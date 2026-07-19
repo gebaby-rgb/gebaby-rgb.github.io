@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibrahem Osama Hassan | Software Engineer Portfolio</title>
+  <meta name="description" content="Professional portfolio of Ibrahem Osama Hassan, a Software Engineer graduated 2026. Specializing in Web Design, Desktop Applications (ERP), IoT systems, embedded hardware, and embedded ML.">
+  <meta name="keywords" content="Ibrahem Osama Hassan, Software Engineer, Portfolio, Web Developer, Desktop Apps, Tauri, React, SQLite, IoT, Embedded Systems, ESP32, Arduino">
+  <meta name="author" content="Ibrahem Osama Hassan">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/profile.jpg">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-code"></i> Ibrahem<span>Osama</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home" class="active" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button class="lang-switcher" aria-label="Change language">
+          <i class="fa-solid fa-globe"></i> <span>العربية</span>
+        </button>
+
+        <a href="#contact" class="btn btn-outline" data-i18n="nav_talk" style="padding: 0.4rem 1.1rem; font-size: 0.85rem;">
+          <i class="fa-solid fa-paper-plane"></i> Let's Talk
+        </a>
+
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-wrapper">
+      <div class="hero-content reveal">
+        <span class="hero-welcome" data-i18n="hero_welcome">Welcome to my space</span>
+        <h1 class="hero-title">
+          <span data-i18n="hero_title_prefix">I'm </span><span class="hero-name">Ibrahem Osama</span>
+        </h1>
+        <h2 class="hero-tagline" data-i18n="hero_tagline">Software Engineer | Web & Desktop Developer</h2>
+        <p class="hero-description" data-i18n="hero_desc">
+          Focused on building custom responsive websites and high-performance desktop applications. Specializing in IoT systems, embedded hardware layouts (ESP32, Arduino), and embedded machine learning.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">
+            <i class="fa-solid fa-briefcase"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_contact">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-illustration reveal">
+        <div class="profile-frame">
+          <img src="assets/images/profile.jpg" alt="Ibrahem Osama Hassan" class="profile-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="about_title">About Me</h2>
+        <p class="section-subtitle" data-i18n="about_subtitle">A brief overview of my professional profile, core focus, and academic background.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-details reveal">
+          <p data-i18n="about_p1">
+            Hello! I am Ibrahem Osama Hassan, a passionate Software Engineer graduated in 2026 with a "Very Good" grade. My technical expertise spans across both hardware and software domains, specializing in building websites and desktop applications.
+          </p>
+          <p data-i18n="about_p2">
+            I design IoT architectures, embedded hardware layouts, and embedded machine learning models. Simultaneously, I create feature-rich cross-platform desktop ERPs and responsive websites using Tauri, React, Typescript, Tailwind CSS, SQLite, and Python.
+          </p>
+          <p data-i18n="about_p3">
+            I enjoy translating complex business operations into clean, user-friendly, and offline-first software. Whether designing custom ticketing apps, financial ledgers, or print-shop databases, I focus on performance, aesthetics, and accessibility.
+          </p>
+        </div>
+
+        <div class="about-info-cards reveal">
+          <div class="info-card glass-card">
+            <div class="info-card-header">
+              <i class="fa-solid fa-graduation-cap"></i> <span data-i18n="about_card_edu_title">Education</span>
+            </div>
+            <h3 class="info-card-title" data-i18n="about_edu_name">Faculty of Industrial and Energy Technology</h3>
+            <div class="info-card-meta" data-i18n="about_edu_univ">New Assiut Technological University (NATU), IT Department</div>
+            <div class="info-card-body" data-i18n="about_edu_body">
+              Bachelor's Degree in Information Technology, Graduated 2026.
+              <br>Grade: <strong>Very Good</strong>.
+            </div>
+          </div>
+
+          <div class="info-card glass-card">
+            <div class="info-card-header">
+              <i class="fa-solid fa-circle-nodes"></i> <span data-i18n="about_card_phil_title">Core Philosophy</span>
+            </div>
+            <div class="info-card-body" data-i18n="about_card_phil_body">
+              Connecting physical sensors and embedded IoT systems with responsive websites and desktop ERP dashboards. Committed to offline-first speed and pristine, user-centered interface designs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section" style="background-color: var(--bg-deep);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="skills_title">Skills & Technologies</h2>
+        <p class="section-subtitle" data-i18n="skills_subtitle">A collection of languages, libraries, and systems I actively use to develop software.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1: Embedded / IoT -->
+        <div class="skill-category glass-card reveal">
+          <h3 class="skill-category-title">
+            <i class="fa-solid fa-microchip"></i> <span data-i18n="skills_cat_embedded">Embedded & IoT</span>
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">ESP32 & Arduino</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Embedded ML</span>
+                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">C / C++ Programming</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Software / Web & Desktop -->
+        <div class="skill-category glass-card reveal">
+          <h3 class="skill-category-title">
+            <i class="fa-solid fa-laptop-code"></i> <span data-i18n="skills_cat_desktop">Web & Desktop</span>
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">React & TypeScript</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Tauri Framework</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python & SQLite</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 82%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Other Technologies -->
+        <div class="skill-category glass-card reveal">
+          <h3 class="skill-category-title">
+            <i class="fa-solid fa-screwdriver-wrench"></i> <span data-i18n="skills_cat_other">Tools & Networking</span>
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Tailwind CSS v4</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">IP Camera & NVR Layouts</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Git & Firestore API</span>
+                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="projects_title">Projects Showcase</h2>
+        <p class="section-subtitle" data-i18n="projects_subtitle">Explore actual screenshots of active ERPs, custom accounting apps, and websites built on my workstation.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Oxygen Website -->
+        <div class="project-card glass-card reveal">
+          <div class="project-img-wrapper">
+            <img src="assets/images/oxygen_preview.png" alt="Oxygen Website Preview" class="project-img">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="https://github.com/gebaby-rgb" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_profile">
+                  <i class="fa-brands fa-github"></i> View Profile
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">HTML5/CSS3</span>
+              <span class="project-tag">Bootstrap</span>
+              <span class="project-tag">JS</span>
+              <span class="project-tag">Web Design</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_oxygen_title">Oxygen Business Portal</h3>
+            <p class="project-description" data-i18n="project_oxygen_desc">
+              A responsive, modern marketing website built for strategic business presentation. Showcases consultation services, client grids, and team details with micro-interactions.
+            </p>
+            <div class="project-footer">
+              <span class="project-path" title="D:\1 Work\Oxygen\Oxygen">Oxygen\Oxygen</span>
+              <a href="https://github.com/gebaby-rgb" target="_blank" class="view-code-link">
+                <span data-i18n="project_link_code">View Code</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: GBB Accounting ERP -->
+        <div class="project-card glass-card reveal">
+          <div class="project-img-wrapper">
+            <img src="assets/images/gbb_accounting_preview.png" alt="GBB Accounting ERP Preview" class="project-img">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="https://github.com/gebaby-rgb" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_profile">
+                  <i class="fa-brands fa-github"></i> View Profile
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Tauri</span>
+              <span class="project-tag">Vite</span>
+              <span class="project-tag">LocalStorage</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_gbb_title">GBB Route Accounting</h3>
+            <p class="project-description" data-i18n="project_gbb_desc">
+              Desktop ERP app managing transportation schedules, route logs, driver-vehicle pairings, passenger tickets, and financial logs syncing to local state.
+            </p>
+            <div class="project-footer">
+              <span class="project-path" title="D:\GBB_accounting">GBB_accounting</span>
+              <a href="https://github.com/gebaby-rgb" target="_blank" class="view-code-link">
+                <span data-i18n="project_link_code">View Code</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Jacket Maqtoo3 (Suit Rental ERP) -->
+        <div class="project-card glass-card reveal">
+          <div class="project-img-wrapper">
+            <img src="assets/images/jacket_maqtoo3_preview.png" alt="Jacket Maqtoo3 Suit Rental ERP Preview" class="project-img">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="https://github.com/gebaby-rgb" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_profile">
+                  <i class="fa-brands fa-github"></i> View Profile
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Tauri</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_jacket_title">Jacket Maqtoo3 ERP</h3>
+            <p class="project-description" data-i18n="project_jacket_desc">
+              Desktop suite rental ERP featuring active booking calendars, order processing, inventory control, and customer physical measurements registers with saved profiles.
+            </p>
+            <div class="project-footer">
+              <span class="project-path" title="D:\Jacket_ma2do3">Jacket_ma2do3</span>
+              <a href="https://github.com/gebaby-rgb" target="_blank" class="view-code-link">
+                <span data-i18n="project_link_code">View Code</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Jacket Maqtoo3 v1 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-img-wrapper">
+            <img src="assets/images/jacket_maqtoo3_v1_preview.png" alt="Jacket Maqtoo3 v1 ERP Preview" class="project-img">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="https://github.com/gebaby-rgb" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_profile">
+                  <i class="fa-brands fa-github"></i> View Profile
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Tauri</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Vite</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_jacket_v1_title">Jacket Maqtoo3 v1</h3>
+            <p class="project-description" data-i18n="project_jacket_v1_desc">
+              Initial release build of the suit rental app management software. Houses catalog searching, customer order history tables, and sales log tracking.
+            </p>
+            <div class="project-footer">
+              <span class="project-path" title="D:\jacket_ma2to31">jacket_ma2to31</span>
+              <a href="https://github.com/gebaby-rgb" target="_blank" class="view-code-link">
+                <span data-i18n="project_link_code">View Code</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Printing Accounting ERP -->
+        <div class="project-card glass-card reveal">
+          <div class="project-img-wrapper">
+            <img src="assets/images/printing_accounting_preview.png" alt="Printing Accounting ERP Preview" class="project-img">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="https://github.com/gebaby-rgb" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_profile">
+                  <i class="fa-brands fa-github"></i> View Profile
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Tauri v2</span>
+              <span class="project-tag">Tailwind v4</span>
+              <span class="project-tag">Recharts</span>
+              <span class="project-tag">jsPDF</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_printing_title">Print-Job Billing System</h3>
+            <p class="project-description" data-i18n="project_printing_desc">
+              Financial and order administration desktop app for copy centers. Generates financial charts for sales metrics, invoices print orders, and exports logs as PDFs.
+            </p>
+            <div class="project-footer">
+              <span class="project-path" title="D:\printing_Accounting">printing_Accounting</span>
+              <a href="https://github.com/gebaby-rgb" target="_blank" class="view-code-link">
+                <span data-i18n="project_link_code">View Code</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Vodafone Cash ERP -->
+        <div class="project-card glass-card reveal">
+          <div class="project-img-wrapper">
+            <img src="assets/images/vodafone_cash_preview.png" alt="Vodafone Cash ERP Preview" class="project-img">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="https://github.com/gebaby-rgb" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_profile">
+                  <i class="fa-brands fa-github"></i> View Profile
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Tauri v2</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Lucide Icons</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_vodafone_title">Vodafone Cash ERP</h3>
+            <p class="project-description" data-i18n="project_vodafone_desc">
+              Agent manager desktop application tracking multiple wallets, cash-in/out registers, automatic commission calculations, and cheapest wallet transfer paths.
+            </p>
+            <div class="project-footer">
+              <span class="project-path" title="D:\vodafon_cash1">vodafon_cash1</span>
+              <a href="https://github.com/gebaby-rgb" target="_blank" class="view-code-link">
+                <span data-i18n="project_link_code">View Code</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section" style="background-color: var(--bg-deep);">
+    <div class="container contact-wrapper">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="contact_title">Get in Touch</h2>
+        <p class="section-subtitle" data-i18n="contact_subtitle">Have a project, job offer, or technical query? Let's connect and build together.</p>
+      </div>
+
+      <div class="contact-card glass-card reveal">
+        <div class="contact-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+        <h3 class="contact-heading" data-i18n="contact_card_heading">Let's collaborate!</h3>
+        <p class="contact-text" data-i18n="contact_card_text">
+          Click below to copy my email address or connect with me via professional social networks. I am always open to discussing new opportunities.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-method email" style="cursor: pointer;" title="Click to copy email">
+            <div class="contact-method-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-method-info">
+              <div class="contact-label" data-i18n="contact_lbl_email">Email Address (Click to copy)</div>
+              <div class="contact-value">ibrahem.osama.hassan@gmail.com</div>
+            </div>
+          </div>
+
+          <a href="https://github.com/gebaby-rgb" target="_blank" class="contact-method">
+            <div class="contact-method-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="contact-method-info">
+              <div class="contact-label" data-i18n="contact_lbl_github">GitHub Account</div>
+              <div class="contact-value">github.com/gebaby-rgb</div>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/gebaby-rgb" target="_blank" class="contact-method">
+            <div class="contact-method-icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="contact-method-info">
+              <div class="contact-label" data-i18n="contact_lbl_linkedin">LinkedIn Profile</div>
+              <div class="contact-value">linkedin.com/in/gebaby-rgb</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://github.com/gebaby-rgb" target="_blank" class="social-link" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/gebaby-rgb" target="_blank" class="social-link" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:ibrahem.osama.hassan@gmail.com" class="social-link" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 <span data-i18n="hero_title_name">Ibrahem Osama</span>. <span data-i18n="footer_copy">All Rights Reserved. Built on local workspaces.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
