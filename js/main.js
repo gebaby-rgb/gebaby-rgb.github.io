@@ -58,7 +58,7 @@ const translations = {
     project_printing_desc: "Financial and order administration desktop app for copy centers. Generates financial charts for sales metrics, invoices print orders, and exports logs as PDFs.",
     project_vodafone_title: "Vodafone Cash ERP",
     project_vodafone_desc: "Agent manager desktop application tracking multiple wallets, cash-in/out registers, automatic commission calculations, and cheapest wallet transfer paths.",
-    project_btn_profile: "View Profile",
+    project_btn_details: "View Details",
     project_link_code: "View Code",
     
     contact_title: "Get in Touch",
@@ -122,7 +122,7 @@ const translations = {
     project_printing_desc: "تطبيق سطح مكتب محاسبي للمطابع ومراكز التصوير. يستعرض إحصائيات الأرباح والمبيعات بالرسوم البيانية، ويصدر الفواتير، ويطبع التقارير بصيغة PDF.",
     project_vodafone_title: "برنامج فودافون كاش للمبيعات",
     project_vodafone_desc: "تطبيق لإدارة عمليات وكلاء فودافون كاش؛ يتتبع الأرصدة والعمولات للعمليات اليومية، ويحسب أرخص مسار لتحويل المبالغ بين المحافظ.",
-    project_btn_profile: "عرض الحساب",
+    project_btn_details: "عرض التفاصيل",
     project_link_code: "عرض الكود",
     
     contact_title: "تواصل معي",
