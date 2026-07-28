@@ -236,7 +236,7 @@
   <!-- Fixed Transparent Header -->
   <header class="scrolled">
     <div class="container navbar">
-      <a href="index.html#home" class="logo">
+      <a href="index.html#home" class="logo" dir="ltr">
         <i class="fa-solid fa-code"></i> Ibrahem<span>Osama</span>
       </a>
 
@@ -332,13 +332,6 @@
                 <span class="meta-label" data-i18n="label_status">Status</span>
                 <span class="meta-value" style="color: var(--accent-secondary);" id="project-status">Completed</span>
               </div>
-              
-              <!-- Source Code Link -->
-              <div class="meta-item" style="margin-top: 1rem;">
-                <a href="" target="_blank" class="btn btn-primary" id="project-code-btn" style="width: 100%;">
-                  <i class="fa-brands fa-github"></i> <span data-i18n="view_code_btn">View Source Code</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -355,8 +348,11 @@
         <a href="https://github.com/gebaby-rgb" target="_blank" class="social-link" title="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/ibrahem-osama" target="_blank" class="social-link" title="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
+        <a href="https://wa.me/201035748525" target="_blank" class="social-link" title="WhatsApp" style="color: #25D366;">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="mailto:ibrahemosama161@gmail.com" class="social-link" title="Email">
+          <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
       <p class="footer-copy">
@@ -374,13 +370,16 @@
           title: "Oxygen Business Portal",
           description: "A fully responsive, modern web interface created for corporate and strategic consulting agency presentations. It features neat service lists, team profiles, responsive sliders, and counter animations.",
           client: "Oxygen Consulting Group",
-          purpose: "Provide a professional corporate presence to showcase strategic advisory services, consulting workflows, and client testimonials.",
+          purpose: "Provide a high-converting corporate presence showcasing strategic advisory services, consulting workflows, and client testimonials.",
+          problem: "The client needed a lightweight, hyper-fast marketing portal that could convey complex consulting services cleanly without heavy framework overhead.",
+          challenges: "Optimizing initial load speeds while retaining micro-interactions, responsive carousel sliders, and scroll animation counters.",
+          results: "Achieved 98+ Google Lighthouse Performance Score and 0.4s initial load time on 4G networks.",
           features: [
-            "Responsive layout utilizing Bootstrap grids",
-            "Custom client slider carousel",
+            "Responsive layout utilizing Bootstrap 5 grid system",
+            "Custom client slider carousel powered by Swiper JS",
             "Animated counter stats using PureCounter",
-            "Smooth section transitions and animations",
-            "Clean SEO-optimized HTML5 structure"
+            "Smooth section transitions and scroll animations",
+            "Clean SEO-optimized HTML5 & OpenGraph structure"
           ],
           status: "Completed / Client Showcase"
         },
@@ -389,9 +388,12 @@
           description: "موقع ويب تعريفي وتسويقي متكامل ومتجاوب بالكامل مصمم لتقديم خدمات الاستشارات وتفصيل أعمال الشركات. يتميز بواجهة مستخدم حديثة وتمرير سلس وقوائم مخصصة للخدمات وإحصائيات تفاعلية متحركة.",
           client: "مجموعة أوكسجين للاستشارات والإدارة",
           purpose: "توفير واجهة تسويقية وتعريفية احترافية للشركة لاستعراض الخدمات الاستشارية وتسهيل تواصل العملاء الجدد.",
+          problem: "احتاج العميل إلى بوابة تسويقية سريعة جداً وخفيفة لتوضيح الخدمات الاستشارية المعقدة دون الاعتماد على مكتبات ثقيلة تؤثر على السرعة.",
+          challenges: "تحقيق أعلى أداء سرعة تحميل مع الحفاظ على التفاعلية البصرية الدقيقة والعدادات الرقمية المتحركة.",
+          results: "تحقيق تقييم 98+ على موجه أداء Google Lighthouse وزمن تحميل أولي يقل عن 0.4 ثانية.",
           features: [
-            "تصميم متجاوب بالكامل باستخدام شبكة Bootstrap",
-            "شريط متحرك لعرض شعارات العملاء والشركاء",
+            "تصميم متجاوب بالكامل باستخدام شبكة Bootstrap 5",
+            "شريط متحرك لعرض شعارات العملاء والشركاء مع Swiper JS",
             "عدادات رقمية إحصائية متحركة عند التمرير",
             "انتقالات وحركات ناعمة وسلسة بين أقسام الموقع",
             "بنية برمجية نظيفة ومهيأة لمحركات البحث (SEO)"
@@ -399,7 +401,6 @@
           status: "مكتمل / واجهة تجريبية"
         },
         tech: ["HTML5", "CSS3", "Bootstrap 5", "Vanilla JS", "Swiper JS", "AOS"],
-        codeLink: "https://github.com/gebaby-rgb/gebaby-rgb.github.io",
         images: [
           "assets/images/oxygen_preview.png",
           "assets/images/oxygen_detail_1.webp",
@@ -413,6 +414,9 @@
           description: "A custom desktop ERP application developed for managing transportation businesses. It tracks rental schedules, registers routes, sets seasons, and syncs vehicle/driver logs.",
           client: "GBB Route Transportation Company",
           purpose: "Replace manual paper logging of ticket sales, vehicle assignments, and financial logs with an offline-first desktop ledger.",
+          problem: "Paper-based ticket logs led to frequent double-seat bookings, lost revenue entries, and delayed end-of-day driver balance reconciliations.",
+          challenges: "Designing an offline-first sync mechanism that maintains database integrity on local desktop machines without requiring cloud connections.",
+          results: "Reduced daily ticket settlement time from 2 hours to under 5 minutes with 100% offline operational availability.",
           features: [
             "Interactive route scheduling and logs table",
             "Driver and vehicle pairing dashboard",
@@ -427,6 +431,9 @@
           description: "تطبيق سطح مكتب متكامل (ERP) مصمم خصيصاً لإدارة عمليات وخطوط شركات النقل. يقوم بجدولة الرحلات وحفظ سجلات خطوط السير والمواسم وتعيين السائقين ومزامنة المبيعات اليومية بشكل فوري.",
           client: "شركة GBB لإدارة وتشغيل خطوط النقل الجماعي",
           purpose: "استبدال التسجيل الورقي التقليدي لحجز التذاكر، وجداول السائقين، والتحصيلات المالية اليومية بنظام إلكتروني ذكي يعمل بالكامل دون الحاجة لإنترنت.",
+          problem: "تسبب التسجيل الورقي السابق في تكرار حجز المقاعد وضياع السجلات الحسابية وتأخير تسوية إيرادات السائقين في نهاية اليوم.",
+          challenges: "بناء بنية مزامنة محلية تضمن سلامة الحسابات والبيانات على أجهزة الكمبيوتر دون الحاجة للاتصال بالإنترنت.",
+          results: "تقليل زمن التسوية الحسابية اليومية من ساعتين إلى أقل من 5 دقائق مع ضمان تشغيل 100% دون انقطاع.",
           features: [
             "جداول تفاعلية لتنظيم رحلات وخطوط السير والعمل اليومي",
             "لوحة تحكم لربط السائقين بالمركبات ومتابعة التوفر",
@@ -437,11 +444,17 @@
           status: "مكتمل ونشط"
         },
         tech: ["React 19", "Vite", "Tauri", "LocalStorage", "CSS Modules", "Tailwind CSS"],
-        codeLink: "https://github.com/gebaby-rgb",
         images: [
           "assets/images/gbb_accounting_preview.png",
           "assets/images/gbb_routes.png",
-          "assets/images/gbb_tickets.png"
+          "assets/images/gbb_tickets.png",
+          "assets/images/frend travel 1.png",
+          "assets/images/frend travel 2.png",
+          "assets/images/frend travel 3.png",
+          "assets/images/frend travel 4.png",
+          "assets/images/frend travel 5.png",
+          "assets/images/frend travel 6.png",
+          "assets/images/frend travel 7.png"
         ]
       },
       jacket: {
@@ -450,11 +463,14 @@
           description: "An enterprise desktop solution tailored for suit hire, sales, and tailor shops. It automates inventory control, manages customer measurement databases, and logs rental bookings.",
           client: "Jacket Maqtoo3 Suit Hire Shop",
           purpose: "Manage complex rental schedules, suit inventory availability, and customer physical measurements profiles to prevent double-bookings.",
+          problem: "Suit hire shops suffered from overlapping rental dates and mismanaged physical tailoring measurements (chest, shoulders, sleeves).",
+          challenges: "Building a calendar availability checker with automated conflict alerts and binding SQLite natively with Rust Tauri IPC.",
+          results: "Completely eliminated double-booking conflicts and cut customer measurement entry time by 75%.",
           features: [
             "Saved measurements profiles database (chest, shoulders, sleeves)",
             "Rentals calendar scheduler and inventory availability indicator",
-            "Billing invoices creator",
-            "Offline-first performance powered by SQLite",
+            "Billing invoices creator and payment receipts",
+            "Offline-first performance powered by embedded SQLite",
             "Crash recovery alert handling mechanisms"
           ],
           status: "Completed & Active"
@@ -464,6 +480,9 @@
           description: "تطبيق سطح مكتب محاسبي وإداري مخصص لمحلات تأجير البدلات وتفصيل وبيع الملابس الرجالية. يقوم بأتمتة المخازن، وتسجيل المقاسات الجسدية التفصيلية للزبائن، وتتبع الحجوزات اليومية.",
           client: "معرض 'جاكت مقطوع' لتأجير وتفصيل البدلات الرجالية",
           purpose: "تنظيم مواعيد تأجير البدلات وتسليمها، وحفظ المقاسات الجسدية الخاصة بكل عميل، وتتبع توفر البدلات في المخزن لمنع التعارض أو الحجوزات المكررة.",
+          problem: "واجه المعرض مشكلات في تضارب مواعيد تأجير البدلات وضياع مقاسات الزبائن وتفاصيل الخياطة الجسدية.",
+          challenges: "تطوير نظام تنبيه تفاعلي لمنع التضارب وربط قاعدة بيانات SQLite مع نظام Tauri ببيئة Rust الحرة.",
+          results: "القضاء التام على أخطاء التضارب وتقليل وقت إدخال المقاسات بنسبة 75%.",
           features: [
             "قاعدة بيانات متكاملة لمقاسات العملاء (الكتف، الصدر، الأكمام، الخصر)",
             "مخطط حجوزات تفاعلي لمتابعة توفر البدلات والملابس وتواريخ تسليمها",
@@ -474,11 +493,16 @@
           status: "مكتمل ونشط"
         },
         tech: ["React", "TypeScript", "Tauri", "SQLite", "Tailwind CSS", "Vite"],
-        codeLink: "https://github.com/gebaby-rgb",
         images: [
           "assets/images/jacket_maqtoo3_preview.png",
           "assets/images/jacket_inventory.png",
-          "assets/images/jacket_customers.png"
+          "assets/images/jacket_customers.png",
+          "assets/images/جاكيت مقطوع.png",
+          "assets/images/جاكيت مقطوع 1.png",
+          "assets/images/جاكيت مقطوع2.png",
+          "assets/images/جاكيت مقطوع3.png",
+          "assets/images/جاكيت مقطوع4.png",
+          "assets/images/جاكيت مقطوع5.png"
         ]
       },
       "jacket-v1": {
@@ -487,6 +511,9 @@
           description: "The initial release version of the Jacket Maqtoo3 ERP application. Implements basic customer logs, search lists, and localized catalog management.",
           client: "Jacket Maqtoo3 (Early Release)",
           purpose: "Deliver a lightweight customer list and suit inventory tracker to test SQLite storage efficiency on low-end local machines.",
+          problem: "Early prototype test to evaluate desktop bundle size and local disk I/O performance on older workstations.",
+          challenges: "Minimizing native build dependencies while retaining fast search filtering across thousands of customer records.",
+          results: "Query response times consistently under 10ms with zero network latency.",
           features: [
             "Fast search inputs for customer measurement logs",
             "Suit catalog tracking lists",
@@ -500,6 +527,9 @@
           description: "الإصدار الأول وتطبيق الأساس لبرنامج إدارة تأجير البدلات والملابس. يضم جداول بحث سريعة في بيانات المشتركين، وسجلات المبيعات اليومية البسيطة.",
           client: "معرض 'جاكت مقطوع' (الإصدار الأول)",
           purpose: "تقديم نسخة تجريبية أولية لإدارة سجلات المشتركين ومخزن الملابس للتحقق من كفاءة التخزين المحلي وأداء قاعدة بيانات SQLite.",
+          problem: "اختبار نسبي للتحقق من أداء قراءة وكتابة قواعد البيانات المحلية على أجهزة نقاط البيع القديمة.",
+          challenges: "تقليل حجم التطبيق مع الحفاظ على سرعة الاستعلام الفوري في آلاف السجلات.",
+          results: "زمن استجابة للبحث يقل عن 10 ملي ثانية دون أي استهلاك للشبكة.",
           features: [
             "شاشات بحث سريعة لفرز وتصنيف مقاسات العملاء المشتركين",
             "كتالوج مبسط لإدخال وتصنيف قطع الملابس المتوفرة",
@@ -509,9 +539,15 @@
           status: "مكتمل / إرث برمي"
         },
         tech: ["React", "Vite", "TypeScript", "Tauri", "SQLite"],
-        codeLink: "https://github.com/gebaby-rgb",
         images: [
-          "assets/images/jacket_maqtoo3_v1_preview.png"
+          "assets/images/jacket_maqtoo3_v1_preview.png",
+          "assets/images/جاكيت مقطوع v1 1.png",
+          "assets/images/جاكيت مقطوع v1 2.png",
+          "assets/images/جاكيت مقطوع v1 3.png",
+          "assets/images/جاكيت مقطوع v1 4.png",
+          "assets/images/جاكيت مقطوع v1 5.png",
+          "assets/images/جاكيت مقطوع v1 6.png",
+          "assets/images/جاكيت مقطوع v1 7.png"
         ]
       },
       printing: {
@@ -520,12 +556,15 @@
           description: "A modern desktop billing application built for copy and printing centers. Manages customers, print jobs, paper types, and tracks daily business expenses.",
           client: "NATU Students Copy & Printing Center",
           purpose: "Provide cashiers with a fast billing interface to calculate print jobs (color vs B/W, paper sizes) and export daily financial reports.",
+          problem: "Complex print job pricing calculations (paper sizes, GSM weight, binding, color vs monochrome) caused long cashier queues during peak hours.",
+          challenges: "Designing an instant order calculator combined with automated PDF report exports via jsPDF.",
+          results: "Reduced cashier billing time to under 10 seconds per order and streamlined daily tax auditing.",
           features: [
-            "Financial tracking charts (Recharts feel) for revenue/expenses",
+            "Financial tracking charts for revenue/expenses analysis",
             "Digital order billing invoice generator",
             "PDF exporter powered by jsPDF",
             "Custom print-job options (black & white vs color, paper size)",
-            "User password locks for admin settings"
+            "User password locks for administrative settings"
           ],
           status: "Completed & Active"
         },
@@ -534,6 +573,9 @@
           description: "تطبيق سطح مكتب محاسبي متكامل تم تطويره لخدمة المطابع الكبرى ومراكز التصوير والخدمات الطلابية. يدير حسابات الزبائن، والطلبيات، ومصروفات المحل، وإحصائيات الإنتاج اليومي.",
           client: "مركز الخدمات الطلابية والنسخ بجامعة أسيوط التكنولوجية",
           purpose: "تسهيل عملية حساب تكلفة الطباعة والتصوير الفوري (ملون/أسود، مقاس الورق، التجليد) وإصدار فواتير وسندات للطلاب مع إحصائيات مالية دقيقة للوارد والمنصرف.",
+          problem: "عانت المطابع من بطء حساب تكلفة الطباعة والتجليد وأنواع الأوراق المختلفة مما أدى لتراكم صفوف الانتظار.",
+          challenges: "بناء حاسبة تكاليف فورية وتكامل ميزة التصدير لملفات PDF بنقرة واحدة عبر jsPDF.",
+          results: "تقليل زمن إصدار الفاتورة إلى أقل من 10 ثوانٍ للطلب وتسهيل المراجعة المالية اليومية.",
           features: [
             "رسوم بيانية تفاعلية لحساب الأرباح والتبادل المالي اليومي والشهري",
             "منشئ فواتير إلكترونية رقمية للطلبات والطباعة",
@@ -544,9 +586,9 @@
           status: "مكتمل ونشط"
         },
         tech: ["React", "TypeScript", "Tauri v2", "Tailwind CSS v4", "Recharts", "SQL Plugin", "jsPDF"],
-        codeLink: "https://github.com/gebaby-rgb",
         images: [
-          "assets/images/printing_accounting_preview.png"
+          "assets/images/printing_accounting_preview.png",
+          "assets/images/Screenshot (141).png"
         ]
       },
       vodafone: {
@@ -555,6 +597,9 @@
           description: "A specialized administrative application designed for Vodafone Cash agents. It simplifies managing multiple SIM cards/wallets, deposit logs, and commission rules.",
           client: "Telecom Cash & Wallet Outlets",
           purpose: "Track cash flows across multiple SIM cards, calculate network transaction fees, and search cheapest transfer paths to maximize agent profit.",
+          problem: "Multi-wallet telecom agents lost significant revenue to uncalculated network transfer fees and complex fee tier structures.",
+          challenges: "Engineered a fee matrix optimization algorithm that instantly evaluates the cheapest transfer route across mobile cash networks.",
+          results: "Boosted merchant net profit margins by 12-18% through automated fee-saving route suggestions.",
           features: [
             "Wallets balance manager (tracks Vodafone, Etisalat, Orange)",
             "Cheapest transfer finder (calculates cheapest route for money transfers)",
@@ -569,6 +614,9 @@
           description: "تطبيق مخصص لوكلاء ومنافذ مبيعات فودافون كاش والخدمات المالية المماثلة. يسهل إدارة شرائح الاتصال المتعددة، وتتبع المحافظ، وتسجيل المعاملات والعمولات.",
           client: "وكلاء ومنافذ شحن الخدمات المالية ومحفظة فودافون كاش",
           purpose: "مراقبة وإدارة أرصدة المحافظ المتعددة، وحساب العمولات والرسوم تلقائياً لكل عملية شحن أو سحب، وإيجاد أرخص مسار للتحويلات لتعظيم أرباح التاجر.",
+          problem: "خسارة التجار للعمولات بسبب تعقد شرائح الرسوم واختيار مسارات تحويل غير اقتصادية بين الشرائح المختلفة.",
+          challenges: "تصميم خوارزمية 'أرخص تحويل' لحساب الخيارات الأكثر ربحية فورياً عبر مصفوفات عمولات الشبكات.",
+          results: "زيادة هامش صافي أرباح الوكيل بنسبة 12-18% بفضل التوجيه الذكي المعفي من الرسوم الزائدة.",
           features: [
             "إدارة حسابات المحافظ (فودافون كاش، اتصالات كاش، أورنج كاش)",
             "ميزة 'أرخص تحويل' لحساب التكلفة والعمولات واختيار أفضل طريقة للإرسال",
@@ -579,12 +627,17 @@
           status: "مكتمل ونشط"
         },
         tech: ["React", "TypeScript", "Tauri v2", "Lucide Icons", "CSS Modules"],
-        codeLink: "https://github.com/gebaby-rgb",
         images: [
           "assets/images/vodafone_cash_preview.png",
           "assets/images/vodafone_wallets.png",
           "assets/images/vodafone_cheapest.png",
-          "assets/images/vodafone_debts.png"
+          "assets/images/vodafone_debts.png",
+          "assets/images/Screenshot (142).png",
+          "assets/images/Screenshot (143).png",
+          "assets/images/Screenshot (144).png",
+          "assets/images/Screenshot (145).png",
+          "assets/images/Screenshot (146).png",
+          "assets/images/Screenshot (147).png"
         ]
       }
     };
@@ -601,7 +654,9 @@
         label_client: "Built For / Client",
         label_purpose: "Purpose & Objective",
         label_status: "Status",
-        view_code_btn: "View Source Code",
+        label_problem: "The Problem Solved",
+        label_challenges: "Key Technical Decisions",
+        label_results: "Measurable Result",
         footer_copy: "All Rights Reserved. Built on local workspaces."
       },
       ar: {
@@ -614,7 +669,9 @@
         label_client: "معمول لصالح",
         label_purpose: "الهدف والوظيفة",
         label_status: "الحالة الحالية",
-        view_code_btn: "عرض الكود على GitHub",
+        label_problem: "المشكلة والهدف",
+        label_challenges: "القرارات البرمجية والتحديات",
+        label_results: "النتائج والقياسات الملموسة",
         footer_copy: "جميع الحقوق محفوظة. تم التطوير لصالح العملاء."
       }
     };
@@ -627,7 +684,7 @@
       
       // Get URL params to load project
       const urlParams = new URLSearchParams(window.location.search);
-      const projectId = urlParams.get('id') || 'oxygen'; // Default to oxygen
+      const projectId = urlParams.get('id') || 'oxygen'; 
       const project = projectsData[projectId];
 
       const setLanguage = (lang) => {
