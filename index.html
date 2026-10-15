@@ -72,6 +72,34 @@
           <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_contact">
             <i class="fa-solid fa-envelope"></i> Contact Me
           </a>
+          <div class="cv-btn-group">
+            <a href="assets/cv/Ibrahem_Osama_Hassan_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="hero_btn_cv">
+              <i class="fa-solid fa-file-lines"></i> View CV
+            </a>
+            <a href="assets/cv/Ibrahem_Osama_Hassan_CV.pdf" download class="btn btn-outline btn-icon" id="cv-download-btn" title="Download CV (PDF)" aria-label="Download CV (PDF)">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Stats Ribbon -->
+        <div class="hero-stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">11+</span>
+            <span class="stat-label" data-i18n="stat_projects">Projects & Systems Shipped</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label" data-i18n="stat_offline">Offline-Resilient Systems</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2026</span>
+            <span class="stat-label" data-i18n="stat_degree">IT Graduate (Very Good)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label" data-i18n="stat_languages">Core Languages & Stacks</span>
+          </div>
         </div>
       </div>
 
@@ -139,145 +167,231 @@
       </div>
 
       <div class="skills-grid">
-        <!-- Category 1: Embedded / IoT -->
+        <!-- Category 1: Systems & Embedded / IoT -->
         <div class="skill-category glass-card reveal">
           <h3 class="skill-category-title">
-            <i class="fa-solid fa-microchip"></i> <span data-i18n="skills_cat_embedded">Embedded / IoT</span>
+            <i class="fa-solid fa-microchip"></i> <span data-i18n="skills_cat_embedded">Systems & Embedded / IoT</span>
           </h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">ESP32</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Arduino</span>
+                <span class="skill-name"><i class="fa-solid fa-bolt"></i> ESP32</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
             </div>
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name" data-i18n="skill_embedded_ml">Embedded ML</span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+                <span class="skill-name"><i class="fa-solid fa-microchip"></i> Arduino & MCUs</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
             </div>
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">C / C++</span>
+                <span class="skill-name"><i class="fa-solid fa-code"></i> C / C++ (Embedded)</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-brain"></i> <span data-i18n="skill_embedded_ml">Embedded ML / TinyML</span></span>
+                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
             </div>
           </div>
         </div>
 
-        <!-- Category 2: Programming Languages -->
+        <!-- Category 2: Core Programming Languages -->
         <div class="skill-category glass-card reveal">
           <h3 class="skill-category-title">
-            <i class="fa-solid fa-code"></i> <span data-i18n="skills_cat_languages">Programming Languages</span>
+            <i class="fa-solid fa-code"></i> <span data-i18n="skills_cat_languages">Core Programming Languages</span>
           </h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Python</span>
+                <span class="skill-name"><i class="fa-brands fa-rust"></i> Rust</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-js"></i> TypeScript & JS (ES6+)</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-python"></i> Python</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
             </div>
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">C#</span>
+                <span class="skill-name"><i class="fa-solid fa-hashtag"></i> C# (.NET)</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
             </div>
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Java</span>
+                <span class="skill-name"><i class="fa-brands fa-golang"></i> Go (Golang)</span>
+                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-java"></i> Java & Dart</span>
                 <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
             </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Dart</span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
-            </div>
           </div>
         </div>
 
-        <!-- Category 3: Mobile Development -->
+        <!-- Category 3: Desktop & Offline ERPs -->
         <div class="skill-category glass-card reveal">
           <h3 class="skill-category-title">
-            <i class="fa-solid fa-mobile-screen-button"></i> <span data-i18n="skills_cat_mobile">Mobile Development</span>
+            <i class="fa-solid fa-desktop"></i> <span data-i18n="skills_cat_desktop">Desktop & Offline ERPs</span>
           </h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Flutter</span>
+                <span class="skill-name"><i class="fa-solid fa-shield-halved"></i> Tauri v2 & Rust IPC</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Category 4: AI / Machine Learning -->
-        <div class="skill-category glass-card reveal">
-          <h3 class="skill-category-title">
-            <i class="fa-solid fa-brain"></i> <span data-i18n="skills_cat_ai">AI / Machine Learning</span>
-          </h3>
-          <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name" data-i18n="skill_ai_fundamentals">AI fundamentals</span>
+                <span class="skill-name"><i class="fa-solid fa-database"></i> SQLite & Local D1</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
             </div>
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name" data-i18n="skill_dl_basics">Deep Learning basics</span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+                <span class="skill-name"><i class="fa-solid fa-cash-register"></i> Offline-First POS & Ledgers</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
             </div>
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name" data-i18n="skill_embedded_ml">Embedded ML</span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+                <span class="skill-name"><i class="fa-solid fa-chart-pie"></i> Recharts & Analytics</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
             </div>
           </div>
         </div>
 
-        <!-- Category 5: Desktop & Database -->
+        <!-- Category 4: Web & Cloud Architecture -->
         <div class="skill-category glass-card reveal">
           <h3 class="skill-category-title">
-            <i class="fa-solid fa-database"></i> <span data-i18n="skills_cat_desktop_db">Desktop & Database</span>
+            <i class="fa-solid fa-cloud"></i> <span data-i18n="skills_cat_web">Web & Cloud Architecture</span>
           </h3>
           <div class="skill-list">
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Tauri</span>
+                <span class="skill-name"><i class="fa-brands fa-react"></i> React 19 & Vite</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-cloudflare"></i> Cloudflare Workers & Pages</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
             </div>
             <div class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">SQLite</span>
+                <span class="skill-name"><i class="fa-brands fa-css3-alt"></i> Tailwind CSS v4</span>
                 <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-network-wired"></i> RESTful APIs & Serverless</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: AI & Machine Learning -->
+        <div class="skill-category glass-card reveal">
+          <h3 class="skill-category-title">
+            <i class="fa-solid fa-brain"></i> <span data-i18n="skills_cat_ai">AI & Machine Learning</span>
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-robot"></i> <span data-i18n="skill_ai_fundamentals">AI Fundamentals</span></span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 86%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-network-wired"></i> <span data-i18n="skill_dl_basics">Deep Learning basics</span></span>
+                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-eye"></i> Computer Vision & Edge AI</span>
+                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 6: Mobile & DevOps Tools -->
+        <div class="skill-category glass-card reveal">
+          <h3 class="skill-category-title">
+            <i class="fa-solid fa-toolbox"></i> <span data-i18n="skills_cat_devops">Mobile & DevOps Tools</span>
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-flutter"></i> Flutter Mobile</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-git-alt"></i> Git & GitHub Actions</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-linux"></i> Linux & Bash Scripting</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 84%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-file-pdf"></i> jsPDF & Invoicing Engines</span>
+                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
             </div>
           </div>
         </div>
@@ -293,10 +407,75 @@
         <p class="section-subtitle" data-i18n="projects_subtitle">Explore actual screenshots of active ERPs, custom accounting apps, and websites built on my workstation.</p>
       </div>
 
+      <div class="projects-filter-bar reveal">
+        <button class="filter-btn active" data-filter="all"><i class="fa-solid fa-layer-group"></i> <span data-i18n="filter_all">All Projects (11)</span></button>
+        <button class="filter-btn" data-filter="desktop"><i class="fa-solid fa-desktop"></i> <span data-i18n="filter_desktop">Desktop & ERPs (7)</span></button>
+        <button class="filter-btn" data-filter="web"><i class="fa-solid fa-globe"></i> <span data-i18n="filter_web">Web & Cloud Platforms (4)</span></button>
+      </div>
+
       <div class="projects-grid">
-        <!-- Project 1: Oxygen Website -->
-        <div class="project-card glass-card reveal">
+        <!-- Project 1: Mastoor Home Textiles ERP (Desktop) -->
+        <div class="project-card glass-card reveal" data-category="desktop">
           <div class="project-img-wrapper">
+            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
+            <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
+            <img src="assets/images/project/Screenshot (244).png" alt="Mastoor Home Textiles ERP Preview" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="project.html?id=mastoor" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
+                  <i class="fa-solid fa-circle-info"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">React 19</span>
+              <span class="project-tag">Tauri v2</span>
+              <span class="project-tag">Rust</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_mastoor_title">Mastoor Home Textiles ERP & Installments</h3>
+            <p class="project-description" data-i18n="project_mastoor_desc">
+              Offline-first desktop ERP and POS for home textiles and fabrics retail. Features fast POS checkout, credit & installment ledger with guarantor records, multi-channel cash liquidity (Cash, Vodafone Cash, InstaPay), and fabric yardage tracking.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 2: Gebaby EdTech & Exam Platform (Web) -->
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
+            <div class="media-badge"><i class="fa-solid fa-images"></i> 14</div>
+            <img src="assets/images/project1/Screenshot (227).png" alt="Gebaby EdTech & Exam Management Platform Preview" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="project.html?id=gebaby-platform" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
+                  <i class="fa-solid fa-circle-info"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Cloudflare Workers</span>
+              <span class="project-tag">D1 (SQLite)</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Chart.js</span>
+              <span class="project-tag">REST API</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_gebaby_title">Gebaby EdTech & Exam Management Platform</h3>
+            <p class="project-description" data-i18n="project_gebaby_desc">
+              A centralized cloud learning and examination management platform deployed on Cloudflare Pages. Unifies teacher group management, a question bank, timed auto-graded exams, digital study libraries (PDF/video), and a gamified merit leaderboard.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 3: Oxygen Website -->
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
             <div class="media-badge"><i class="fa-solid fa-images"></i> 4</div>
             <img src="assets/images/oxygen_preview.png" alt="Oxygen Website Preview" class="project-img" loading="lazy">
             <div class="project-overlay">
@@ -321,9 +500,10 @@
           </div>
         </div>
 
-        <!-- Project 2: GBB Accounting ERP -->
-        <div class="project-card glass-card reveal">
+        <!-- Project 4: GBB Accounting ERP -->
+        <div class="project-card glass-card reveal" data-category="desktop">
           <div class="project-img-wrapper">
+            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
             <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
             <img src="assets/images/gbb_accounting_preview.png" alt="GBB Accounting ERP Preview" class="project-img" loading="lazy">
             <div class="project-overlay">
@@ -348,9 +528,10 @@
           </div>
         </div>
 
-        <!-- Project 3: Jacket Maqtoo3 (Suit Rental ERP) -->
-        <div class="project-card glass-card reveal">
+        <!-- Project 5: Jacket Maqtoo3 (Suit Rental ERP) -->
+        <div class="project-card glass-card reveal" data-category="desktop">
           <div class="project-img-wrapper">
+            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
             <div class="media-badge"><i class="fa-solid fa-images"></i> 9</div>
             <img src="assets/images/jacket_maqtoo3_preview.png" alt="Jacket Maqtoo3 Suit Rental ERP Preview" class="project-img" loading="lazy">
             <div class="project-overlay">
@@ -375,9 +556,10 @@
           </div>
         </div>
 
-        <!-- Project 4: Jacket Maqtoo3 v1 -->
-        <div class="project-card glass-card reveal">
+        <!-- Project 6: Jacket Maqtoo3 v1 -->
+        <div class="project-card glass-card reveal" data-category="desktop">
           <div class="project-img-wrapper">
+            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
             <div class="media-badge"><i class="fa-solid fa-images"></i> 8</div>
             <img src="assets/images/jacket_maqtoo3_v1_preview.png" alt="Jacket Maqtoo3 v1 ERP Preview" class="project-img" loading="lazy">
             <div class="project-overlay">
@@ -402,9 +584,10 @@
           </div>
         </div>
 
-        <!-- Project 5: Printing Accounting ERP -->
-        <div class="project-card glass-card reveal">
+        <!-- Project 7: Printing Accounting ERP -->
+        <div class="project-card glass-card reveal" data-category="desktop">
           <div class="project-img-wrapper">
+            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
             <div class="media-badge"><i class="fa-solid fa-images"></i> 9</div>
             <img src="assets/images/printing_accounting_preview.png" alt="Printing Accounting ERP Preview" class="project-img" loading="lazy">
             <div class="project-overlay">
@@ -429,9 +612,10 @@
           </div>
         </div>
 
-        <!-- Project 6: Vodafone Cash ERP -->
-        <div class="project-card glass-card reveal">
+        <!-- Project 8: Vodafone Cash ERP -->
+        <div class="project-card glass-card reveal" data-category="desktop">
           <div class="project-img-wrapper">
+            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
             <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
             <img src="assets/images/vodafone_cash_preview.png" alt="Vodafone Cash ERP Preview" class="project-img" loading="lazy">
             <div class="project-overlay">
@@ -452,6 +636,90 @@
             <h3 class="project-card-title" data-i18n="project_vodafone_title">Vodafone Cash ERP</h3>
             <p class="project-description" data-i18n="project_vodafone_desc">
               Agent manager desktop application tracking multiple wallets, cash-in/out registers, automatic commission calculations, and cheapest wallet transfer paths.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 9: Al-Fares Al-Moaser Exam Platform -->
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
+            <div class="media-badge"><i class="fa-solid fa-images"></i> 3</div>
+            <img src="assets/images/exam_platform_preview.svg" alt="Al-Fares Al-Moaser Exam Platform Preview" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="project.html?id=exam-platform" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
+                  <i class="fa-solid fa-circle-info"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Google Apps Script</span>
+              <span class="project-tag">Google Sheets</span>
+              <span class="project-tag">Cloudflare Pages</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_exam_title">Al-Fares Al-Moaser Exam Platform</h3>
+            <p class="project-description" data-i18n="project_exam_desc">
+              A free, fully custom online exam platform for a secondary-school teacher, serving Grade 1 & 2 students. Serverless Google Apps Script backend with Google Sheets as the database, featuring auto-grading, anti-cheat detection, and scheduled exam windows.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 10: Aura Academy Management System -->
+        <div class="project-card glass-card reveal" data-category="desktop">
+          <div class="project-img-wrapper">
+            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
+            <div class="media-badge"><i class="fa-solid fa-images"></i> 17</div>
+            <img src="assets/images/aura academy 0.png" alt="Aura Academy Management System Preview" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="project.html?id=aura-academy" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
+                  <i class="fa-solid fa-circle-info"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">React 19</span>
+              <span class="project-tag">Tauri v2</span>
+              <span class="project-tag">Rust</span>
+              <span class="project-tag">SQLite</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_aura_title">Aura Academy Management System</h3>
+            <p class="project-description" data-i18n="project_aura_desc">
+              Offline-first desktop ERP for a private educational academy, unifying student & course management, attendance, a café POS, inventory, cash-shift reconciliation, payroll, and full financial reporting in one native app.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 11: Osama Group Agency ERP & CRM -->
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
+            <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
+            <img src="assets/images/agency-ERP 0.jpeg" alt="Osama Group Agency ERP Preview" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-meta-links">
+                <a href="project.html?id=agency-erp" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
+                  <i class="fa-solid fa-circle-info"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Cloudflare Workers</span>
+              <span class="project-tag">D1 (SQLite)</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Backblaze B2</span>
+            </div>
+            <h3 class="project-card-title" data-i18n="project_agency_title">Osama Group Agency ERP & CRM</h3>
+            <p class="project-description" data-i18n="project_agency_desc">
+              Full-stack ERP/CRM for a digital marketing agency running entirely on Cloudflare Workers and D1. Manages employees, clients, financial dues, a 7-stage project workflow, attendance, WhatsApp templates, complaints, and dynamic role-based permissions.
             </p>
           </div>
         </div>
@@ -510,7 +778,7 @@
             </div>
             <div class="contact-method-info">
               <div class="contact-label" data-i18n="contact_lbl_email">Email Address (Click to copy)</div>
-              <div class="contact-value">ibrahemosama161@gmail.com</div>
+              <div class="contact-value">ibrahem.gebaby@gmail.com</div>
             </div>
           </div>
 
@@ -548,7 +816,7 @@
         <a href="https://wa.me/201035748525" target="_blank" class="social-link" title="WhatsApp" style="color: #25D366;">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="mailto:ibrahemosama161@gmail.com" class="social-link" title="Email">
+        <a href="mailto:ibrahem.gebaby@gmail.com" class="social-link" title="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>

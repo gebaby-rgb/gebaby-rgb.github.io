@@ -59,7 +59,7 @@
     
     .project-detail-grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
       gap: 3rem;
       margin-top: 2rem;
     }
@@ -351,7 +351,7 @@
         <a href="https://wa.me/201035748525" target="_blank" class="social-link" title="WhatsApp" style="color: #25D366;">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="mailto:ibrahemosama161@gmail.com" class="social-link" title="Email">
+        <a href="mailto:ibrahem.gebaby@gmail.com" class="social-link" title="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
@@ -402,10 +402,7 @@
         },
         tech: ["HTML5", "CSS3", "Bootstrap 5", "Vanilla JS", "Swiper JS", "AOS"],
         images: [
-          "assets/images/oxygen_preview.png",
-          "assets/images/oxygen_detail_1.webp",
-          "assets/images/oxygen_detail_2.webp",
-          "assets/images/oxygen_detail_3.webp"
+          "assets/images/oxygen_preview.png"
         ]
       },
       gbb: {
@@ -588,7 +585,14 @@
         tech: ["React", "TypeScript", "Tauri v2", "Tailwind CSS v4", "Recharts", "SQL Plugin", "jsPDF"],
         images: [
           "assets/images/printing_accounting_preview.png",
-          "assets/images/Screenshot (141).png"
+          "assets/images/ms للدعاية.png",
+          "assets/images/ms للدعاية1.png",
+          "assets/images/ms للدعاية2.png",
+          "assets/images/ms للدعاية3.png",
+          "assets/images/ms للدعاية4.png",
+          "assets/images/ms للدعاية5.png",
+          "assets/images/ms للدعاية6.png",
+          "assets/images/ms للدعاية7.png"
         ]
       },
       vodafone: {
@@ -632,12 +636,290 @@
           "assets/images/vodafone_wallets.png",
           "assets/images/vodafone_cheapest.png",
           "assets/images/vodafone_debts.png",
-          "assets/images/Screenshot (142).png",
-          "assets/images/Screenshot (143).png",
-          "assets/images/Screenshot (144).png",
-          "assets/images/Screenshot (145).png",
-          "assets/images/Screenshot (146).png",
-          "assets/images/Screenshot (147).png"
+          "assets/images/مستقبل كاش.png",
+          "assets/images/مستقبل كاش1.png",
+          "assets/images/مستقبل كاش2.png",
+          "assets/images/مستقبل كاش3.png",
+          "assets/images/مستقبل كاش4.png",
+          "assets/images/مستقبل كاش5.png"
+        ]
+      },
+      "exam-platform": {
+        en: {
+          title: "Al-Fares Al-Moaser Exam Platform",
+          description: "A free, fully custom-built online exam platform delivered for a secondary-school teacher client, serving Grade 1 and Grade 2 secondary students. Built end-to-end with a serverless Google Apps Script backend and Google Sheets as the live database, hosted on Cloudflare Pages for fast global delivery.",
+          client: "Private Secondary School Teacher (Grade 1 & 2)",
+          purpose: "Give the teacher a paperless, zero-cost way to run timed multiple-choice and true/false exams for two separate grade levels, with automatic grading and cheat-resistant controls.",
+          problem: "The teacher needed a reliable way to run timed exams for two grade levels without paying for traditional server hosting, while preventing duplicate attempts and basic cheating.",
+          challenges: "Engineering a fully serverless architecture on Google Apps Script and Sheets that shuffles questions per attempt, blocks duplicate submissions, and detects tab-switching or fullscreen exits in real time without a conventional backend.",
+          results: "Delivered a zero hosting-cost, production exam platform that automatically grades every attempt, flags suspicious tab-switch behavior, and gives the teacher full scheduling and audit control per grade.",
+          features: [
+            "Shuffled MCQ / True-False questions and answer order on every attempt",
+            "Instant automatic grading with a per-question correct-answer review screen",
+            "Duplicate-attempt prevention tied to each student's identity",
+            "Anti-cheating detection: tab-switch and fullscreen-exit warnings with auto-submit on repeat violations",
+            "Teacher-controlled scheduled open/close windows per exam",
+            "Full admin action logging for transparency and auditing",
+            "Strict grade separation — dedicated landing pages, results, and schedules for Grade 1 and Grade 2"
+          ],
+          status: "Completed / Live for Client"
+        },
+        ar: {
+          title: "منصة الفارس المعاصر للامتحانات الإلكترونية",
+          description: "منصة امتحانات إلكترونية مجانية مبنية بالكامل من الصفر لصالح عميل مدرّس بالمرحلة الثانوية، وتخدم طلاب الصف الأول والصف الثاني الثانوي. تم بناؤها بالكامل باستخدام Google Apps Script كخادم بدون سيرفر تقليدي (Serverless) وجداول Google Sheets كقاعدة بيانات حية، مع استضافة على Cloudflare Pages لضمان سرعة الوصول من أي مكان.",
+          client: "مدرّس بمدرسة ثانوية خاصة (الصف الأول والثاني الثانوي)",
+          purpose: "منح المعلم وسيلة مجانية وخالية من الورق لعقد امتحانات محددة بوقت (اختيار من متعدد وصح/خطأ) لصفين دراسيين، مع تصحيح تلقائي وإجراءات حماية من الغش.",
+          problem: "احتاج المعلم لوسيلة موثوقة لعقد امتحانات محددة بوقت لصفين دراسيين دون دفع تكلفة استضافة تقليدية، مع منع تكرار المحاولات والغش الأساسي.",
+          challenges: "بناء معمارية Serverless بالكامل باستخدام Google Apps Script وSheets تقوم بخلط الأسئلة في كل محاولة، ومنع تكرار التسليم، واكتشاف تبديل التبويبات أو الخروج من وضع ملء الشاشة فورياً دون خادم تقليدي.",
+          results: "تسليم منصة امتحانات جاهزة للعمل الفعلي بدون أي تكلفة استضافة، تقوم بتصحيح كل محاولة تلقائياً، وترصد محاولات الغش المشبوهة، وتمنح المعلم تحكماً كاملاً في الجدولة والمراجعة لكل صف.",
+          features: [
+            "خلط ترتيب الأسئلة والإجابات في كل امتحان اختيار من متعدد وصح/خطأ لكل محاولة",
+            "تصحيح تلقائي فوري مع شاشة مراجعة تعرض الإجابة الصحيحة لكل سؤال",
+            "منع تكرار محاولة الامتحان لنفس الطالب",
+            "نظام حماية من الغش: تنبيه عند تبديل التبويب أو الخروج من وضع ملء الشاشة مع تسليم تلقائي عند التكرار",
+            "تحكم المعلم بالكامل في مواعيد فتح وإغلاق كل امتحان",
+            "سجل كامل لكل إجراءات الإدارة لضمان الشفافية والمراجعة",
+            "فصل صارم بين الصفوف الدراسية — صفحات هبوط ونتائج ومواعيد مستقلة لكل صف"
+          ],
+          status: "مكتمل / يعمل فعلياً لدى العميل"
+        },
+        tech: ["JavaScript", "HTML5", "CSS3", "Google Apps Script", "Google Sheets", "Cloudflare Pages"],
+        images: [
+          "assets/images/exam_platform_preview.svg",
+          "assets/images/exam_platform_results.svg",
+          "assets/images/exam_platform_admin.svg"
+        ]
+      },
+      "aura-academy": {
+        en: {
+          title: "Aura Academy Management System",
+          description: "A comprehensive offline-first desktop ERP built for AURA Academy, a private educational and training center that also runs an in-house student café. Combines student & course management, attendance tracking, a café point-of-sale, inventory control, cash-shift reconciliation, payroll, and full financial reporting in one native Windows application.",
+          client: "AURA Academy — Private Educational & Training Center",
+          purpose: "Replace scattered paper and spreadsheet tracking of student enrollments, attendance, wallet balances, café sales, staff shifts, and monthly accounting with one reliable offline-first system.",
+          problem: "The academy needed a single system to manage students, courses, attendance, an on-site café, cash shifts, and payroll — all while working reliably without a dependable internet connection.",
+          challenges: "Designing a unified Rust/SQLite backend (via Tauri) that keeps course billing, café POS transactions, cash-shift reconciliation, and payroll consistent in one local database, plus building automatic backups and idle-lock security for a shared front-desk machine.",
+          results: "Delivered a single native desktop app covering the academy's day-to-day accounting and operations end-to-end, with automatic local backups, role-based access, and real-time dashboards for revenue, profit, and outstanding student debts.",
+          features: [
+            "Student records with wallet balances, enrollment history, and attendance tracking per course",
+            "Course scheduling with instructor assignment and a per-session attendance roster",
+            "Built-in café point-of-sale with product categories, pricing, and cash/wallet payments",
+            "Cash-shift open/close workflow with automatic expected-vs-counted variance reconciliation",
+            "Inventory management with low-stock and critical-stock alerts",
+            "Financial dashboard with revenue/expense breakdowns, profit margins, and period-over-period comparisons",
+            "Student debts ledger with one-click WhatsApp payment reminders",
+            "Payroll with base salary, bonuses, deductions, and salary advances",
+            "Role-based accounts (admin/manager/employee) with a full audit log and automatic database backups"
+          ],
+          status: "Completed & Active"
+        },
+        ar: {
+          title: "نظام إدارة أكاديمية أورا",
+          description: "نظام ERP متكامل يعمل دون اتصال بالإنترنت (Offline-First) تم بناؤه لأكاديمية أورا، وهو مركز تعليمي وتدريبي خاص يضم أيضاً كافيتريا داخلية للطلاب. يجمع بين إدارة الطلاب والكورسات، وتسجيل الحضور، ونقطة بيع للكافيه، وإدارة المخزون، وتسوية الورديات النقدية، والرواتب، والتقارير المالية الكاملة في تطبيق واحد أصلي لنظام ويندوز.",
+          client: "أكاديمية أورا — مركز تعليمي وتدريبي خاص",
+          purpose: "استبدال التسجيل الورقي والمتفرق عبر جداول إكسل لبيانات تسجيل الطلاب، والحضور، وأرصدة المحافظ، ومبيعات الكافيه، وورديات الموظفين، والحسابات الشهرية، بنظام واحد موثوق يعمل دون إنترنت.",
+          problem: "احتاجت الأكاديمية لنظام واحد يدير الطلاب والكورسات والحضور وكافيتريا داخلية وورديات نقدية ورواتب — مع ضمان العمل بشكل موثوق دون اتصال دائم بالإنترنت.",
+          challenges: "تصميم بنية موحدة بلغة Rust وقاعدة بيانات SQLite (عبر Tauri) تجمع بين فواتير الكورسات، ومبيعات نقطة بيع الكافيه، وتسوية الورديات النقدية، والرواتب، في قاعدة بيانات محلية واحدة متّسقة، مع بناء نظام نسخ احتياطي تلقائي وقفل تلقائي عند عدم النشاط لحماية جهاز الاستقبال المشترك.",
+          results: "تسليم تطبيق سطح مكتب أصلي واحد يغطي كافة العمليات اليومية والمحاسبية للأكاديمية، مع نسخ احتياطي محلي تلقائي، وصلاحيات حسب الدور، ولوحات تحكم فورية للإيرادات والأرباح والمستحقات المتأخرة على الطلاب.",
+          features: [
+            "سجلات طلاب متكاملة تضم رصيد المحفظة، وسجل الاشتراكات، ومتابعة الحضور لكل كورس",
+            "جدولة الكورسات مع تعيين المدربين وكشف حضور لكل جلسة",
+            "نقطة بيع مدمجة لكافيتريا الأكاديمية تدعم الفئات والأسعار والدفع كاش أو من المحفظة",
+            "دورة عمل لفتح وإغلاق الوردية النقدية مع تسوية تلقائية للفرق بين المتوقع والفعلي",
+            "إدارة مخزون مع تنبيهات عند انخفاض المخزون أو وصوله لمستوى حرج",
+            "لوحة تحكم مالية تعرض توزيع الإيرادات والمصروفات وهامش الربح ومقارنات الفترات",
+            "دفتر مستحقات الطلاب مع تذكير دفع بضغطة واحدة عبر واتساب",
+            "نظام رواتب يشمل الراتب الأساسي والمكافآت والخصومات والسلف",
+            "حسابات بصلاحيات حسب الدور (أدمن/مدير/موظف) مع سجل تدقيق كامل ونسخ احتياطي تلقائي لقاعدة البيانات"
+          ],
+          status: "مكتمل ونشط"
+        },
+        tech: ["React 19", "TypeScript", "Tauri v2", "Rust", "SQLite", "Tailwind CSS", "Zustand", "Radix UI", "Recharts"],
+        images: [
+          "assets/images/aura academy 0.png",
+          "assets/images/aura academy 1.png",
+          "assets/images/aura academy 2.png",
+          "assets/images/aura academy 3.png",
+          "assets/images/aura academy 4.png",
+          "assets/images/aura academy 5.png",
+          "assets/images/aura academy 6.png",
+          "assets/images/aura academy 7.png",
+          "assets/images/aura academy 8.png",
+          "assets/images/aura academy 9.png",
+          "assets/images/aura academy 10.png",
+          "assets/images/aura academy 11.png",
+          "assets/images/aura academy 12.png",
+          "assets/images/aura academy 13.png",
+          "assets/images/aura academy 14.png",
+          "assets/images/aura academy 15.png",
+          "assets/images/aura academy 16.png"
+        ]
+      },
+      "agency-erp": {
+        en: {
+          title: "Osama Group Agency ERP & CRM",
+          description: "A full-stack ERP/CRM system built for a digital marketing agency (\"Osama Group\"), running entirely on Cloudflare Workers with a D1 (SQLite) database and a vanilla JavaScript/HTML/CSS frontend (no framework) served from the same Worker. Manages employees, clients, financial dues, a 7-stage project workflow, attendance/time-off, WhatsApp message templates, client complaints, ratings, periodic staff reports, and a fully dynamic roles & permissions system — all protected by a complete audit log.",
+          client: "Osama Group — Digital Marketing Agency (internal operations)",
+          purpose: "Replace scattered manual tracking of client work, employee records, and financial dues with a single system that enforces exactly who can see or change what, and logs every action.",
+          problem: "The agency ran client work, staff records, financial dues, and project handoffs through scattered manual tracking, with no single source of truth for who owed what, who owned which task, or what had changed and when.",
+          challenges: "Designing a role-based permission system covering 11 distinct roles across 35+ API routes (later rebuilt into a fully dynamic, data-driven system instead of hardcoded arrays), enforcing per-record ownership rules (only a task's assignee or the owner can update its status), and wiring secure private file uploads (contracts, rating screenshots) through Backblaze B2 from inside the Worker itself via aws4fetch, so raw storage links are never exposed to the client.",
+          results: "Shipped a single-Worker deployment (API and static frontend together) that passed a 396-case regression suite covering every route x role combination, with a fully dynamic roles/permissions screen the owner can edit with no redeploy, and zero-cost file bandwidth via the Cloudflare-Backblaze partnership.",
+          features: [
+            "Role-based access control across 11 roles, now fully dynamic — roles and permissions editable from the UI with no redeploy",
+            "Owner dashboard summarizing clients, active projects, task status breakdown, open complaints, and overdue dues in one query",
+            "Client & financial dues management with a \"mark as paid\" workflow and per-client contract uploads",
+            "7-stage project workflow engine (brief -> strategy -> content plan -> design -> video -> media buy -> publish) with a personal \"My Tasks\" view per employee",
+            "Attendance/time-off logging with salary-deduction hours tracked per record",
+            "One-click WhatsApp message templates (wa.me links) for follow-ups, payment reminders, and general messages",
+            "Client complaint tracking and per-project client ratings with screenshot evidence",
+            "Periodic staff report submissions with an owner-only aggregated report view",
+            "Full audit log of every write action in the system, plus secure private file uploads (contracts, rating screenshots) via Backblaze B2"
+          ],
+          status: "MVP Completed — Pre-Launch Pilot"
+        },
+        ar: {
+          title: "نظام Osama Group لإدارة الوكالات (ERP/CRM)",
+          description: "نظام ERP/CRM متكامل تم بناؤه لوكالة تسويق رقمي (Osama Group)، يعمل بالكامل على Cloudflare Workers مع قاعدة بيانات D1 (SQLite) وواجهة أمامية بلغة JavaScript وHTML وCSS خالصة (بدون أي Framework) تُقدَّم من نفس الـ Worker. يدير الموظفين، والعملاء، والمستحقات المالية، وسير عمل المشاريع بسبع مراحل، والحضور والغياب، وقوالب رسائل واتساب، وشكاوى العملاء، والتقييمات، والتقارير الدورية للموظفين، ونظام أدوار وصلاحيات ديناميكي بالكامل — كل ذلك محمي بسجل تدقيق كامل.",
+          client: "Osama Group — وكالة تسويق رقمي (نظام تشغيل داخلي)",
+          purpose: "استبدال المتابعة اليدوية المتفرقة لأعمال العملاء وسجلات الموظفين والمستحقات المالية بنظام واحد يفرض بدقة مين يقدر يشوف أو يعدّل إيه، ويسجّل كل عملية تتم.",
+          problem: "كانت الوكالة تدير أعمال العملاء وسجلات الموظفين والمستحقات المالية وتسليم المشاريع عبر متابعة يدوية متفرقة، بدون مصدر واحد موثوق لمعرفة مين عليه فلوس، ومين مسؤول عن أي مهمة، وإيه اللي اتغيّر وإمتى.",
+          challenges: "تصميم نظام صلاحيات مبني على الأدوار يغطي 11 دورًا مختلفًا عبر أكثر من 35 مسار API (وإعادة بنائه لاحقًا كنظام ديناميكي بالكامل مبني على البيانات بدل الاعتماد على قوائم ثابتة في الكود)، وفرض قواعد ملكية على مستوى كل سجل (تحديث حالة المهمة مسموح فقط لصاحبها أو للأونر)، وربط رفع الملفات الخاصة (العقود، سكرين شوت التقييمات) بأمان عبر Backblaze B2 من داخل الـ Worker نفسه باستخدام aws4fetch، بحيث لا يظهر رابط التخزين المباشر للعميل أبدًا.",
+          results: "تسليم نظام بنشر واحد فقط (الـ API والواجهة الأمامية مع بعض من نفس الـ Worker)، اجتاز 396 اختبار انحدار تغطي كل مسار × كل دور، مع شاشة أدوار وصلاحيات ديناميكية بالكامل يقدر الأونر يعدّلها من غير إعادة نشر، وتخزين ملفات بدون أي تكلفة على الباندويدث بفضل شراكة Cloudflare مع Backblaze.",
+          features: [
+            "نظام صلاحيات مبني على 11 دورًا، أصبح الآن ديناميكيًا بالكامل — تعديل الأدوار والصلاحيات من الواجهة بدون إعادة نشر",
+            "لوحة تحكم للأونر تلخّص العملاء، والمشاريع الشغالة، وحالة المهام، والشكاوى المفتوحة، والمستحقات المتأخرة في استعلام واحد",
+            "إدارة العملاء والمستحقات المالية مع زر \"تم الدفع\" ورفع عقود لكل عميل",
+            "محرك سير عمل للمشاريع بسبع مراحل (بريف ← استراتيجية ← خطة محتوى ← تصميم ← فيديو ← ميديا باي ← نشر) مع صفحة \"مهامي\" شخصية لكل موظف",
+            "تسجيل غياب/إذن مع تتبع ساعات خصم الراتب لكل سجل",
+            "قوالب رسائل واتساب جاهزة (روابط wa.me) للمتابعة والتذكير بالدفع والرسائل العامة",
+            "تسجيل شكاوى العملاء وتقييمات العملاء لكل مشروع مع أدلة سكرين شوت",
+            "إرسال تقارير دورية للموظفين وشاشة تجميع تقارير للأونر فقط",
+            "سجل تدقيق كامل لكل عملية كتابة في النظام، بالإضافة إلى رفع ملفات خاصة وآمنة (عقود، سكرين شوت تقييمات) عبر Backblaze B2"
+          ],
+          status: "اكتمل الإصدار التجريبي (MVP) — قيد التجربة قبل الإطلاق"
+        },
+        tech: ["Cloudflare Workers", "TypeScript", "D1 (SQLite)", "Backblaze B2", "aws4fetch", "Vanilla JS/HTML/CSS"],
+        images: [
+          "assets/images/agency-ERP 0.jpeg",
+          "assets/images/agency-ERP  2 (1).jpeg",
+          "assets/images/agency-ERP  2 (2).jpeg",
+          "assets/images/agency-ERP 6 (2).jpeg",
+          "assets/images/agency-ERP 6 (3).jpeg",
+          "assets/images/agency-ERP 6 (4).jpeg",
+          "assets/images/agency-ERP 6 (1).jpeg",
+          "assets/images/agency-ERP 8 (1).jpeg",
+          "assets/images/agency-ERP 8 (2).jpeg",
+          "assets/images/agency-ERP 9.jpeg"
+        ]
+      },
+      mastoor: {
+        en: {
+          title: "Mastoor Home Textiles ERP & Installment System",
+          description: "A comprehensive offline-first desktop ERP and Point of Sale (POS) system engineered for retail and wholesale home textiles, cut-to-order fabrics, and household linen businesses. Features an advanced credit & installment ledger with guarantor profiles, multi-channel cash treasury (Cash drawer, Vodafone Cash, InstaPay), fabric yardage tracking, and active order deposit reservations.",
+          client: "Mastoor Home Textiles & Fabrics Enterprise",
+          purpose: "Unify POS fabric sales, installment credit contracts, supplier dues, and cash flow reconciliation across multiple digital and physical wallets into a 100% offline-resilient desktop app.",
+          problem: "The enterprise suffered from chaotic paper installment logs, untracked guarantor information, frequent discrepancies when selling fabric by fractional meters, and disconnected financial accounting between the cash register, mobile wallets, and InstaPay.",
+          challenges: "Designing an offline-first financial ledger on SQLite via Tauri v2 with zero data loss, integrating keyboard-accelerated POS cashier operations (F2 checkout, F4 reservations), managing cut fabric fractional measurements, and automated guarantor installment tracking.",
+          results: "Achieved 100% precision in installment collection and overdue alerts, cut counter checkout time for cut-to-order fabrics to under 5 seconds, and eliminated end-of-shift cash variance to 0%.",
+          features: [
+            "Executive command dashboard tracking net revenue, COGS gross profits, multi-channel cash liquidity, and inventory",
+            "Advanced installment ledger managing customer debt schedules, guarantor profiles, and overdue alerts",
+            "Rapid POS sales counter with keyboard shortcuts (F2 pay, F4 booking) and barcode scanner integration",
+            "Multi-channel cash treasury: separate tracking for cash drawer, Vodafone Cash, and InstaPay transfers",
+            "Textiles & fabrics catalog tracking linear meters, piece goods, landed costs, and supplier dues",
+            "Fabrics booking & deposit management system with active delivery queues",
+            "Staff follow-up and audit log tracking user permissions and daily cashier shifts",
+            "100% local database storage powered by embedded SQLite with instant zero-latency auto-save"
+          ],
+          status: "Completed & Active in Production"
+        },
+        ar: {
+          title: "نظام مستور لإدارة الأقمشة والمفروشات والتقسيط (ERP & POS)",
+          description: "تطبيق سطح مكتب محاسبي وإداري متكامل (Offline-First) لمتاجر الأقمشة والمفروشات المنزلية. يجمع بين نقطة بيع سريعة (POS)، ومنظومة عقود بيع بالتقسيط مع الضامنين، وإدارة الخزينة والسيولة (نقدية بالدرج، فودافون كاش، إنستاباي)، وتتبع أمتار الأقمشة والمفروشات بالقطعة، وحجوزات الأقمشة وعرابين الاستلام.",
+          client: "مؤسسة مستور للأقمشة والمفروشات والمنسوجات المنزلية",
+          purpose: "توحيد مبيعات الأقمشة والمفروشات، وعقود التقسيط والضامنين، ومستحقات الموردين، ومطابقة حركة النقدية والمحافظ الإلكترونية في نظام مكتبي واحد فائق السرعة يعمل دون اتصال بالإنترنت.",
+          problem: "عانت المؤسسة من فوضى الدفاتر الورقية في تحصيل الأقساط، وصعوبة متابعة الضامنين والأقساط المتأخرة، وتداخل مبيعات الأقمشة المقاسة بالأمتار مع المفروشات، وتشتت السيولة بين نقدية الدرج ومحافظ فودافون كاش وإنستاباي دون مطابقة يومية دقيقة.",
+          challenges: "بناء محرك حسابات دقيق يربط عقود التقسيط بجدول زمني آلي للأقساط الشهرية والأسبوعية مع الضامنين، وتصميم شاشة نقطة بيع (POS) فائقة السرعة تدعم اختصارات لوحة المفاتيح (F2, F4) وحسابات العرابين، مع حفظ قاعدة بيانات SQLite محلياً ومزامنة فورية دون انقطاع.",
+          results: "تحصيل الأقساط ومتابعة المتأخرات بدقة 100% دون فقدان أي قسط، وتقليص زمن إصدار فواتير الأقمشة إلى 5 ثوانٍ، وضبط السيولة النقدية ومطابقة الورديات والخزائن بنسبة خطأ 0%.",
+          features: [
+            "لوحة مؤشرات تنفيذية شاملة: صافي المبيعات، مجمل الأرباح (COGS)، السيولة المتاحة، والمخزون",
+            "منظومة بيع بالتقسيط متقدمة مع بيانات الضامنين، كشوف الحساب، وفلاتر الأقساط المتأخرة والقادمة",
+            "نقطة بيع سريعة (POS) تدعم اختصارات الكيبورد (F2 سداد، F4 حجز) والبحث السريع بالباركود",
+            "إدارة السيولة والخزائن المتعددة: نقدية الدرج، محافظ فودافون كاش، ومحفظة إنستاباي (InstaPay)",
+            "دليل متكامل للأقمشة والمنسوجات بتكاليف الاستيراد وحجوزات وعرابين الأقمشة قيد التسليم",
+            "نظام ورديات كاشير مع تدقيق إغلاق الوردية وحساب الفوارق تلقائياً",
+            "أداء محلي 100% فائق السرعة عبر محرك SQLite دون الحاجة لأي اتصال بالإنترنت"
+          ],
+          status: "مكتمل ونشط في بيئة العمل الفعلية"
+        },
+        tech: ["React 19", "Tauri v2", "Rust", "SQLite", "TypeScript", "Tailwind CSS", "Zustand"],
+        images: [
+          "assets/images/project/Screenshot (244).png",
+          "assets/images/project/Screenshot (245).png",
+          "assets/images/project/Screenshot (246).png",
+          "assets/images/project/Screenshot (247).png",
+          "assets/images/project/Screenshot (248).png",
+          "assets/images/project/Screenshot (249).png",
+          "assets/images/project/Screenshot (250).png",
+          "assets/images/project/Screenshot (251).png",
+          "assets/images/project/Screenshot (252).png",
+          "assets/images/project/Screenshot (253).png"
+        ]
+      },
+      "gebaby-platform": {
+        en: {
+          title: "Gebaby EdTech & Exam Management Platform",
+          description: "A centralized cloud learning and examination management platform deployed on Cloudflare Pages. Features dedicated role-separated portals for Admins, Teachers, and Students, complete with student group management, a question bank, timed auto-graded exams, digital study library (PDF/video uploads), full activity audit logs, and a gamified merit-ranking leaderboard.",
+          client: "Gebaby EdTech Learning & Examination Ecosystem",
+          purpose: "Eliminate fragmented communication across social messaging groups by providing a centralized cloud ecosystem for exams, study material delivery, teacher rosters, and gamified student engagement.",
+          problem: "Teachers and students struggled with scattered study files, untracked exam results, manual grading bottlenecks, and lack of a structured administrative audit trail to oversee teacher activities and student progress.",
+          challenges: "Designing a high-speed multi-portal web architecture on Cloudflare Pages and Workers with D1, enforcing strict RBAC security across Admin, Teacher, and Student roles, engineering a robust online exam engine with instant auto-grading, and building an interactive gamified leaderboard.",
+          results: "Delivered a lightning-fast cloud educational platform with sub-50ms latency via Cloudflare edge CDN, 100% automated exam grading, and significant boosts in student motivation through merit rank tiers.",
+          features: [
+            "Centralized admin dashboard monitoring active enrollments, exam throughput, score averages, and ticket queues",
+            "Full system audit log capturing all administrative and pedagogical events with time and user filtering",
+            "Teacher portal with student group assignment, custom question bank, and timed exam publishing",
+            "Rich digital library supporting PDF study pack uploads and integrated YouTube/Google Drive educational media",
+            "Student portal enabling one-click teacher enrollment requests, active exam sittings, and instant grading",
+            "Gamification and leaderboard rankings awarding points and tiered bronze/gold achievement badges",
+            "Full bilingual support (English/Arabic) with mobile-first responsive interfaces across all portals"
+          ],
+          status: "Completed & Live on Cloudflare"
+        },
+        ar: {
+          title: "منصة جيبابي المركزية لإدارة التعليم والامتحانات (Gebaby EdTech)",
+          description: "منصة تعليمية سحابية متكاملة للمعلمين والطلاب مستضافة على Cloudflare Pages، تجمع بين إدارة المجموعات، وبنك الأسئلة، والامتحانات المؤقتة مع التصحيح الآلي، والمكتبة الرقمية للمذكرات والفيديوهات، وبوابة الطلاب التفاعلية مع نظام النقاط وترتيب الأوائل (Gamification).",
+          client: "منصة تعليمية مركزية للمعلمين والطلاب - Gebaby EdTech",
+          purpose: "القضاء على تشتت المذكرات والامتحانات على منصات التواصل الاجتماعي عبر توفير منصة سحابية موحدة تجمع المعلمين والطلاب وتدير الامتحانات والمكتبة والترتيب.",
+          problem: "تشتت المعلمين والطلاب بين جروبات واتساب وجداول إكسل لمتابعة الحصص والمذكرات، وصعوبة إجراء امتحانات محددة الوقت مع تصحيح آلي فوري، وغياب بيئة مركزية تحفز الطلاب على التنافس وتمنح الإدارة رقابة كاملة على سجلات النشاط والشكاوى.",
+          challenges: "بناء منصة متكاملة متعددة البوابات (بوابة الإدارة، بوابة المعلم، بوابة الطالب) مع فصل أمني كامل للصلاحيات، وتصميم محرك امتحانات يتعامل مع بنوك الأسئلة وخلطها عشوائياً وتصحيحها لحظياً، بالإضافة إلى مكتبة للمذكرات والفيديوهات وسجل تدقيق شامل (Audit Log) على كل إجراء، كل ذلك بأداء فائق عبر شبكة Cloudflare العالمية.",
+          results: "تشغيل منصة تعليمية سحابية مركزية تخدم مئات الطلاب والمعلمين بزمن استجابة أقل من 50 ملي ثانية عالمياً، مع أتمتة التصحيح بنسبة 100% وتحفيز الطلاب بنظام الرتب والنقاط الشفاف.",
+          features: [
+            "لوحة تحكم إدارية مركزية: إحصائيات الطلاب والمعلمين، المحاولات المسلمة، متوسط الدرجات، والشكاوى",
+            "سجل تدقيق كامل وشامل (Audit Log) يوثق كل إجراء من المعلمين والمديرين مع فلاتر التاريخ والمستخدم",
+            "بوابة المعلم: إدارة مجموعات الطلاب، بنك الأسئلة، وإعداد ونشر الامتحانات المجدولة",
+            "مكتبة رقمية متطورة تدعم رفع وتصنيف مذكرات الـ PDF والربط مع فيديوهات YouTube و Google Drive",
+            "بوابة الطالب الذكية: تصفح المعلمين، إرسال طلبات الانضمام، وأداء الامتحانات المؤقتة فورياً",
+            "نظام تحفيز وترتيب تفاعلي (Gamification & Ranking) يمنح نقاط وأوسمة برونزية وذهبية للطلاب المتفوقين",
+            "دعم ثنائي اللغة كامل (عربي / إنجليزي) وتصميم متجاوب 100% يعمل بسلاسة على الهواتف والأجهزة اللوحية"
+          ],
+          status: "مكتمل ويعمل سحابياً على Cloudflare"
+        },
+        tech: ["Cloudflare Pages", "Cloudflare Workers", "TypeScript", "D1 (SQLite)", "Tailwind CSS", "REST API", "Chart.js"],
+        images: [
+          "assets/images/project1/Screenshot (227).png",
+          "assets/images/project1/Screenshot (228).png",
+          "assets/images/project1/Screenshot (229).png",
+          "assets/images/project1/Screenshot (230).png",
+          "assets/images/project1/Screenshot (231).png",
+          "assets/images/project1/Screenshot (232).png",
+          "assets/images/project1/Screenshot (233).png",
+          "assets/images/project1/Screenshot (234).png",
+          "assets/images/project1/Screenshot (235).png",
+          "assets/images/project1/Screenshot (236).png",
+          "assets/images/project1/Screenshot (237).png",
+          "assets/images/project1/Screenshot (238).png",
+          "assets/images/project1/Screenshot (239).png",
+          "assets/images/project1/Screenshot (240).png"
         ]
       }
     };
