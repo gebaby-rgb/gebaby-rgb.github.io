@@ -865,6 +865,53 @@
           "assets/images/project/Screenshot (253).png"
         ]
       },
+      "novera-clean": {
+        en: {
+          title: "Novera Clean - Cleaning & Pest Control Website",
+          description: "A bilingual (Arabic RTL / English) marketing website for Novera Clean, a cleaning and pest control company in Dammam, Saudi Arabia. Presents every service on its own page, service areas across the Eastern Province, an FAQ, and one-tap call and WhatsApp booking, with a dark-mode toggle and a fully responsive layout.",
+          client: "Novera Clean - Cleaning & Pest Control, Dammam, Saudi Arabia",
+          purpose: "Turn local search traffic into phone and WhatsApp bookings by presenting the services clearly and making contact a single tap away.",
+          problem: "The company needed a web presence to showcase its range of services (pest control, sterilization, sofa/carpet/villa/mosque cleaning, water tank cleaning) and to capture customers searching in Arabic across Dammam, Khobar, Qatif, Jubail and nearby areas.",
+          challenges: "Building a fast, SEO-friendly Arabic-first site with correct RTL layout and a mirrored English version, giving each service its own indexable page, and keeping the booking flow friction-free on mobile with click-to-call and pre-filled WhatsApp messages.",
+          results: "A live production website at noveraclean.com with dedicated service pages, service-area coverage, FAQ, legal pages, and direct call/WhatsApp conversion paths on every screen.",
+          features: [
+            "Arabic-first RTL design with a complete English version and language switcher",
+            "Dedicated pages for each service: pest control, sterilization, pigeon repellent, sofa, carpet, apartment/villa and mosque cleaning, water tanks",
+            "Service-area coverage for Dammam, Khobar, Qatif, Safwa, Jubail and the Eastern Province",
+            "Sticky click-to-call button and WhatsApp link with a pre-filled Arabic message",
+            "Simple three-step booking flow, FAQ section, privacy policy and terms pages",
+            "Light/dark theme toggle and mobile-first responsive layout"
+          ],
+          status: "Completed & Live"
+        },
+        ar: {
+          title: "موقع نوفيرا كلين لخدمات التنظيف ومكافحة الحشرات",
+          description: "موقع تعريفي ثنائي اللغة (عربي RTL / إنجليزي) لشركة نوفيرا كلين للتنظيف ومكافحة الحشرات بالدمام. يعرض كل خدمة في صفحة مستقلة ومناطق الخدمة بالمنطقة الشرقية والأسئلة الشائعة مع الحجز بنقرة واحدة عبر الاتصال أو واتساب، مع وضع ليلي وتصميم متجاوب بالكامل.",
+          client: "شركة نوفيرا كلين للتنظيف ومكافحة الحشرات - الدمام، المملكة العربية السعودية",
+          purpose: "تحويل زيارات البحث المحلي إلى حجوزات عبر الهاتف وواتساب من خلال عرض الخدمات بوضوح وجعل التواصل بنقرة واحدة.",
+          problem: "حاجة الشركة لحضور رقمي يعرض تنوع خدماتها (مكافحة الحشرات، التعقيم، طارد الحمام، تنظيف الكنب والسجاد والشقق والفلل والمساجد وخزانات المياه) ويستقطب العملاء الباحثين بالعربية في الدمام والخبر والقطيف والجبيل وما حولها.",
+          challenges: "بناء موقع سريع ومتوافق مع محركات البحث بواجهة عربية RTL ونسخة إنجليزية مطابقة، وإفراد صفحة مستقلة لكل خدمة، وتبسيط رحلة الحجز على الجوال عبر زر اتصال مباشر ورسالة واتساب جاهزة.",
+          results: "موقع حي ومنشور على noveraclean.com بصفحات خدمات مستقلة وتغطية لمناطق الخدمة وأسئلة شائعة وصفحات قانونية ومسارات تحويل مباشرة عبر الاتصال وواتساب في كل شاشة.",
+          features: [
+            "تصميم عربي RTL أولاً مع نسخة إنجليزية كاملة وزر تبديل اللغة",
+            "صفحة مستقلة لكل خدمة: مكافحة الحشرات، التعقيم، طارد الحمام، تنظيف الكنب والسجاد والشقق والفلل والمساجد وخزانات المياه",
+            "تغطية مناطق الدمام والخبر والقطيف وصفوى والجبيل والمنطقة الشرقية",
+            "زر اتصال ثابت ورابط واتساب برسالة عربية جاهزة",
+            "رحلة حجز بثلاث خطوات وقسم أسئلة شائعة وصفحتا الخصوصية والشروط",
+            "وضع فاتح/داكن وتصميم متجاوب يبدأ من الجوال"
+          ],
+          status: "مكتمل ومنشور"
+        },
+        liveUrl: "https://noveraclean.com/",
+        tech: ["HTML5", "CSS3", "JavaScript", "RTL / i18n", "SEO", "Responsive Design"],
+        images: [
+          "assets/images/novera/novera-ar-home.png",
+          "assets/images/novera/novera-en-home.png",
+          "assets/images/novera/novera-ar-full.png",
+          "assets/images/novera/novera-en-full.png",
+          "assets/images/novera/novera-mobile.png"
+        ]
+      },
       "gebaby-platform": {
         en: {
           title: "Gebaby EdTech & Exam Management Platform",
@@ -1024,6 +1071,14 @@
 
       // Populate Project Data once on load (non-lingual metadata)
       if (project) {
+        // Set live site link
+        if (project.liveUrl) {
+          const liveItem = document.createElement('div');
+          liveItem.className = 'meta-item';
+          liveItem.innerHTML = `<span class="meta-label">Live Site · الموقع المباشر</span><a class="meta-value" style="color: var(--accent-secondary);" href="${project.liveUrl}" target="_blank" rel="noopener">${project.liveUrl.replace('https://', '')} <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
+          document.getElementById('project-status').parentElement.after(liveItem);
+        }
+
         // Set code link
         const codeBtn = document.getElementById('project-code-btn');
         if (codeBtn) {

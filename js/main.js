@@ -58,9 +58,9 @@ const translations = {
     
     projects_title: "Projects Showcase",
     projects_subtitle: "Explore actual screenshots of active ERPs, custom accounting apps, and websites built on my workstation.",
-    filter_all: "All Projects (11)",
+    filter_all: "All Projects (12)",
     filter_desktop: "Desktop & ERPs (7)",
-    filter_web: "Web & Cloud Platforms (4)",
+    filter_web: "Web & Cloud Platforms (5)",
     category_badge_desktop: "Desktop & ERP",
     category_badge_web: "Cloud & Web",
     
@@ -84,6 +84,8 @@ const translations = {
     project_exam_desc: "A free, fully custom online exam platform for a secondary-school teacher, serving Grade 1 & 2 students. Serverless Google Apps Script backend with Google Sheets as the database, featuring auto-grading, anti-cheat detection, and scheduled exam windows.",
     project_aura_title: "Aura Academy Management System",
     project_aura_desc: "Offline-first desktop ERP for a private educational academy, unifying student & course management, attendance, a café POS, inventory, cash-shift reconciliation, payroll, and full financial reporting in one native app.",
+    project_novera_title: "Novera Clean - Cleaning & Pest Control Website",
+    project_novera_desc: "Bilingual (Arabic RTL / English) marketing website for a cleaning and pest control company in Dammam. Dedicated service pages, FAQ, dark mode, and one-tap call and WhatsApp booking.",
     project_agency_title: "Osama Group Agency ERP & CRM",
     project_agency_desc: "Full-stack ERP/CRM for a digital marketing agency running entirely on Cloudflare Workers and D1. Manages employees, clients, financial dues, a 7-stage project workflow, attendance, WhatsApp templates, complaints, and dynamic role-based permissions.",
     project_btn_details: "View Details",
@@ -153,9 +155,9 @@ const translations = {
     
     projects_title: "معرض المشاريع",
     projects_subtitle: "شاهد لقطات شاشة حقيقية وفعلية من تطبيقات الـ ERP المنجزة ومواقع الويب التي قمت بتطويرها.",
-    filter_all: "جميع المشاريع (11)",
+    filter_all: "جميع المشاريع (12)",
     filter_desktop: "تطبيقات سطح المكتب و ERP (7)",
-    filter_web: "المنصات السحابية والويب (4)",
+    filter_web: "المنصات السحابية والويب (5)",
     category_badge_desktop: "تطبيق سطح مكتب و ERP",
     category_badge_web: "منصة سحابية وويب",
     
@@ -179,6 +181,8 @@ const translations = {
     project_exam_desc: "منصة امتحانات إلكترونية مجانية مصممة بالكامل لمعلم ثانوي، تخدم طلاب الصف الأول والثاني الثانوي. تعمل بدون سيرفر عبر Google Apps Script وGoogle Sheets، وتضم تصحيحاً تلقائياً وحماية من الغش ومواعيد امتحانات مجدولة.",
     project_aura_title: "نظام إدارة أكاديمية أورا",
     project_aura_desc: "نظام ERP لسطح المكتب يعمل دون إنترنت لأكاديمية تعليمية خاصة، يوحّد إدارة الطلاب والكورسات، والحضور، ونقطة بيع الكافيه، والمخزون، وتسوية الورديات، والرواتب، والتقارير المالية في تطبيق واحد.",
+    project_novera_title: "موقع نوفيرا كلين للتنظيف ومكافحة الحشرات",
+    project_novera_desc: "موقع تعريفي ثنائي اللغة (عربي RTL / إنجليزي) لشركة تنظيف ومكافحة حشرات بالدمام، بصفحات مستقلة للخدمات وأسئلة شائعة ووضع ليلي وحجز بنقرة عبر الاتصال أو واتساب.",
     project_agency_title: "نظام Osama Group لإدارة الوكالات (ERP/CRM)",
     project_agency_desc: "نظام ERP/CRM متكامل لوكالة تسويق رقمي يعمل بالكامل على Cloudflare Workers وD1. يدير الموظفين والعملاء والمستحقات المالية وسير عمل المشاريع بسبع مراحل والحضور وقوالب واتساب والشكاوى ونظام صلاحيات ديناميكي حسب الدور.",
     project_btn_details: "عرض التفاصيل",
