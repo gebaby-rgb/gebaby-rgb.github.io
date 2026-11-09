@@ -1,758 +1,377 @@
-/**
- * ================================================================
- *   PORTFOLIO SCRIPTS ─ Ibrahem Osama Hassan
- *   Features: Scroll effects, Nav highlight, Scroll Reveal, Bilingual Translation
- * ================================================================
- */
+/* ==============================================================
+   Portfolio — Ibrahem Osama Hassan, Software Engineer
+   i18n (EN / AR), project rendering, filters, motion
+   ============================================================== */
 
-// Translation Database
 const translations = {
   en: {
-    nav_home: "Home",
-    nav_about: "About",
-    nav_skills: "Skills",
-    nav_projects: "Projects",
-    nav_contact: "Contact",
-    nav_talk: "Let's Talk",
-    
-    hero_welcome: "Welcome to my space",
-    hero_title_prefix: "I'm ",
-    hero_title_name: "Ibrahem Osama",
-    hero_tagline: "Software Engineer | Web & Desktop Developer",
-    hero_desc: "Focused on building custom responsive websites and high-performance desktop applications. Specializing in IoT systems, embedded hardware layouts (ESP32, Arduino), and embedded machine learning.",
-    hero_btn_projects: "View Projects",
-    hero_btn_contact: "Contact Me",
-    hero_btn_cv: "View CV",
-    hero_cv_download: "Download CV (PDF)",
-
-    stat_projects: "Projects & Systems Shipped",
-    stat_offline: "100% Offline-Resilient",
-    stat_degree: "IT Graduate 2026 (Very Good)",
-    stat_languages: "Core Languages & Stacks",
-    
-    about_title: "About Me",
-    about_subtitle: "A brief overview of my professional profile, core focus, and academic background.",
-    about_p1: "Hello! I am Ibrahem Osama Hassan, a passionate Software Engineer graduated in 2026 with a 'Very Good' grade. My technical expertise spans across both hardware and software domains, specializing in building websites and desktop applications.",
-    about_p2: "I design IoT architectures, embedded hardware layouts, and embedded machine learning models. Simultaneously, I create feature-rich cross-platform desktop ERPs and responsive websites using Tauri, React, Typescript, Tailwind CSS, SQLite, and Python.",
-    about_p3: "I enjoy translating complex business operations into clean, user-friendly, and offline-first software. Whether designing custom ticketing apps, financial ledgers, or print-shop databases, I focus on performance, aesthetics, and accessibility.",
-    about_card_edu_title: "Education",
-    about_edu_name: "Faculty of Industrial and Energy Technology",
-    about_edu_univ: "New Assiut Technological University (NATU), IT Department",
-    about_edu_body: "Bachelor's Degree in Information Technology, Graduated 2026. Grade: Very Good.",
-    about_card_phil_title: "Core Philosophy",
-    about_card_phil_body: "Connecting physical sensors and embedded IoT systems with responsive websites and desktop ERP dashboards. Committed to offline-first speed and pristine, user-centered interface designs.",
-    
-    skills_title: "Skills & Technologies",
-    skills_subtitle: "A collection of languages, libraries, and systems I actively use to develop software.",
-    skills_cat_embedded: "Systems & Embedded / IoT",
-    skills_cat_languages: "Core Programming Languages",
-    skills_cat_desktop: "Desktop & Offline ERPs",
-    skills_cat_web: "Web & Cloud Architecture",
-    skills_cat_ai: "AI & Machine Learning",
-    skills_cat_devops: "Mobile & DevOps Tools",
-    skill_embedded_ml: "Embedded ML / TinyML",
-    skill_ai_fundamentals: "AI fundamentals",
-    skill_dl_basics: "Deep Learning basics",
-    skill_level_advanced: "Advanced",
-    skill_level_intermediate: "Intermediate",
-    
-    projects_title: "Projects Showcase",
-    projects_subtitle: "Explore actual screenshots of active ERPs, custom accounting apps, and websites built on my workstation.",
-    filter_all: "All Projects (12)",
-    filter_desktop: "Desktop & ERPs (7)",
-    filter_web: "Web & Cloud Platforms (5)",
-    category_badge_desktop: "Desktop & ERP",
-    category_badge_web: "Cloud & Web",
-    
-    project_mastoor_title: "Mastoor Home Textiles ERP & Installments",
-    project_mastoor_desc: "Offline-first desktop ERP and POS for home textiles and fabrics retail. Features fast POS checkout, credit & installment ledger with guarantor records, multi-channel cash liquidity (Cash, Vodafone Cash, InstaPay), and fabric yardage tracking.",
-    project_gebaby_title: "Gebaby EdTech & Exam Management Platform",
-    project_gebaby_desc: "A centralized cloud learning and examination management platform deployed on Cloudflare Pages. Unifies teacher group management, a question bank, timed auto-graded exams, digital study libraries (PDF/video), and a gamified merit leaderboard.",
-    project_oxygen_title: "Oxygen Business Portal",
-    project_oxygen_desc: "A responsive, modern marketing website built for strategic business presentation. Showcases consultation services, client grids, and team details with micro-interactions.",
-    project_gbb_title: "GBB Route Accounting",
-    project_gbb_desc: "Desktop ERP app managing transportation schedules, route logs, driver-vehicle pairings, passenger tickets, and financial logs syncing to local state.",
-    project_jacket_title: "Jacket Maqtoo3 ERP",
-    project_jacket_desc: "Desktop suite rental ERP featuring active booking calendars, order processing, inventory control, and customer physical measurements registers with saved profiles.",
-    project_jacket_v1_title: "Jacket Maqtoo3 v1",
-    project_jacket_v1_desc: "Initial release build of the suit rental app management software. Houses catalog searching, customer order history tables, and sales log tracking.",
-    project_printing_title: "Print-Job Billing System",
-    project_printing_desc: "Financial and order administration desktop app for copy centers. Generates financial charts for sales metrics, invoices print orders, and exports logs as PDFs.",
-    project_vodafone_title: "Vodafone Cash ERP",
-    project_vodafone_desc: "Agent manager desktop application tracking multiple wallets, cash-in/out registers, automatic commission calculations, and cheapest wallet transfer paths.",
-    project_exam_title: "Al-Fares Al-Moaser Exam Platform",
-    project_exam_desc: "A free, fully custom online exam platform for a secondary-school teacher, serving Grade 1 & 2 students. Serverless Google Apps Script backend with Google Sheets as the database, featuring auto-grading, anti-cheat detection, and scheduled exam windows.",
-    project_aura_title: "Aura Academy Management System",
-    project_aura_desc: "Offline-first desktop ERP for a private educational academy, unifying student & course management, attendance, a café POS, inventory, cash-shift reconciliation, payroll, and full financial reporting in one native app.",
-    project_novera_title: "Novera Clean - Cleaning & Pest Control Website",
-    project_novera_desc: "Bilingual (Arabic RTL / English) marketing website for a cleaning and pest control company in Dammam. Dedicated service pages, FAQ, dark mode, and one-tap call and WhatsApp booking.",
-    project_agency_title: "Osama Group Agency ERP & CRM",
-    project_agency_desc: "Full-stack ERP/CRM for a digital marketing agency running entirely on Cloudflare Workers and D1. Manages employees, clients, financial dues, a 7-stage project workflow, attendance, WhatsApp templates, complaints, and dynamic role-based permissions.",
-    project_btn_details: "View Details",
-
-    contact_title: "Get in Touch",
-    contact_subtitle: "Have a project, job offer, or technical query? Let's connect and build together.",
-    contact_card_heading: "Let's collaborate!",
-    contact_card_text: "Click below to copy my email address or connect with me via professional social networks. I am always open to discussing new opportunities.",    contact_lbl_email: "Email Address (Click to copy)",
-    contact_lbl_whatsapp: "WhatsApp",
-    contact_lbl_github: "GitHub Account",
-    
-    modal_lbl_problem: "The Problem Solved",
-    modal_lbl_challenges: "Key Technical Decisions",
-    modal_lbl_results: "Measurable Results",
-    modal_full_page_btn: "Open Full Page Details",
-    
-    footer_copy: "All Rights Reserved. Built on local workspaces."
+    nav_home: "Home", nav_about: "About", nav_services: "Services", nav_skills: "Skills", nav_projects: "Projects", nav_contact: "Contact", nav_talk: "Let's Talk",
+    hero_status: "Available for full-time roles & freelance projects",
+    hero_hi: "Hi, I'm", hero_name: "Ibrahem Osama",
+    hero_role_prefix: "Software Engineer building",
+    hero_desc: "I design and ship <strong>production software end-to-end</strong> — full-stack web platforms, cloud backends and offline-first desktop systems — with TypeScript, React, Rust, SQL and serverless infrastructure. 16 projects delivered for real businesses, schools and agencies.",
+    hero_btn_projects: "View Projects", hero_btn_cv: "Resume / CV", hero_cv_download: "Download CV (PDF)",
+    hero_find: "Find me on", hero_badge_t: "B.Sc. IT · 2026", hero_badge_s: "Very Good grade",
+    stat_projects: "Projects shipped to real clients", stat_desktop: "Desktop ERP & POS systems", stat_web: "Web & cloud platforms", stat_langs: "Languages in every product (AR / EN)",
+    about_eyebrow: "About me",
+    about_title: "An engineer who owns the <em>whole product</em>",
+    about_lead: "I'm a Software Engineer from Egypt who turns messy, real-world business operations into fast, reliable software that people actually use every day.",
+    about_p1: "I work across the full stack: <strong>React and TypeScript</strong> interfaces, <strong>Rust</strong> and <strong>Node/serverless</strong> backends, and <strong>SQL databases</strong> — PostgreSQL with Row-Level Security on Supabase, SQLite in desktop apps and Cloudflare D1 at the edge.",
+    about_p2: "I take projects from the first conversation with the client to requirements, data modelling, implementation, testing and deployment — then keep improving them after launch. My work runs shops, academies, agencies and schools: POS and ERP systems, exam platforms, CRMs and marketing websites.",
+    pr1_t: "Clean architecture", pr1_d: "Typed layers, clear data models, testable logic.",
+    pr2_t: "Offline-first", pr2_d: "Software that keeps working without the internet.",
+    pr3_t: "Secure by default", pr3_d: "RBAC, RLS policies and server-side rules.",
+    pr4_t: "Arabic & English", pr4_d: "Proper RTL / LTR, not an afterthought.",
+    exp_title: "Experience",
+    exp1_date: "Present", exp1_t: "Freelance Software Engineer", exp1_d: "Building ERP/POS desktop apps, SaaS-style web platforms and websites for clients in Egypt and Saudi Arabia.",
+    exp2_t: "B.Sc. in Information Technology", exp2_d: "New Assiut Technological University — Faculty of Industrial & Energy Technology. Grade: Very Good.",
+    exp3_date: "University", exp3_t: "Academic engineering projects", exp3_d: "Applied ML and embedded/IoT projects (ESP32, Flutter + Firebase) as part of the degree.",
+    loc_title: "Based in", loc_name: "Assiut, Egypt", loc_body: "Open to remote work, relocation and freelance contracts.",
+    svc_eyebrow: "What I build", svc_title: "Software that solves <em>real operations</em>", svc_subtitle: "Four kinds of products I design, build and deliver end-to-end.",
+    svc1_t: "Desktop ERP & POS", svc1_d: "Native, offline-first business systems: sales, inventory, installments, shifts, payroll and reports in one installer.",
+    svc2_t: "Full-Stack Web Platforms", svc2_d: "Multi-role SaaS-style platforms with auth, permissions, dashboards, realtime updates and audit logs.",
+    svc3_t: "Interactive Websites", svc3_d: "Fast, bilingual, SEO-ready websites with scroll storytelling, 3D scenes and conversion-focused UX.",
+    svc4_t: "Backend & Data", svc4_d: "Data modelling, SQL schemas and migrations, REST APIs, server-side business rules and backups.",
+    skills_eyebrow: "Toolbox", skills_title: "Skills & <em>technologies</em>", skills_subtitle: "The languages, frameworks and tools I use to ship production software.",
+    sk_lang: "Languages", sk_front: "Frontend", sk_back: "Backend & Cloud", sk_db: "Databases", sk_desk: "Desktop & Mobile", sk_tools: "Engineering practice",
+    skills_legend: "Highlighted = used in production daily",
+    projects_eyebrow: "Selected work", projects_title: "Projects I've <em>shipped</em>",
+    projects_subtitle: "Real systems built for real clients. Open any project for screenshots, the problem, technical decisions and results.",
+    filter_all: "All", filter_web: "Web & Cloud", filter_desktop: "Desktop",
+    badge_web: "Web & Cloud", badge_desktop: "Desktop", badge_new: "New", case_study: "View case study",
+    video_eyebrow: "Demo reel", video_title: "See the systems <em>in action</em>",
+    video_subtitle: "A short walkthrough of desktop ERP and accounting software built for business clients.",
+    video_badge: "Systems & ERP demo reel", video_info_text: "Desktop ERP applications, real-time data management and financial ledgers.",
+    contact_eyebrow: "Contact", contact_title: "Have a role or a project? <em>Let's talk.</em>",
+    contact_text: "I'm open to Software Engineer positions (remote or on-site) and freelance projects. I usually reply within a day.",
+    contact_btn: "Send an email", contact_lbl_email: "Email (click to copy)", contact_lbl_whatsapp: "WhatsApp", contact_lbl_github: "GitHub",
+    copied: "Email copied to clipboard",
+    footer_name: "Ibrahem Osama Hassan", footer_copy: "Software Engineer. Designed & built by me.",
+    roles: ["desktop ERP systems.", "full-stack web platforms.", "cloud backends with SQL.", "interactive websites."]
   },
   ar: {
-    nav_home: "الرئيسية",
-    nav_about: "من أنا",
-    nav_skills: "المهارات",
-    nav_projects: "المشاريع",
-    nav_contact: "تواصل معي",
-    nav_talk: "دعنا نتحدث",
-    
-    hero_welcome: "مرحباً بك في مساحتي الخاصة",
-    hero_title_prefix: "أنا ",
-    hero_title_name: "إبراهيم أسامة",
-    hero_tagline: "مهندس برمجيات | مطور مواقع وتطبيقات سطح مكتب",
-    hero_desc: "متخصص في بناء وتطوير مواقع الويب المخصصة وتطبيقات سطح المكتب عالية الأداء. أمتلك خبرة في أنظمة إنترنت الأشياء (IoT)، وتصميم الدوائر المدمجة (ESP32, Arduino)، وتعلم الآلة المدمج (Embedded ML).",
-    hero_btn_projects: "عرض مشاريعي",
-    hero_btn_contact: "تواصل معي",
-    hero_btn_cv: "عرض السيرة الذاتية",
-    hero_cv_download: "تحميل السيرة الذاتية (PDF)",
-    
-    stat_projects: "أنظمة ومشاريع برمجية منجزة",
-    stat_offline: "أنظمة مستقلة دون إنترنت 100%",
-    stat_degree: "خريج IT دفعة 2026 (جيد جداً)",
-    stat_languages: "لغات وتقنيات برمجية متقنة",
-
-    about_title: "من أنا",
-    about_subtitle: "نبذة مختصرة عن مسيرتي المهنية، وتركيزي الأساسي، ومؤهلاتي الأكاديمية.",
-    about_p1: "أهلاً بك! أنا إبراهيم أسامة حسن، مهندس برمجيات شغوف تخرجت عام 2026 بتقدير عام 'جيد جداً'. تمتد خبرتي التقنية لتشمل مجالي الأجهزة (Hardware) والبرمجيات (Software)، مع تركيز خاص على بناء المواقع وتطبيقات سطح المكتب.",
-    about_p2: "أقوم بتصميم وتطوير بنى إنترنت الأشياء واللوحات الإلكترونية المدمجة وخوارزميات تعلم الآلة المصغرة. وفي الوقت ذاته، أقوم ببناء لوحات تحكم وتطبيقات سطح مكتب (ERP) متكاملة ومواقع ويب متجاوبة باستخدام تقنيات Tauri وReact وTypescript وTailwind CSS وSQLite وبايثون.",
-    about_p3: "أستمتع بتحويل العمليات الحسابية والتجارية المعقدة إلى برمجيات نظيفة وسهلة الاستخدام وتعمل بذكاء بدون اتصال بالإنترنت (Offline-First). وسواء كان العمل تصميم تطبيق تذاكر، أو دفاتر مالية، أو قواعد بيانات مطابع، فإنني أركز دائماً على السرعة، والجمالية، وسهولة الوصول.",
-    about_card_edu_title: "التعليم والشهادات",
-    about_edu_name: "كلية تكنولوجيا الصناعة والطاقة",
-    about_edu_univ: "جامعة أسيوط التكنولوجية الجديدة، قسم تكنولوجيا المعلومات",
-    about_edu_body: "بكالوريوس تكنولوجيا المعلومات، خريج دفعة 2026. بتقدير عام: جيد جداً.",
-    about_card_phil_title: "فلسفتي في العمل",
-    about_card_phil_body: "ربط أجهزة الاستشعار والأنظمة المدمجة والـ IoT بمواقع ويب متجاوبة وشاشات تحكم سطح مكتب (ERP) احترافية. ملتزم بالأداء السريع وتصميم الواجهات الأنيقة التي تضع المستخدم في المقام الأول.",
-    
-    skills_title: "المهارات والتقنيات",
-    skills_subtitle: "مجموعة من اللغات والمكتبات والأنظمة التي أستخدمها بفعالية لتطوير البرمجيات.",
-    skills_cat_embedded: "الأنظمة المدمجة وإنترنت الأشياء (IoT)",
-    skills_cat_languages: "لغات البرمجة الأساسية",
-    skills_cat_desktop: "تطبيقات سطح المكتب و ERP",
-    skills_cat_web: "تطوير الويب والسحابة",
-    skills_cat_ai: "الذكاء الاصطناعي وتعلم الآلة",
-    skills_cat_devops: "تطبيقات الهاتف وأدوات المطورين",
-    skill_embedded_ml: "تعلم الآلة المدمج (Embedded ML / TinyML)",
-    skill_ai_fundamentals: "أساسيات الذكاء الاصطناعي",
-    skill_dl_basics: "أساسيات التعلم العميق",
-    skill_level_advanced: "متقدم",
-    skill_level_intermediate: "متوسط",
-    
-    projects_title: "معرض المشاريع",
-    projects_subtitle: "شاهد لقطات شاشة حقيقية وفعلية من تطبيقات الـ ERP المنجزة ومواقع الويب التي قمت بتطويرها.",
-    filter_all: "جميع المشاريع (12)",
-    filter_desktop: "تطبيقات سطح المكتب و ERP (7)",
-    filter_web: "المنصات السحابية والويب (5)",
-    category_badge_desktop: "تطبيق سطح مكتب و ERP",
-    category_badge_web: "منصة سحابية وويب",
-    
-    project_mastoor_title: "نظام مستور لإدارة الأقمشة والمفروشات والتقسيط",
-    project_mastoor_desc: "نظام سطح مكتب محاسبي وإداري متكامل (Offline-First) لمتاجر الأقمشة والمفروشات المنزلية. يجمع بين نقطة بيع سريعة (POS)، ومنظومة عقود بيع بالتقسيط مع الضامنين، وإدارة الخزينة والسيولة (نقدية، فودافون كاش، إنستاباي)، وتتبع أمتار الأقمشة.",
-    project_gebaby_title: "منصة جيبابي المركزية لإدارة التعليم والامتحانات",
-    project_gebaby_desc: "منصة تعليمية سحابية متكاملة للمعلمين والطلاب مستضافة على Cloudflare Pages، تجمع بين إدارة المجموعات، وبنك الأسئلة، والامتحانات المؤقتة مع التصحيح الآلي، والمكتبة الرقمية للمذكرات والفيديوهات، ونظام الترتيب التفاعلي (Gamification).",
-    project_oxygen_title: "موقع أوكسجين (Oxygen)",
-    project_oxygen_desc: "موقع تعريفي وتسويقي متجاوب ومبتكر للشركات والاستشارات. يعرض الخدمات، وسجلات العملاء، وتفاصيل الفريق مع حركات تفاعلية ميكروية.",
-    project_gbb_title: "برنامج حسابات خطوط النقل (GBB)",
-    project_gbb_desc: "تطبيق سطح مكتب (ERP) لإدارة مسارات النقل وجداول الرحلات، وتعيين السائقين والمركبات، وتسجيل فواتير وتذاكر الركاب والمزامنة محلياً.",
-    project_jacket_title: "برنامج جاكت مقطوع (Jacket Maqtoo3)",
-    project_jacket_desc: "تطبيق سطح مكتب لإدارة محلات تأجير وبدلات الزفاف. يتابع الحجوزات والمخازن، ويحفظ مقاسات العملاء الجسدية التفصيلية للtailoring.",
-    project_jacket_v1_title: "برنامج جاكت مقطوع v1",
-    project_jacket_v1_desc: "الإصدار الأول من تطبيق تأجير السترات والبدل. يحتوي على ميزات البحث في كتالوج الملابس، وتوثيق سجلات الطلبات والمبيعات الفورية.",
-    project_printing_title: "برنامج حسابات وفواتير المطابع",
-    project_printing_desc: "تطبيق سطح مكتب محاسبي للمطابع ومراكز التصوير. يستعرض إحصائيات الأرباح والمبيعات بالرسوم البيانية، ويصدر الفواتير، ويطبع التقارير بصيغة PDF.",
-    project_vodafone_title: "برنامج فودافون كاش للمبيعات",
-    project_vodafone_desc: "تطبيق لإدارة عمليات وكلاء فودافون كاش؛ يتتبع الأرصدة والعمولات للعمليات اليومية، ويحسب أرخص مسار لتحويل المبالغ بين المحافظ.",
-    project_exam_title: "منصة الفارس المعاصر للامتحانات",
-    project_exam_desc: "منصة امتحانات إلكترونية مجانية مصممة بالكامل لمعلم ثانوي، تخدم طلاب الصف الأول والثاني الثانوي. تعمل بدون سيرفر عبر Google Apps Script وGoogle Sheets، وتضم تصحيحاً تلقائياً وحماية من الغش ومواعيد امتحانات مجدولة.",
-    project_aura_title: "نظام إدارة أكاديمية أورا",
-    project_aura_desc: "نظام ERP لسطح المكتب يعمل دون إنترنت لأكاديمية تعليمية خاصة، يوحّد إدارة الطلاب والكورسات، والحضور، ونقطة بيع الكافيه، والمخزون، وتسوية الورديات، والرواتب، والتقارير المالية في تطبيق واحد.",
-    project_novera_title: "موقع نوفيرا كلين للتنظيف ومكافحة الحشرات",
-    project_novera_desc: "موقع تعريفي ثنائي اللغة (عربي RTL / إنجليزي) لشركة تنظيف ومكافحة حشرات بالدمام، بصفحات مستقلة للخدمات وأسئلة شائعة ووضع ليلي وحجز بنقرة عبر الاتصال أو واتساب.",
-    project_agency_title: "نظام Osama Group لإدارة الوكالات (ERP/CRM)",
-    project_agency_desc: "نظام ERP/CRM متكامل لوكالة تسويق رقمي يعمل بالكامل على Cloudflare Workers وD1. يدير الموظفين والعملاء والمستحقات المالية وسير عمل المشاريع بسبع مراحل والحضور وقوالب واتساب والشكاوى ونظام صلاحيات ديناميكي حسب الدور.",
-    project_btn_details: "عرض التفاصيل",
-    
-    contact_title: "تواصل معي",
-    contact_subtitle: "هل لديك مشروع، عرض عمل، أو استفسار تقني؟ دعنا نتحدث ونبنِ شيئاً رائعاً معاً.",
-    contact_card_heading: "لنبدأ العمل معاً!",
-    contact_card_text: "اضغط أدناه لنسخ بريدي الإلكتروني أو تواصل معي مباشرة عبر حساباتي الرسمية في شبكات التواصل المهنية.",
-    contact_lbl_email: "البريد الإلكتروني (اضغط للنسخ)",
-    contact_lbl_whatsapp: "رقم الواتساب",
-    contact_lbl_github: "حساب GitHub",
-    
-    video_title: "عرض مرئي تطبيقي لأعمالي",
-    video_subtitle: "استعرض مقطعاً توضيحياً شاملاً لنماذج حية من تطبيقات سطح المكتب وأنظمة الـ ERP وحسابات الشركات التي قمت بتطويرها.",
-    video_badge: "إبراهيم أسامة حسن - استعرض فيديو أعمالي وأنظمتي البرمجية",
-    video_info_text: "عرض توضيحي يستعرض أداء وتصميم واجهات تطبيقات سطح المكتب، وإدارة الحسابات، وقواعد البيانات المحلية، ومزامنة العمليات المالية بسرعة وحرفية.",
-    
-    footer_copy: "جميع الحقوق محفوظة. تم التطوير محلياً من بيئة العمل الخاصة بي."
+    nav_home: "الرئيسية", nav_about: "عني", nav_services: "خدماتي", nav_skills: "المهارات", nav_projects: "المشاريع", nav_contact: "تواصل", nav_talk: "تواصل معي",
+    hero_status: "متاح لوظائف بدوام كامل ومشاريع حرة",
+    hero_hi: "مرحباً، أنا", hero_name: "إبراهيم أسامة",
+    hero_role_prefix: "مهندس برمجيات أبني",
+    hero_desc: "أصمم وأطلق <strong>برمجيات إنتاجية من البداية للنهاية</strong> — منصات ويب متكاملة، وأنظمة سحابية، وتطبيقات سطح مكتب تعمل بدون إنترنت — باستخدام TypeScript و React و Rust و SQL والبنية السحابية. سلّمت 16 مشروعاً لشركات ومدارس ووكالات حقيقية.",
+    hero_btn_projects: "شاهد المشاريع", hero_btn_cv: "السيرة الذاتية", hero_cv_download: "تحميل السيرة الذاتية (PDF)",
+    hero_find: "تابعني على", hero_badge_t: "بكالوريوس IT · 2026", hero_badge_s: "بتقدير جيد جداً",
+    stat_projects: "مشروعاً تم تسليمها لعملاء حقيقيين", stat_desktop: "أنظمة ERP ونقاط بيع مكتبية", stat_web: "منصات ويب وسحابية", stat_langs: "لغتان في كل منتج (عربي / إنجليزي)",
+    about_eyebrow: "نبذة عني",
+    about_title: "مهندس يتحمل مسؤولية <em>المنتج بالكامل</em>",
+    about_lead: "أنا مهندس برمجيات من مصر، أحوّل عمليات الأعمال الحقيقية المعقدة إلى برمجيات سريعة وموثوقة يستخدمها الناس يومياً.",
+    about_p1: "أعمل على كامل طبقات النظام: واجهات <strong>React و TypeScript</strong>، وخوادم بلغة <strong>Rust</strong> و <strong>Node / Serverless</strong>، و<strong>قواعد بيانات SQL</strong>: قاعدة PostgreSQL مع Row-Level Security على Supabase، وقاعدة SQLite في تطبيقات سطح المكتب، و Cloudflare D1 على الحافة.",
+    about_p2: "أتولى المشروع من أول حديث مع العميل إلى تحليل المتطلبات وتصميم البيانات والتنفيذ والاختبار والنشر، ثم أواصل تطويره بعد الإطلاق. أعمالي تدير محلات وأكاديميات ووكالات ومدارس: أنظمة ERP ونقاط بيع، ومنصات امتحانات، وأنظمة CRM، ومواقع تسويقية.",
+    pr1_t: "معمارية نظيفة", pr1_d: "طبقات واضحة ونماذج بيانات قابلة للاختبار.",
+    pr2_t: "يعمل بدون إنترنت", pr2_d: "برمجيات تستمر في العمل دون اتصال.",
+    pr3_t: "أمان افتراضي", pr3_d: "صلاحيات RBAC وسياسات RLS وقواعد على السيرفر.",
+    pr4_t: "عربي وإنجليزي", pr4_d: "دعم RTL / LTR حقيقي وليس إضافة لاحقة.",
+    exp_title: "الخبرة",
+    exp1_date: "حالياً", exp1_t: "مهندس برمجيات مستقل", exp1_d: "بناء أنظمة ERP ونقاط بيع مكتبية ومنصات ويب ومواقع لعملاء في مصر والسعودية.",
+    exp2_t: "بكالوريوس تكنولوجيا المعلومات", exp2_d: "جامعة أسيوط الجديدة التكنولوجية — كلية التكنولوجيا الصناعية والطاقة. التقدير: جيد جداً.",
+    exp3_date: "الجامعة", exp3_t: "مشاريع هندسية أكاديمية", exp3_d: "مشاريع تعلم آلي وأنظمة مدمجة/IoT (ESP32 و Flutter مع Firebase) ضمن الدراسة.",
+    loc_title: "المقر", loc_name: "أسيوط، مصر", loc_body: "متاح للعمل عن بُعد أو الانتقال أو العقود الحرة.",
+    svc_eyebrow: "ماذا أبني", svc_title: "برمجيات تحل <em>مشاكل حقيقية</em>", svc_subtitle: "أربعة أنواع من المنتجات أصممها وأبنيها وأسلمها كاملة.",
+    svc1_t: "أنظمة ERP ونقاط بيع مكتبية", svc1_d: "أنظمة أعمال أصلية تعمل بدون إنترنت: مبيعات ومخزون وأقساط وورديات ورواتب وتقارير في ملف تثبيت واحد.",
+    svc2_t: "منصات ويب متكاملة", svc2_d: "منصات متعددة الأدوار مع تسجيل دخول وصلاحيات ولوحات تحكم وتحديثات لحظية وسجل تدقيق.",
+    svc3_t: "مواقع تفاعلية", svc3_d: "مواقع سريعة ثنائية اللغة ومهيأة لمحركات البحث مع قصص بالتمرير ومشاهد ثلاثية الأبعاد.",
+    svc4_t: "الخوادم والبيانات", svc4_d: "تصميم البيانات وجداول SQL والـ Migrations وواجهات REST وقواعد العمل على السيرفر والنسخ الاحتياطي.",
+    skills_eyebrow: "الأدوات", skills_title: "المهارات و<em>التقنيات</em>", skills_subtitle: "اللغات والأطر والأدوات التي أستخدمها لإطلاق برمجيات إنتاجية.",
+    sk_lang: "لغات البرمجة", sk_front: "الواجهات الأمامية", sk_back: "الخوادم والسحابة", sk_db: "قواعد البيانات", sk_desk: "سطح المكتب والموبايل", sk_tools: "ممارسات هندسية",
+    skills_legend: "المميز = أستخدمه يومياً في الإنتاج",
+    projects_eyebrow: "أعمال مختارة", projects_title: "مشاريع <em>تم تسليمها</em>",
+    projects_subtitle: "أنظمة حقيقية لعملاء حقيقيين. افتح أي مشروع لترى الصور والمشكلة والقرارات التقنية والنتائج.",
+    filter_all: "الكل", filter_web: "ويب وسحابة", filter_desktop: "سطح المكتب",
+    badge_web: "ويب وسحابة", badge_desktop: "سطح المكتب", badge_new: "جديد", case_study: "عرض تفاصيل المشروع",
+    video_eyebrow: "فيديو العرض", video_title: "شاهد الأنظمة <em>أثناء العمل</em>",
+    video_subtitle: "جولة قصيرة في أنظمة ERP والبرامج المحاسبية المكتبية المطورة لعملاء.",
+    video_badge: "عرض أنظمة ERP", video_info_text: "تطبيقات ERP مكتبية وإدارة بيانات لحظية ودفاتر مالية.",
+    contact_eyebrow: "تواصل", contact_title: "عندك وظيفة أو مشروع؟ <em>لنتحدث.</em>",
+    contact_text: "متاح لوظائف مهندس برمجيات (عن بُعد أو من المقر) وللمشاريع الحرة. عادةً أرد خلال يوم.",
+    contact_btn: "أرسل بريداً", contact_lbl_email: "البريد الإلكتروني (اضغط للنسخ)", contact_lbl_whatsapp: "واتساب", contact_lbl_github: "جيت هب",
+    copied: "تم نسخ البريد الإلكتروني",
+    footer_name: "إبراهيم أسامة حسن", footer_copy: "مهندس برمجيات. تصميم وتطوير شخصي.",
+    roles: ["أنظمة ERP مكتبية.", "منصات ويب متكاملة.", "خوادم سحابية بقواعد SQL.", "مواقع تفاعلية."]
   }
 };
 
-// Comprehensive Projects Dataset for In-Page Modal & Dynamic Details
-const globalProjectsMap = {
-  oxygen: {
-    en: {
-      title: "Oxygen Business Portal",
-      client: "Oxygen Consulting Group",
-      description: "A fully responsive, modern web interface created for corporate and strategic consulting agency presentations. It features neat service lists, team profiles, responsive sliders, and counter animations.",
-      problem: "The client needed a lightweight, hyper-fast marketing portal that could convey complex consulting services cleanly without heavy framework overhead.",
-      challenges: "Optimizing initial load speeds while retaining micro-interactions, responsive carousel sliders, and scroll animation counters.",
-      results: "Achieved 98+ Google Lighthouse Performance Score and 0.4s initial load time on 4G networks.",
-      features: [
-        "Responsive layout utilizing Bootstrap 5 grid system",
-        "Custom client slider carousel powered by Swiper JS",
-        "Animated counter stats using PureCounter",
-        "Smooth section transitions and scroll animations",
-        "Clean SEO-optimized HTML5 & OpenGraph structure"
-      ]
-    },
-    ar: {
-      title: "موقع أوكسجين للشركات",
-      client: "مجموعة أوكسجين للاستشارات والإدارة",
-      description: "موقع ويب تعريفي وتسويقي متكامل ومتجاوب بالكامل مصمم لتقديم خدمات الاستشارات وتفصيل أعمال الشركات. يتميز بواجهة مستخدم حديثة وتمرير سلس وقوائم مخصصة للخدمات وإحصائيات تفاعلية متحركة.",
-      problem: "احتاج العميل إلى بوابة تسويقية سريعة جداً وخفيفة لتوضيح الخدمات الاستشارية المعقدة دون الاعتماد على مكتبات ثقيلة تؤثر على السرعة.",
-      challenges: "تحقيق أعلى أداء سرعة تحميل مع الحفاظ على التفاعلية البصرية الدقيقة والعدادات الرقمية المتحركة.",
-      results: "تحقيق تقييم 98+ على موجه أداء Google Lighthouse وزمن تحميل أولي يقل عن 0.4 ثانية.",
-      features: [
-        "تصميم متجاوب بالكامل باستخدام شبكة Bootstrap 5",
-        "شريط متحرك لعرض شعارات العملاء والشركاء مع Swiper JS",
-        "عدادات رقمية إحصائية متحركة عند التمرير",
-        "انتقالات وحركات ناعمة وسلسة بين أقسام الموقع",
-        "بنية برمجية نظيفة ومهيأة لمحركات البحث (SEO)"
-      ]
-    },
-    tech: ["HTML5", "CSS3", "Bootstrap 5", "Vanilla JS", "Swiper JS", "AOS"],
-    images: [
-      "assets/images/oxygen_preview.png"
-    ]
-  },
-  gbb: {
-    en: {
-      title: "GBB Route Accounting ERP",
-      client: "GBB Route Transportation Company",
-      description: "A custom desktop ERP application developed for managing transportation businesses. It tracks rental schedules, registers routes, sets seasons, and syncs vehicle/driver logs.",
-      problem: "Paper-based ticket logs led to frequent double-seat bookings, lost revenue entries, and delayed end-of-day driver balance reconciliations.",
-      challenges: "Designing an offline-first sync mechanism that maintains database integrity on local desktop machines without requiring cloud connections.",
-      results: "Reduced daily ticket settlement time from 2 hours to under 5 minutes with 100% offline operational availability.",
-      features: [
-        "Interactive route scheduling and logs table",
-        "Driver and vehicle pairing dashboard",
-        "Digital ticket sales booking panel",
-        "Synchronization panel with local state management",
-        "Role-based administrative settings (Admin/Cashier)"
-      ]
-    },
-    ar: {
-      title: "نظام حسابات النقل GBB ERP",
-      client: "شركة GBB لإدارة وتشغيل خطوط النقل الجماعي",
-      description: "تطبيق سطح مكتب متكامل (ERP) مصمم خصيصاً لإدارة عمليات وخطوط شركات النقل. يقوم بجدولة الرحلات وحفظ سجلات خطوط السير والمواسم وتعيين السائقين ومزامنة المبيعات اليومية بشكل فوري.",
-      problem: "تسبب التسجيل الورقي السابق في تكرار حجز المقاعد وضياع السجلات الحسابية وتأخير تسوية إيرادات السائقين في نهاية اليوم.",
-      challenges: "بناء بنية مزامنة محلية تضمن سلامة الحسابات والبيانات على أجهزة الكمبيوتر دون الحاجة للاتصال بالإنترنت.",
-      results: "تقليل زمن التسوية الحسابية اليومية من ساعتين إلى أقل من 5 دقائق مع ضمان تشغيل 100% دون انقطاع.",
-      features: [
-        "جداول تفاعلية لتنظيم رحلات وخطوط السير والعمل اليومي",
-        "لوحة تحكم لربط السائقين بالمركبات ومتابعة التوفر",
-        "نظام حجز وإصدار التذاكر الرقمية للعملاء والاشتراكات",
-        "شاشة مزامنة مركزية لحفظ البيانات وحمايتها من الضياع",
-        "لوحة تحكم للمسؤولين لإدارة المستخدمين والصلاحيات (أدمن/كاشير)"
-      ]
-    },
-    tech: ["React 19", "Vite", "Tauri", "LocalStorage", "CSS Modules", "Tailwind CSS"],
-    images: [
-      "assets/images/gbb_accounting_preview.png",
-      "assets/images/gbb_routes.png",
-      "assets/images/gbb_tickets.png",
-      "assets/images/frend travel 1.png",
-      "assets/images/frend travel 2.png",
-      "assets/images/frend travel 3.png",
-      "assets/images/frend travel 4.png",
-      "assets/images/frend travel 5.png",
-      "assets/images/frend travel 6.png",
-      "assets/images/frend travel 7.png"
-    ]
-  },
-  jacket: {
-    en: {
-      title: "Jacket Maqtoo3 (Suit Rental ERP)",
-      client: "Jacket Maqtoo3 Suit Hire Shop",
-      description: "An enterprise desktop solution tailored for suit hire, sales, and tailor shops. It automates inventory control, manages customer measurement databases, and logs rental bookings.",
-      problem: "Suit hire shops suffered from overlapping rental dates and mismanaged physical tailoring measurements (chest, shoulders, sleeves).",
-      challenges: "Building a calendar availability checker with automated conflict alerts and binding SQLite natively with Rust Tauri IPC.",
-      results: "Completely eliminated double-booking conflicts and cut customer measurement entry time by 75%.",
-      features: [
-        "Saved measurements profiles database (chest, shoulders, sleeves)",
-        "Rentals calendar scheduler and inventory availability indicator",
-        "Billing invoices creator and payment receipts",
-        "Offline-first performance powered by embedded SQLite",
-        "Crash recovery alert handling mechanisms"
-      ]
-    },
-    ar: {
-      title: "برنامج جاكت مقطوع للبدلات",
-      client: "معرض 'جاكت مقطوع' لتأجير وتفصيل البدلات الرجالية",
-      description: "تطبيق سطح مكتب محاسبي وإداري مخصص لمحلات تأجير البدلات وتفصيل وبيع الملابس الرجالية. يقوم بأتمتة المخازن، وتسجيل المقاسات الجسدية التفصيلية للزبائن، وتتبع الحجوزات اليومية.",
-      problem: "واجه المعرض مشكلات في تضارب مواعيد تأجير البدلات وضياع مقاسات الزبائن وتفاصيل الخياطة الجسدية.",
-      challenges: "تطوير نظام تنبيه تفاعلي لمنع التضارب وربط قاعدة بيانات SQLite مع نظام Tauri ببيئة Rust الحرة.",
-      results: "القضاء التام على أخطاء التضارب وتقليل وقت إدخال المقاسات بنسبة 75%.",
-      features: [
-        "قاعدة بيانات متكاملة لمقاسات العملاء (الكتف، الصدر، الأكمام، الخصر)",
-        "مخطط حجوزات تفاعلي لمتابعة توفر البدلات والملابس وتواريخ تسليمها",
-        "منشئ فواتير وسندات الدفع للمشتركين",
-        "يعمل بذكاء وبسرعة دون اتصال بالإنترنت بالاعتماد على SQLite",
-        "نظام حماية واستعادة البيانات عند حدوث أعطال مفاجئة"
-      ]
-    },
-    tech: ["React", "TypeScript", "Tauri", "SQLite", "Tailwind CSS", "Vite"],
-    images: [
-      "assets/images/jacket_maqtoo3_preview.png",
-      "assets/images/jacket_inventory.png",
-      "assets/images/jacket_customers.png",
-      "assets/images/جاكيت مقطوع.png",
-      "assets/images/جاكيت مقطوع 1.png",
-      "assets/images/جاكيت مقطوع2.png",
-      "assets/images/جاكيت مقطوع3.png",
-      "assets/images/جاكيت مقطوع4.png",
-      "assets/images/جاكيت مقطوع5.png"
-    ]
-  },
-  "jacket-v1": {
-    en: {
-      title: "Jacket Maqtoo3 v1",
-      client: "Jacket Maqtoo3 (Early Release)",
-      description: "The initial release version of the Jacket Maqtoo3 ERP application. Implements basic customer logs, search lists, and localized catalog management.",
-      problem: "Early prototype test to evaluate desktop bundle size and local disk I/O performance on older workstations.",
-      challenges: "Minimizing native build dependencies while retaining fast search filtering across thousands of customer records.",
-      results: "Query response times consistently under 10ms with zero network latency.",
-      features: [
-        "Fast search inputs for customer measurement logs",
-        "Suit catalog tracking lists",
-        "Basic sales log tables",
-        "Lightweight package footprint"
-      ]
-    },
-    ar: {
-      title: "برنامج جاكت مقطوع (الإصدار 1.0)",
-      client: "معرض 'جاكت مقطوع' (الإصدار الأول)",
-      description: "الإصدار الأول وتطبيق الأساس لبرنامج إدارة تأجير البدلات والملابس. يضم جداول بحث سريعة في بيانات المشتركين، وسجلات المبيعات اليومية البسيطة.",
-      problem: "اختبار نسبي للتحقق من أداء قراءة وكتابة قواعد البيانات المحلية على أجهزة نقاط البيع القديمة.",
-      challenges: "تقليل حجم التطبيق مع الحفاظ على سرعة الاستعلام الفوري في آلاف السجلات.",
-      results: "زمن استجابة للبحث يقل عن 10 ملي ثانية دون أي استهلاك للشبكة.",
-      features: [
-        "شاشات بحث سريعة لفرز وتصنيف مقاسات العملاء المشتركين",
-        "كتالوج مبسط لإدخال وتصنيف قطع الملابس المتوفرة",
-        "جداول لحفظ مبيعات وإيرادات اليوم بشكل مباشر",
-        "تطبيق خفيف الوزن وسهل التثبيت والتشغيل"
-      ]
-    },
-    tech: ["React", "Vite", "TypeScript", "Tauri", "SQLite"],
-    images: [
-      "assets/images/jacket_maqtoo3_v1_preview.png",
-      "assets/images/جاكيت مقطوع v1 1.png",
-      "assets/images/جاكيت مقطوع v1 2.png",
-      "assets/images/جاكيت مقطوع v1 3.png",
-      "assets/images/جاكيت مقطوع v1 4.png",
-      "assets/images/جاكيت مقطوع v1 5.png",
-      "assets/images/جاكيت مقطوع v1 6.png",
-      "assets/images/جاكيت مقطوع v1 7.png"
-    ]
-  },
-  printing: {
-    en: {
-      title: "Printing Accounting ERP",
-      client: "NATU Students Copy & Printing Center",
-      description: "A modern desktop billing application built for copy and printing centers. Manages customers, print jobs, paper types, and tracks daily business expenses.",
-      problem: "Complex print job pricing calculations (paper sizes, GSM weight, binding, color vs monochrome) caused long cashier queues during peak hours.",
-      challenges: "Designing an instant order calculator combined with automated PDF report exports via jsPDF.",
-      results: "Reduced cashier billing time to under 10 seconds per order and streamlined daily tax auditing.",
-      features: [
-        "Financial tracking charts for revenue/expenses analysis",
-        "Digital order billing invoice generator",
-        "PDF exporter powered by jsPDF",
-        "Custom print-job options (black & white vs color, paper size)",
-        "User password locks for administrative settings"
-      ]
-    },
-    ar: {
-      title: "برنامج حسابات المطابع ومراكز التصوير",
-      client: "مركز الخدمات الطلابية والنسخ بجامعة أسيوط التكنولوجية",
-      description: "تطبيق سطح مكتب محاسبي متكامل تم تطويره لخدمة المطابع الكبرى ومراكز التصوير والخدمات الطلابية. يدير حسابات الزبائن، والطلبيات، ومصروفات المحل، وإحصائيات الإنتاج اليومي.",
-      problem: "عانت المطابع من بطء حساب تكلفة الطباعة والتجليد وأنواع الأوراق المختلفة مما أدى لتراكم صفوف الانتظار.",
-      challenges: "بناء حاسبة تكاليف فورية وتكامل ميزة التصدير لملفات PDF بنقرة واحدة عبر jsPDF.",
-      results: "تقليل زمن إصدار الفاتورة إلى أقل من 10 ثوانٍ للطلب وتسهيل المراجعة المالية اليومية.",
-      features: [
-        "رسوم بيانية تفاعلية لحساب الأرباح والتبادل المالي اليومي والشهري",
-        "منشئ فواتير إلكترونية رقمية للطلبات والطباعة",
-        "ميزة تصدير الفواتير وحفظ التقارير كملفات PDF عبر jsPDF",
-        "إدارة خيارات الطباعة المخصصة (ألوان/أسود، مقاس الورق، نوع التجليد)",
-        "نظام صلاحيات محمي بكلمة مرور لإعدادات المسؤولين والتقارير الحساسة"
-      ]
-    },
-    tech: ["React", "TypeScript", "Tauri v2", "Tailwind CSS v4", "Recharts", "SQL Plugin", "jsPDF"],
-    images: [
-      "assets/images/printing_accounting_preview.png",
-      "assets/images/ms للدعاية.png",
-      "assets/images/ms للدعاية1.png",
-      "assets/images/ms للدعاية2.png",
-      "assets/images/ms للدعاية3.png",
-      "assets/images/ms للدعاية4.png",
-      "assets/images/ms للدعاية5.png",
-      "assets/images/ms للدعاية6.png",
-      "assets/images/ms للدعاية7.png"
-    ]
-  },
-  vodafone: {
-    en: {
-      title: "Vodafone Cash ERP",
-      client: "Telecom Cash & Wallet Outlets",
-      description: "A specialized administrative application designed for Vodafone Cash agents. It simplifies managing multiple SIM cards/wallets, deposit logs, and commission rules.",
-      problem: "Multi-wallet telecom agents lost significant revenue to uncalculated network transfer fees and complex fee tier structures.",
-      challenges: "Engineered a fee matrix optimization algorithm that instantly evaluates the cheapest transfer route across mobile cash networks.",
-      results: "Boosted merchant net profit margins by 12-18% through automated fee-saving route suggestions.",
-      features: [
-        "Wallets balance manager (tracks Vodafone, Etisalat, Orange)",
-        "Cheapest transfer finder (calculates cheapest route for money transfers)",
-        "Deposit/withdrawal commission calculator based on rule slices",
-        "Daily settlements log",
-        "Debts ledger with paid/unpaid status indicators"
-      ]
-    },
-    ar: {
-      title: "برنامج مبيعات فودافون كاش والمحافظ",
-      client: "وكلاء ومنافذ شحن الخدمات المالية ومحفظة فودافون كاش",
-      description: "تطبيق مخصص لوكلاء ومنافذ مبيعات فودافون كاش والخدمات المالية المماثلة. يسهل إدارة شرائح الاتصال المتعددة، وتتبع المحافظ، وتسجيل المعاملات والعمولات.",
-      problem: "خسارة التجار للعمولات بسبب تعقد شرائح الرسوم واختيار مسارات تحويل غير اقتصادية بين الشرائح المختلفة.",
-      challenges: "تصميم خوارزمية 'أرخص تحويل' لحساب الخيارات الأكثر ربحية فورياً عبر مصفوفات عمولات الشبكات.",
-      results: "زيادة هامش صافي أرباح الوكيل بنسبة 12-18% بفضل التوجيه الذكي المعفي من الرسوم الزائدة.",
-      features: [
-        "إدارة حسابات المحافظ (فودافون كاش، اتصالات كاش، أورنج كاش)",
-        "ميزة 'أرخص تحويل' لحساب التكلفة والعمولات واختيار أفضل طريقة للإرسال",
-        "حاسبة عمولات تلقائية بناءً على شرائح المبالغ والنسب المحددة لكل شبكة",
-        "تسوية وإغلاق الحساب اليومي ومقارنة الرصيد الفعلي بالرصيد الدفتري",
-        "دفتر ديون إلكتروني مع مؤشرات ملونة لحالة السداد والتأخير"
-      ]
-    },
-    tech: ["React", "TypeScript", "Tauri v2", "Lucide Icons", "CSS Modules"],
-    images: [
-      "assets/images/vodafone_cash_preview.png",
-      "assets/images/vodafone_cheapest.png",
-      "assets/images/vodafone_debts.png",
-      "assets/images/vodafone_wallets.png",
-      "assets/images/مستقبل كاش.png",
-      "assets/images/مستقبل كاش1.png",
-      "assets/images/مستقبل كاش2.png",
-      "assets/images/مستقبل كاش3.png",
-      "assets/images/مستقبل كاش4.png",
-      "assets/images/مستقبل كاش5.png"
-    ]
-  },
-  mastoor: {
-    en: {
-      title: "Mastoor Home Textiles ERP & Installments",
-      client: "Mastoor Home Textiles & Furnishings Store",
-      description: "Offline-first desktop ERP and POS tailored for retail textile and fabric establishments. Features rapid barcode POS checkout, customer installment contracts with guarantor tracking, multi-channel cash registers (Cash, Vodafone Cash, InstaPay), and fabric roll measurement conversions.",
-      problem: "Textile retailers struggle with tracking fractional cut fabric yardage, managing complex installment customer records and guarantor data, and keeping separate cash accounts across electronic wallets and bank transfers.",
-      challenges: "Architecting an ultra-responsive offline database with SQLite and Tauri v2, building a dual-unit inventory engine (bolt vs. meter cuts), and creating an installment ledger that projects interest, due dates, and default alerts with zero cloud reliance.",
-      results: "100% offline uptime, sub-50ms barcode scanning checkout speeds, zero double-booking on installment payments, and instantaneous financial reconciliations across 3 payment channels.",
-      features: [
-        "Fast POS checkout with instant barcode scanning, discount calculations, and thermal receipt printing",
-        "Comprehensive installment & credit contract ledger with guarantor tracking and delayed payment alerts",
-        "Multi-wallet treasury management balancing physical cash, Vodafone Cash, and InstaPay accounts",
-        "Fabric inventory management with dual-unit tracking (meters cut vs. entire rolls remaining)",
-        "Daily profit/loss ledgers, customer debt statements, and comprehensive accounting exports"
-      ]
-    },
-    ar: {
-      title: "نظام مستور لإدارة الأقمشة والمفروشات والتقسيط",
-      client: "مؤسسة مستور للمفروشات والأقمشة وتجارة التجزئة",
-      description: "نظام سطح مكتب محاسبي وإداري متكامل (Offline-First) لمتاجر الأقمشة والمفروشات المنزلية. يجمع بين نقطة بيع سريعة (POS)، ومنظومة عقود بيع بالتقسيط مع الضامنين، وإدارة الخزينة والسيولة (نقدية، فودافون كاش، إنستاباي)، وتتبع أمتار الأقمشة.",
-      problem: "معاناة تجار الأقمشة من صعوبة حساب كسور الأمتار وتوالف التقطيع، وتشتت حسابات أقساط الزبائن وسندات الضامنين في دفاتر ورقية معرضة للتلف والنسيان، مع اختلاط أموال المحافظ الإلكترونية بالسيولة النقدية.",
-      challenges: "تطوير قاعدة بيانات محلية فائقة الأداء عبر SQLite وTauri v2 تعمل بدون إنترنت نهائياً، مع برمجة محرك مخازن مزدوج يدعم القياس بالمتر والطاقة، وتوليد جداول أقساط آلية مع حساب التواريخ والغرامات والتحذيرات.",
-      results: "استقرار تشغيلي 100% بدون انقطاع، وسرعة كاشير أقل من ثانية لكل فاتورة، وقضاء كامل على أخطاء سداد الأقساط مع جرد فوري لمخزون الأقمشة والخزينة الموزعة.",
-      features: [
-        "شاشة كاشير POS فائقة السرعة تدعم قارئ الباركود، والفواتير المعلقة، والخصومات، والطباعة الحرارية",
-        "منظومة عقود التقسيط المتكاملة: تسجيل الأقساط، بيانات الضامنين، جداول السداد، والتنبيهات الملونة للديون",
-        "إدارة خزائن مالية متعددة: رصيد نقدية الدرج، رصيد فودافون كاش، ورصيد إنستاباي ومطابقتها لحظياً",
-        "إدارة مستودعات الأقمشة والمفروشات بالوحدات المزدوجة (طاقات كاملة / أمتار مباعة / توالف التقطيع)",
-        "تقارير محاسبية مفصلة: أرباح يومية، كشوف حساب عملاء، وسجلات مدفوعات قابلة للتصدير والطباعة"
-      ]
-    },
-    tech: ["React 19", "Tauri v2", "Rust", "SQLite", "TypeScript", "Tailwind CSS", "Zustand"],
-    images: [
-      "assets/images/project/Screenshot (244).png",
-      "assets/images/project/Screenshot (245).png",
-      "assets/images/project/Screenshot (246).png",
-      "assets/images/project/Screenshot (247).png",
-      "assets/images/project/Screenshot (248).png",
-      "assets/images/project/Screenshot (249).png",
-      "assets/images/project/Screenshot (250).png",
-      "assets/images/project/Screenshot (251).png",
-      "assets/images/project/Screenshot (252).png",
-      "assets/images/project/Screenshot (253).png"
-    ]
-  },
-  "gebaby-platform": {
-    en: {
-      title: "Gebaby EdTech & Exam Management Platform",
-      client: "Gebaby EdTech Learning & Examination Ecosystem",
-      description: "A centralized cloud learning and examination management platform deployed on Cloudflare Pages. Features dedicated role-separated portals for Admins, Teachers, and Students, complete with student group management, a question bank, timed auto-graded exams, digital study library (PDF/video uploads), full activity audit logs, and a gamified merit-ranking leaderboard.",
-      problem: "Teachers and students struggled with scattered study files, untracked exam results, manual grading bottlenecks, and lack of a structured administrative audit trail to oversee teacher activities and student progress.",
-      challenges: "Designing a high-speed multi-portal web architecture on Cloudflare Pages and Workers with D1, enforcing strict RBAC security across Admin, Teacher, and Student roles, engineering a robust online exam engine with instant auto-grading, and building an interactive gamified leaderboard.",
-      results: "Delivered a lightning-fast cloud educational platform with sub-50ms latency via Cloudflare edge CDN, 100% automated exam grading, and significant boosts in student motivation through merit rank tiers.",
-      features: [
-        "Centralized admin dashboard monitoring active enrollments, exam throughput, score averages, and ticket queues",
-        "Full system audit log capturing all administrative and pedagogical events with time and user filtering",
-        "Teacher portal with student group assignment, custom question bank, and timed exam publishing",
-        "Rich digital library supporting PDF study pack uploads and integrated YouTube/Google Drive educational media",
-        "Student portal enabling one-click teacher enrollment requests, active exam sittings, and instant grading",
-        "Gamification and leaderboard rankings awarding points and tiered bronze/gold achievement badges",
-        "Full bilingual support (English/Arabic) with mobile-first responsive interfaces across all portals"
-      ]
-    },
-    ar: {
-      title: "منصة جيبابي المركزية لإدارة التعليم والامتحانات (Gebaby EdTech)",
-      client: "منصة تعليمية مركزية للمعلمين والطلاب - Gebaby EdTech",
-      description: "منصة تعليمية سحابية متكاملة للمعلمين والطلاب مستضافة على Cloudflare Pages، تجمع بين إدارة المجموعات، وبنك الأسئلة، والامتحانات المؤقتة مع التصحيح الآلي، والمكتبة الرقمية للمذكرات والفيديوهات، وبوابة الطلاب التفاعلية مع نظام النقاط وترتيب الأوائل (Gamification).",
-      problem: "تشتت المعلمين والطلاب بين جروبات واتساب وجداول إكسل لمتابعة الحصص والمذكرات، وصعوبة إجراء امتحانات محددة الوقت مع تصحيح آلي فوري، وغياب بيئة مركزية تحفز الطلاب على التنافس وتمنح الإدارة رقابة كاملة على سجلات النشاط والشكاوى.",
-      challenges: "بناء منصة متكاملة متعددة البوابات (بوابة الإدارة، بوابة المعلم، بوابة الطالب) مع فصل أمني كامل للصلاحيات، وتصميم محرك امتحانات يتعامل مع بنوك الأسئلة وخلطها عشوائياً وتصحيحها لحظياً، بالإضافة إلى مكتبة للمذكرات والفيديوهات وسجل تدقيق شامل (Audit Log) على كل إجراء، كل ذلك بأداء فائق عبر شبكة Cloudflare العالمية.",
-      results: "تشغيل منصة تعليمية سحابية مركزية تخدم مئات الطلاب والمعلمين بزمن استجابة أقل من 50 ملي ثانية عالمياً، مع أتمتة التصحيح بنسبة 100% وتحفيز الطلاب بنظام الرتب والنقاط الشفاف.",
-      features: [
-        "لوحة تحكم إدارية مركزية: إحصائيات الطلاب والمعلمين، المحاولات المسلمة، متوسط الدرجات، والشكاوى",
-        "سجل تدقيق كامل وشامل (Audit Log) يوثق كل إجراء من المعلمين والمديرين مع فلاتر التاريخ والمستخدم",
-        "بوابة المعلم: إدارة مجموعات الطلاب، بنك الأسئلة، وإعداد ونشر الامتحانات المجدولة",
-        "مكتبة رقمية متطورة تدعم رفع وتصنيف مذكرات الـ PDF والربط مع فيديوهات YouTube و Google Drive",
-        "بوابة الطالب الذكية: تصفح المعلمين، إرسال طلبات الانضمام، وأداء الامتحانات المؤقتة فورياً",
-        "نظام تحفيز وترتيب تفاعلي (Gamification & Ranking) يمنح نقاط وأوسمة برونزية وذهبية للطلاب المتفوقين",
-        "دعم ثنائي اللغة كامل (عربي / إنجليزي) وتصميم متجاوب 100% يعمل بسلاسة على الهواتف والأجهزة اللوحية"
-      ]
-    },
-    tech: ["Cloudflare Pages", "Cloudflare Workers", "TypeScript", "D1 (SQLite)", "Tailwind CSS", "REST API", "Chart.js"],
-    images: [
-      "assets/images/project1/Screenshot (227).png",
-      "assets/images/project1/Screenshot (228).png",
-      "assets/images/project1/Screenshot (229).png",
-      "assets/images/project1/Screenshot (230).png",
-      "assets/images/project1/Screenshot (231).png",
-      "assets/images/project1/Screenshot (232).png",
-      "assets/images/project1/Screenshot (233).png",
-      "assets/images/project1/Screenshot (234).png",
-      "assets/images/project1/Screenshot (235).png",
-      "assets/images/project1/Screenshot (236).png",
-      "assets/images/project1/Screenshot (237).png",
-      "assets/images/project1/Screenshot (238).png",
-      "assets/images/project1/Screenshot (239).png",
-      "assets/images/project1/Screenshot (240).png"
-    ]
-  }
-};
+/* ---------- Projects (order = display order) ---------- */
+const projects = [
+  { id: "elhamd-store", cat: "desktop", featured: true, isNew: true, img: "assets/images/elhamd/5.jpg", media: 8,
+    tags: ["Tauri v2", "Rust", "SQLite", "React", "TypeScript"],
+    en: ["El Hamd Store — Mobile Shop ERP & POS", "Fully offline desktop ERP for a mobile-phone and repair shop: POS with QR invoices, IMEI-serialized inventory, repair Kanban, shifts & treasury, installments, suppliers and a profit dashboard — Rust + embedded SQLite in one installer."],
+    ar: ["محل الحمد — نظام ERP ونقطة بيع لمحلات الموبايلات", "نظام مكتبي يعمل بدون إنترنت لمحل موبايلات ومركز صيانة: نقطة بيع بفواتير QR، ومخزون مسلسل بـ IMEI، ومركز صيانة، وورديات وخزينة، وأقساط وموردين ولوحة أرباح — Rust وSQLite مدمجة في ملف تثبيت واحد."] },
+  { id: "osama-group-site", cat: "web", isNew: true, img: "assets/images/osama-site/0.jpg", media: 8,
+    tags: ["GSAP", "JavaScript", "SEO", "PWA"],
+    en: ["Osama Group — Scrollytelling Agency Website", "Live agency website where scrolling tells a story — a dull shop gets rebranded and customers flood in — followed by services, real pricing packages and a 32-article SEO blog."],
+    ar: ["أسامة جروب — موقع وكالة بأسلوب Scrollytelling", "موقع وكالة منشور يحكي قصة أثناء التمرير — محل هادئ يحصل على هوية جديدة فيتوافد العملاء — ثم الخدمات والباقات بالأسعار الحقيقية ومدونة بـ 32 مقالاً."] },
+  { id: "aa-vision", cat: "web", isNew: true, img: "assets/images/aavision/0.jpg", media: 5,
+    tags: ["React 19", "Three.js", "GSAP", "Lenis"],
+    en: ["A_A Vision — Interior Finishing Website", "Bilingual site for a finishing company with a scroll-driven Three.js build story, a cost estimator, a style quiz and a booking wizard with WhatsApp handoff."],
+    ar: ["A_A Vision — موقع شركة تشطيبات", "موقع ثنائي اللغة لشركة تشطيبات بقصة بناء ثلاثية الأبعاد بالتمرير وحاسبة تكلفة واختبار ستايل ومعالج حجز يحول إلى واتساب."] },
+  { id: "gebaby-v2", cat: "web", isNew: true, img: "assets/images/gebaby-v2/0.jpg", media: 2,
+    tags: ["React", "Supabase", "PostgreSQL", "RLS", "PWA"],
+    en: ["Gebaby v2 — Teachers & Students Platform", "Rebuilt on Supabase: admin / teacher / student portals, a one-attempt exam engine enforced by Postgres RPCs and RLS, realtime notifications, library, attendance and leaderboards."],
+    ar: ["جيبابي v2 — منصة المعلمين والطلاب", "إعادة بناء على Supabase: بوابات للمدير والمعلم والطالب، ومحرك امتحانات بمحاولة واحدة مؤمَّن بدوال Postgres وRLS، وإشعارات لحظية ومكتبة وحضور ولوحة ترتيب."] },
+  { id: "mastoor", cat: "desktop", img: "assets/images/project/Screenshot (244).png", media: 10,
+    tags: ["React 19", "Tauri v2", "Rust", "SQLite"],
+    en: ["Mastoor Home Textiles ERP & Installments", "Offline-first desktop ERP and POS for textiles retail: fast checkout, installment ledger with guarantors, multi-channel cash (Cash, Vodafone Cash, InstaPay) and fabric yardage tracking."],
+    ar: ["نظام مستور لإدارة الأقمشة والمفروشات والتقسيط", "نظام مكتبي يعمل بدون إنترنت لمتاجر الأقمشة: نقطة بيع سريعة، وعقود تقسيط مع الضامنين، وإدارة السيولة (نقدية، فودافون كاش، إنستاباي)، وتتبع أمتار الأقمشة."] },
+  { id: "agency-erp", cat: "web", featured: true, img: "assets/images/agency-ERP 0.jpeg", media: 10,
+    tags: ["Cloudflare Workers", "D1", "TypeScript", "Backblaze B2"],
+    en: ["Osama Group Agency ERP & CRM", "Full-stack ERP/CRM for a multi-branch marketing agency on Cloudflare Workers and D1: 11-role dynamic permissions, a 7-stage project workflow, financial dues, attendance, WhatsApp templates and a 396-case regression suite."],
+    ar: ["نظام Osama Group لإدارة الوكالات (ERP/CRM)", "نظام ERP/CRM متكامل لوكالة تسويق متعددة الفروع على Cloudflare Workers وD1: صلاحيات ديناميكية لـ 11 دوراً، ومسار مشاريع بسبع مراحل، ومستحقات مالية وحضور وقوالب واتساب و396 حالة اختبار."] },
+  { id: "aura-academy", cat: "desktop", img: "assets/images/aura academy 0.png", media: 17,
+    tags: ["React 19", "Tauri v2", "Rust", "SQLite"],
+    en: ["Aura Academy Management System", "Offline-first desktop ERP for an academy: students & courses, attendance, café POS, inventory, cash-shift reconciliation, payroll and financial reporting in one native app."],
+    ar: ["نظام إدارة أكاديمية أورا", "نظام ERP مكتبي يعمل بدون إنترنت لأكاديمية: الطلاب والكورسات، والحضور، ونقطة بيع الكافيه، والمخزون، وتسوية الورديات، والرواتب، والتقارير المالية."] },
+  { id: "gebaby-platform", cat: "web", img: "assets/images/project1/Screenshot (227).png", media: 14,
+    tags: ["Cloudflare Workers", "D1", "TypeScript", "Chart.js"],
+    en: ["Gebaby EdTech & Exam Platform (v1)", "Cloud learning platform on Cloudflare Pages + D1: teacher groups, question bank, timed auto-graded exams, digital library, audit logs and a gamified leaderboard."],
+    ar: ["منصة جيبابي للتعليم والامتحانات (v1)", "منصة تعليمية سحابية على Cloudflare Pages وD1: مجموعات المعلمين، وبنك الأسئلة، وامتحانات مؤقتة بتصحيح آلي، ومكتبة رقمية، وسجل تدقيق، ولوحة ترتيب."] },
+  { id: "novera-clean", cat: "web", img: "assets/images/novera/novera-ar-home.png", media: 5,
+    tags: ["HTML5", "CSS3", "JavaScript", "RTL / SEO"],
+    en: ["Novera Clean — Cleaning Services Website", "Live bilingual (Arabic RTL / English) website for a Dammam cleaning & pest-control company: service pages, FAQ, dark mode and one-tap call / WhatsApp booking."],
+    ar: ["موقع نوفيرا كلين لخدمات التنظيف", "موقع منشور ثنائي اللغة لشركة تنظيف ومكافحة حشرات بالدمام: صفحات خدمات وأسئلة شائعة ووضع ليلي وحجز بنقرة عبر الاتصال أو واتساب."] },
+  { id: "exam-platform", cat: "web", img: "assets/images/exam_platform_preview.svg", media: 3,
+    tags: ["JavaScript", "Apps Script", "Google Sheets", "Cloudflare Pages"],
+    en: ["Al-Fares Al-Moaser Exam Platform", "Free serverless exam platform for secondary-school students: shuffled auto-graded exams, anti-cheat tab/fullscreen detection, scheduled windows and admin logging."],
+    ar: ["منصة الفارس المعاصر للامتحانات", "منصة امتحانات مجانية بدون سيرفر لطلاب الثانوي: امتحانات عشوائية بتصحيح تلقائي، وكشف الغش، ومواعيد مجدولة، وتسجيل إجراءات الإدارة."] },
+  { id: "vodafone", cat: "desktop", img: "assets/images/vodafone_cash_preview.png", media: 10,
+    tags: ["Tauri v2", "React", "TypeScript"],
+    en: ["Vodafone Cash Agent ERP", "Desktop app for mobile-wallet agents: multiple wallets, cash-in/out registers, automatic commissions and the cheapest transfer path between wallets."],
+    ar: ["برنامج إدارة وكلاء فودافون كاش", "تطبيق مكتبي لوكلاء المحافظ: محافظ متعددة، وسجلات إيداع وسحب، وحساب العمولات تلقائياً، وأرخص مسار للتحويل بين المحافظ."] },
+  { id: "printing", cat: "desktop", img: "assets/images/printing_accounting_preview.png", media: 9,
+    tags: ["Tauri v2", "Tailwind", "Recharts", "jsPDF"],
+    en: ["Print-Job Billing System", "Billing and order management for copy centers with sales charts, print-order invoices and PDF exports."],
+    ar: ["برنامج حسابات وفواتير المطابع", "إدارة الطلبات والفواتير لمراكز التصوير مع رسوم بيانية للمبيعات وفواتير الطباعة وتصدير PDF."] },
+  { id: "jacket", cat: "desktop", img: "assets/images/jacket_maqtoo3_preview.png", media: 9,
+    tags: ["Tauri", "React", "SQLite", "Tailwind"],
+    en: ["Jacket Maqtoo3 — Suit Rental ERP", "Rental management with booking calendars, orders, inventory and saved customer measurements."],
+    ar: ["جاكت مقطوع — نظام تأجير البدل", "إدارة التأجير بتقويم الحجوزات والطلبات والمخزون وحفظ مقاسات العملاء."] },
+  { id: "gbb", cat: "desktop", img: "assets/images/gbb_accounting_preview.png", media: 10,
+    tags: ["React", "Tauri", "Vite"],
+    en: ["GBB Route Accounting", "Transport ERP for schedules, route logs, driver–vehicle pairing, passenger tickets and financial logs."],
+    ar: ["برنامج حسابات خطوط النقل (GBB)", "نظام لإدارة جداول الرحلات والمسارات وتعيين السائقين والمركبات وتذاكر الركاب والسجلات المالية."] },
+  { id: "jacket-v1", cat: "desktop", img: "assets/images/jacket_maqtoo3_v1_preview.png", media: 8,
+    tags: ["React", "Tauri", "SQLite"],
+    en: ["Jacket Maqtoo3 v1", "First release of the suit-rental app: catalog search, customer order history and sales logs."],
+    ar: ["جاكت مقطوع v1", "الإصدار الأول من تطبيق تأجير البدل: بحث في الكتالوج وسجل طلبات العملاء والمبيعات."] },
+  { id: "oxygen", cat: "web", img: "assets/images/oxygen_preview.png", media: 4,
+    tags: ["HTML5", "Bootstrap", "JavaScript"],
+    en: ["Oxygen Business Portal", "Responsive marketing website for a consulting firm with service lists, team profiles, sliders and animated counters."],
+    ar: ["موقع أوكسجين للشركات", "موقع تسويقي متجاوب لشركة استشارات يعرض الخدمات والفريق مع سلايدر وعدادات متحركة."] }
+];
 
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // 1. Language Toggle Mechanism
-  let currentLang = localStorage.getItem('portfolio_lang') || 'en';
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const langText = document.querySelector('.lang-switcher span');
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+function renderProjects(lang) {
+  const grid = document.getElementById("projects-grid");
+  if (!grid) return;
+  const t = translations[lang];
+  grid.innerHTML = projects.map((p, i) => {
+    const [title, desc] = p[lang];
+    const icon = p.cat === "desktop" ? "fa-desktop" : "fa-cloud";
+    return `
+      <article class="project-card glass-card spotlight reveal${p.featured ? " featured" : ""}" data-category="${p.cat}" style="--d:${(i % 3) * 0.07}s">
+        <a class="project-card-link" href="project.html?id=${p.id}" aria-label="${esc(title)}"></a>
+        <div class="project-img-wrapper">
+          <div class="project-badges">
+            <span class="project-category-badge badge-${p.cat}"><i class="fa-solid ${icon}"></i> ${t["badge_" + p.cat]}</span>
+            <span style="display:flex;gap:.4rem">
+              ${p.isNew ? `<span class="new-badge">${t.badge_new}</span>` : ""}
+              <span class="media-badge"><i class="fa-solid fa-images"></i> ${p.media}</span>
+            </span>
+          </div>
+          <img src="${encodeURI(p.img)}" alt="${esc(title)}" class="project-img" loading="lazy">
+        </div>
+        <div class="project-body">
+          <div class="project-tags">${p.tags.map((tg) => `<span class="project-tag">${esc(tg)}</span>`).join("")}</div>
+          <h3 class="project-card-title">${esc(title)}</h3>
+          <p class="project-description">${esc(desc)}</p>
+          <span class="project-link">${t.case_study} <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </article>`;
+  }).join("");
+
+  ["all", "web", "desktop"].forEach((f) => {
+    const el = document.querySelector(`[data-count-for="${f}"]`);
+    if (el) el.textContent = f === "all" ? projects.length : projects.filter((p) => p.cat === f).length;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let currentLang = "en";
+  try { currentLang = localStorage.getItem("portfolio_lang") || "en"; } catch (e) {}
+
+  /* ---------- Reveal on scroll ---------- */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add("active"); revealObserver.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  const observeReveals = (root = document) => root.querySelectorAll(".reveal:not(.active)").forEach((el) => revealObserver.observe(el));
+
+  /* ---------- Spotlight cards ---------- */
+  const bindSpotlight = (root = document) => {
+    root.querySelectorAll(".spotlight").forEach((card) => {
+      if (card.dataset.spot) return;
+      card.dataset.spot = "1";
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        card.style.setProperty("--my", `${e.clientY - r.top}px`);
+      });
+    });
+  };
+
+  /* ---------- Filters ---------- */
+  let activeFilter = "all";
+  const indicator = document.querySelector(".filter-indicator");
+  const moveIndicator = () => {
+    const btn = document.querySelector(".filter-btn.active");
+    if (!btn || !indicator) return;
+    indicator.style.left = `${btn.offsetLeft}px`;
+    indicator.style.width = `${btn.offsetWidth}px`;
+  };
+  const applyFilter = () => {
+    document.querySelectorAll(".project-card").forEach((card) => {
+      const show = activeFilter === "all" || card.dataset.category === activeFilter;
+      card.classList.toggle("is-hidden", !show);
+      if (show) card.classList.add("active");
+    });
+  };
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = btn.dataset.filter;
+      moveIndicator();
+      applyFilter();
+    });
+  });
+  window.addEventListener("resize", moveIndicator);
+
+  /* ---------- Typed role ---------- */
+  const typedEl = document.querySelector(".typed");
+  let typeTimer = null;
+  const startTyping = () => {
+    if (!typedEl) return;
+    clearTimeout(typeTimer);
+    const roles = translations[currentLang].roles;
+    if (reduceMotion) { typedEl.textContent = roles[0]; return; }
+    let r = 0, c = 0, deleting = false;
+    const tick = () => {
+      const word = roles[r];
+      typedEl.textContent = word.slice(0, c);
+      if (!deleting && c < word.length) { c++; typeTimer = setTimeout(tick, 55); }
+      else if (!deleting) { deleting = true; typeTimer = setTimeout(tick, 1700); }
+      else if (c > 0) { c--; typeTimer = setTimeout(tick, 28); }
+      else { deleting = false; r = (r + 1) % roles.length; typeTimer = setTimeout(tick, 300); }
+    };
+    tick();
+  };
+
+  /* ---------- Language ---------- */
+  const langText = document.querySelector(".lang-switcher span");
   const setLanguage = (lang) => {
     currentLang = lang;
-    localStorage.setItem('portfolio_lang', lang);
-    
+    try { localStorage.setItem("portfolio_lang", lang); } catch (e) {}
     document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-    if (langSwitcher && langText) {
-      langText.textContent = lang === 'en' ? 'العربية' : 'English';
-    }
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (translations[lang] && translations[lang][key]) {
-        if (el.querySelector('strong') || el.querySelector('span') || el.querySelector('i')) {
-          if (key === 'logo') {
-            el.innerHTML = `<i class="fa-solid fa-code"></i> ${translations[lang][key]}`;
-          } else {
-            el.innerHTML = translations[lang][key];
-          }
-        } else {
-          el.textContent = translations[lang][key];
-        }
-      }
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    if (langText) langText.textContent = lang === "en" ? "العربية" : "English";
+    const dict = translations[lang];
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const v = dict[el.dataset.i18n];
+      if (typeof v === "string") el.innerHTML = v;
     });
-
-    const nameEl = document.querySelector('.hero-name');
-    if (nameEl) {
-      nameEl.textContent = translations[lang]['hero_title_name'];
-    }
-
-    // Icon-only button: data-i18n would overwrite its innerHTML and drop the icon,
-    // so its label lives on the title/aria-label instead.
-    const cvDownloadBtn = document.getElementById('cv-download-btn');
-    if (cvDownloadBtn) {
-      const label = translations[lang]['hero_cv_download'];
-      cvDownloadBtn.title = label;
-      cvDownloadBtn.setAttribute('aria-label', label);
-    }
+    const cvBtn = document.getElementById("cv-download-btn");
+    if (cvBtn) { cvBtn.title = dict.hero_cv_download; cvBtn.setAttribute("aria-label", dict.hero_cv_download); }
+    renderProjects(lang);
+    applyFilter();
+    observeReveals();
+    bindSpotlight();
+    startTyping();
+    requestAnimationFrame(moveIndicator);
   };
-
-  if (langSwitcher) {
-    langSwitcher.addEventListener('click', () => {
-      const nextLang = currentLang === 'en' ? 'ar' : 'en';
-      setLanguage(nextLang);
-    });
-  }
-
+  document.querySelector(".lang-switcher")?.addEventListener("click", () => setLanguage(currentLang === "en" ? "ar" : "en"));
   setLanguage(currentLang);
 
-  // 2. Fixed Header Background on Scroll
-  const header = document.querySelector('header');
-  const scrollThreshold = 50;
-
-  const handleHeaderScroll = () => {
-    if (window.scrollY > scrollThreshold) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+  /* ---------- Header, progress, active link ---------- */
+  const header = document.querySelector("header");
+  const progress = document.querySelector(".scroll-progress");
+  const sections = [...document.querySelectorAll("main section[id]")];
+  const navAnchors = [...document.querySelectorAll(".nav-links a")];
+  let ticking = false;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle("scrolled", y > 40);
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress) progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+    let current = "home";
+    sections.forEach((s) => { if (y >= s.offsetTop - 140) current = s.id; });
+    if (current === "video-demo") current = "projects";
+    navAnchors.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === `#${current}`));
+    ticking = false;
   };
+  window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
 
-  window.addEventListener('scroll', handleHeaderScroll);
-  handleHeaderScroll(); 
+  /* ---------- Mobile menu ---------- */
+  const toggle = document.querySelector(".mobile-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  toggle?.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    toggle.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+  navAnchors.forEach((a) => a.addEventListener("click", () => {
+    navLinks.classList.remove("open"); toggle?.classList.remove("open"); toggle?.setAttribute("aria-expanded", "false");
+  }));
 
-  // 3. Mobile Menu Toggle
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  const navItems = document.querySelectorAll('.nav-links a');
-
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
+  /* ---------- Count-up stats ---------- */
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target, target = +el.dataset.count;
+      countObserver.unobserve(el);
+      if (reduceMotion) { el.textContent = target; return; }
+      const start = performance.now(), dur = 1400;
+      const step = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
     });
+  }, { threshold: 0.6 });
+  document.querySelectorAll("[data-count]").forEach((el) => countObserver.observe(el));
 
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
-        mobileToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-      });
-    });
-  }
-
-  // 4. Active Link Highlighting on Scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinksList = document.querySelectorAll('.nav-links a:not(.btn)');
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '-30% 0px -60% 0px', 
-    threshold: 0
+  /* ---------- Copy email ---------- */
+  const toast = document.querySelector(".toast");
+  const showToast = (msg) => {
+    if (!toast) return;
+    toast.textContent = msg; toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 2200);
   };
-
-  const observerCallback = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinksList.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
-      }
-    });
+  const emailBtn = document.querySelector(".contact-method.email");
+  const copyEmail = async () => {
+    const email = "ibrahem.gebaby@gmail.com";
+    try { await navigator.clipboard.writeText(email); showToast(translations[currentLang].copied); }
+    catch (e) { window.location.href = `mailto:${email}`; }
   };
+  emailBtn?.addEventListener("click", copyEmail);
+  emailBtn?.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); copyEmail(); } });
 
-  const navObserver = new IntersectionObserver(observerCallback, observerOptions);
-  sections.forEach(section => navObserver.observe(section));
-
-  // 5. Scroll Reveal Animation
-  const revealElements = document.querySelectorAll('.reveal');
-
-  const revealOptions = {
-    root: null,
-    rootMargin: '0px 0px -100px 0px', 
-    threshold: 0.15
-  };
-
-  const revealCallback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target); 
-      }
-    });
-  };
-
-  const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
-  revealElements.forEach(el => revealObserver.observe(el));
-
-  // 6. Email Copy to Clipboard Feature
-  const emailButton = document.querySelector('.contact-method.email');
-  if (emailButton) {
-    emailButton.addEventListener('click', () => {
-      const emailText = emailButton.querySelector('.contact-value').textContent;
-      navigator.clipboard.writeText(emailText).then(() => {
-        const labelEl = emailButton.querySelector('.contact-label');
-        const originalLabel = currentLang === 'en' ? 'Email Address (Click to copy)' : 'البريد الإلكتروني (اضغط للنسخ)';
-        const successLabel = currentLang === 'en' ? 'Copied to Clipboard!' : 'تم نسخ البريد بنجاح!';
-        
-        labelEl.textContent = successLabel;
-        labelEl.style.color = '#10B981'; 
-        
-        setTimeout(() => {
-          labelEl.textContent = originalLabel;
-          labelEl.style.color = '';
-        }, 2000);
-      }).catch(err => {
-        console.error('Failed to copy text: ', err);
-      });
-    });
-  }
-
-  // 7. Projects Category Filtering
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  if (filterBtns.length > 0 && projectCards.length > 0) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filterVal = btn.getAttribute('data-filter');
-
-        projectCards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          if (filterVal === 'all' || cardCategory === filterVal) {
-            card.style.display = 'flex';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            }, 30);
-          } else {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 250);
-          }
-        });
-      });
+  /* ---------- Hero parallax (subtle) ---------- */
+  const visual = document.querySelector(".hero-visual");
+  if (visual && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelector(".hero").addEventListener("pointermove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 10;
+      const y = (e.clientY / window.innerHeight - 0.5) * 10;
+      visual.style.transform = `translate3d(${x}px, ${y}px, 0)`;
     });
   }
 });
-

@@ -1,860 +1,421 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ibrahem Osama Hassan | Software Engineer Portfolio</title>
-  <meta name="description" content="Professional portfolio of Ibrahem Osama Hassan, a Software Engineer graduated 2026. Specializing in Web Design, Desktop Applications (ERP), IoT systems, embedded hardware, and embedded ML.">
-  <meta name="keywords" content="Ibrahem Osama Hassan, Software Engineer, Portfolio, Web Developer, Desktop Apps, Tauri, React, SQLite, IoT, Embedded Systems, ESP32, Arduino">
+  <title>Ibrahem Osama Hassan | Software Engineer</title>
+  <meta name="description" content="Ibrahem Osama Hassan — Software Engineer building full-stack web platforms, cloud systems and offline-first desktop ERPs with TypeScript, React, Rust, Tauri, SQL and Cloudflare / Supabase.">
+  <meta name="keywords" content="Ibrahem Osama Hassan, Software Engineer, Full-Stack Developer, React, TypeScript, Rust, Tauri, SQLite, PostgreSQL, Supabase, Cloudflare Workers, Portfolio, Egypt">
   <meta name="author" content="Ibrahem Osama Hassan">
+  <meta name="theme-color" content="#07090D">
+  <meta property="og:title" content="Ibrahem Osama Hassan | Software Engineer">
+  <meta property="og:description" content="Full-stack web platforms, cloud systems and offline-first desktop software — 16 shipped projects.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:type" content="website">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/profile.jpg">
-
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Navigation Header -->
+  <!-- Header -->
   <header>
     <div class="container navbar">
-      <a href="#home" class="logo" dir="ltr">
-        <i class="fa-solid fa-code"></i> Ibrahem<span>Osama</span>
+      <a href="#home" class="logo" dir="ltr" aria-label="Ibrahem Osama — home">
+        <span class="logo-mark">IO</span> Ibrahem<span>.dev</span>
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main">
         <a href="#home" class="active" data-i18n="nav_home">Home</a>
         <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
         <a href="#skills" data-i18n="nav_skills">Skills</a>
         <a href="#projects" data-i18n="nav_projects">Projects</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <!-- Language Switcher Button -->
         <button class="lang-switcher" aria-label="Change language">
           <i class="fa-solid fa-globe"></i> <span>العربية</span>
         </button>
-
-        <a href="#contact" class="btn btn-outline" data-i18n="nav_talk" style="padding: 0.4rem 1.1rem; font-size: 0.85rem;">
-          <i class="fa-solid fa-paper-plane"></i> Let's Talk
-        </a>
-
-        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a href="#contact" class="btn btn-primary btn-sm btn-talk"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="nav_talk">Let's Talk</span></a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <main>
+  <!-- Hero -->
   <section id="home" class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-glow g1"></div>
+      <div class="hero-glow g2"></div>
+    </div>
+
     <div class="container hero-wrapper">
-      <div class="hero-content reveal">
-        <span class="hero-welcome" data-i18n="hero_welcome">Welcome to my space</span>
-        <h1 class="hero-title">
-          <span data-i18n="hero_title_prefix">I'm </span><span class="hero-name">Ibrahem Osama</span>
+      <div class="hero-content">
+        <div class="status-pill reveal"><span class="status-dot"></span> <span data-i18n="hero_status">Available for full-time roles & freelance projects</span></div>
+
+        <h1 class="hero-title reveal" style="--d:.08s">
+          <span class="line muted" data-i18n="hero_hi">Hi, I'm</span>
+          <span class="line hero-name" data-i18n="hero_name">Ibrahem Osama</span>
         </h1>
-        <h2 class="hero-tagline" data-i18n="hero_tagline">Software Engineer | Web & Desktop Developer</h2>
-        <p class="hero-description" data-i18n="hero_desc">
-          Focused on building custom responsive websites and high-performance desktop applications. Specializing in IoT systems, embedded hardware layouts (ESP32, Arduino), and embedded machine learning.
+
+        <p class="hero-role reveal" style="--d:.16s" aria-live="polite">
+          <span class="prompt">&gt;</span><span data-i18n="hero_role_prefix">Software Engineer building</span> <span class="typed"></span><span class="caret" aria-hidden="true"></span>
         </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">
-            <i class="fa-solid fa-briefcase"></i> View Projects
-          </a>
-          <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_contact">
-            <i class="fa-solid fa-envelope"></i> Contact Me
-          </a>
+
+        <p class="hero-description reveal" style="--d:.24s" data-i18n="hero_desc">
+          I design and ship <strong>production software end-to-end</strong> — full-stack web platforms, cloud backends and offline-first desktop systems — with TypeScript, React, Rust, SQL and serverless infrastructure. 16 projects delivered for real businesses, schools and agencies.
+        </p>
+
+        <div class="hero-actions reveal" style="--d:.32s">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-layer-group"></i> <span data-i18n="hero_btn_projects">View Projects</span></a>
           <div class="cv-btn-group">
-            <a href="assets/cv/Ibrahem_Osama_Hassan_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="hero_btn_cv">
-              <i class="fa-solid fa-file-lines"></i> View CV
-            </a>
-            <a href="assets/cv/Ibrahem_Osama_Hassan_CV.pdf" download class="btn btn-outline btn-icon" id="cv-download-btn" title="Download CV (PDF)" aria-label="Download CV (PDF)">
-              <i class="fa-solid fa-download"></i>
-            </a>
+            <a href="assets/cv/Ibrahem_Osama_Hassan_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-solid fa-file-lines"></i> <span data-i18n="hero_btn_cv">Resume / CV</span></a>
+            <a href="assets/cv/Ibrahem_Osama_Hassan_CV.pdf" download class="btn btn-outline btn-icon" id="cv-download-btn" title="Download CV (PDF)" aria-label="Download CV (PDF)"><i class="fa-solid fa-download"></i></a>
           </div>
         </div>
 
-        <!-- Quick Stats Ribbon -->
-        <div class="hero-stats-grid">
-          <div class="stat-item">
-            <span class="stat-number">11+</span>
-            <span class="stat-label" data-i18n="stat_projects">Projects & Systems Shipped</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label" data-i18n="stat_offline">Offline-Resilient Systems</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">2026</span>
-            <span class="stat-label" data-i18n="stat_degree">IT Graduate (Very Good)</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">10+</span>
-            <span class="stat-label" data-i18n="stat_languages">Core Languages & Stacks</span>
-          </div>
+        <div class="hero-socials reveal" style="--d:.4s">
+          <span data-i18n="hero_find">Find me on</span><span class="line-sep"></span>
+          <a href="https://github.com/gebaby-rgb" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://wa.me/201035748525" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:ibrahem.gebaby@gmail.com" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
 
-      <div class="hero-illustration reveal">
+      <div class="hero-visual reveal" style="--d:.2s">
+        <div class="orbit" aria-hidden="true"></div>
         <div class="profile-frame">
-          <img src="assets/images/profile.jpg" alt="Ibrahem Osama Hassan" class="profile-img">
+          <img src="assets/images/profile.jpg" alt="Ibrahem Osama Hassan" class="profile-img" width="400" height="500">
         </div>
+        <div class="float-card code-card" aria-hidden="true">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div><span class="tok-k">const</span> engineer = {</div>
+          <div>&nbsp;&nbsp;stack: [<span class="tok-s">"TS"</span>, <span class="tok-s">"Rust"</span>, <span class="tok-s">"SQL"</span>],</div>
+          <div>&nbsp;&nbsp;ships: <span class="tok-f">true</span>, <span class="tok-c">// 16 projects</span></div>
+          <div>};</div>
+        </div>
+        <div class="float-card badge-card" aria-hidden="true">
+          <div class="ic"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div><strong data-i18n="hero_badge_t">B.Sc. IT · 2026</strong><small data-i18n="hero_badge_s">Very Good grade</small></div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"></a>
+  </section>
+
+  <!-- Tech marquee -->
+  <div class="marquee" aria-label="Technologies">
+    <div class="marquee-track">
+      <span class="marquee-item"><i class="fa-brands fa-js"></i> TypeScript</span>
+      <span class="marquee-item"><i class="fa-brands fa-react"></i> React</span>
+      <span class="marquee-item"><i class="fa-brands fa-rust"></i> Rust</span>
+      <span class="marquee-item"><i class="fa-solid fa-feather"></i> Tauri v2</span>
+      <span class="marquee-item"><i class="fa-brands fa-node-js"></i> Node.js</span>
+      <span class="marquee-item"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+      <span class="marquee-item"><i class="fa-solid fa-bolt"></i> Supabase</span>
+      <span class="marquee-item"><i class="fa-brands fa-cloudflare"></i> Cloudflare Workers</span>
+      <span class="marquee-item"><i class="fa-solid fa-table"></i> SQLite / D1</span>
+      <span class="marquee-item"><i class="fa-brands fa-python"></i> Python</span>
+      <span class="marquee-item"><i class="fa-solid fa-hashtag"></i> C#</span>
+      <span class="marquee-item"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+      <span class="marquee-item"><i class="fa-solid fa-cube"></i> Three.js</span>
+      <span class="marquee-item"><i class="fa-solid fa-wand-magic-sparkles"></i> GSAP</span>
+      <span class="marquee-item"><i class="fa-brands fa-git-alt"></i> Git</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <section class="section" style="padding: 4.5rem 0;">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item"><span class="stat-number"><span data-count="16">0</span><span class="plus">+</span></span><span class="stat-label" data-i18n="stat_projects">Projects shipped to real clients</span></div>
+        <div class="stat-item"><span class="stat-number"><span data-count="8">0</span></span><span class="stat-label" data-i18n="stat_desktop">Desktop ERP & POS systems</span></div>
+        <div class="stat-item"><span class="stat-number"><span data-count="8">0</span></span><span class="stat-label" data-i18n="stat_web">Web & cloud platforms</span></div>
+        <div class="stat-item"><span class="stat-number"><span data-count="2">0</span></span><span class="stat-label" data-i18n="stat_langs">Languages in every product (AR / EN)</span></div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
+  <!-- About -->
+  <section id="about" class="section section-alt">
     <div class="container">
       <div class="section-header reveal">
-        <h2 class="section-title" data-i18n="about_title">About Me</h2>
-        <p class="section-subtitle" data-i18n="about_subtitle">A brief overview of my professional profile, core focus, and academic background.</p>
+        <span class="eyebrow" data-i18n="about_eyebrow">About me</span>
+        <h2 class="section-title" data-i18n="about_title">An engineer who owns the <em>whole product</em></h2>
       </div>
 
       <div class="about-grid">
         <div class="about-details reveal">
-          <p data-i18n="about_p1">
-            Hello! I am Ibrahem Osama Hassan, a passionate Software Engineer graduated in 2026 with a "Very Good" grade. My technical expertise spans across both hardware and software domains, specializing in building websites and desktop applications.
-          </p>
-          <p data-i18n="about_p2">
-            I design IoT architectures, embedded hardware layouts, and embedded machine learning models. Simultaneously, I create feature-rich cross-platform desktop ERPs and responsive websites using Tauri, React, Typescript, Tailwind CSS, SQLite, and Python.
-          </p>
-          <p data-i18n="about_p3">
-            I enjoy translating complex business operations into clean, user-friendly, and offline-first software. Whether designing custom ticketing apps, financial ledgers, or print-shop databases, I focus on performance, aesthetics, and accessibility.
-          </p>
+          <p class="about-lead" data-i18n="about_lead">I'm a Software Engineer from Egypt who turns messy, real-world business operations into fast, reliable software that people actually use every day.</p>
+          <p data-i18n="about_p1">I work across the full stack: <strong>React and TypeScript</strong> interfaces, <strong>Rust</strong> and <strong>Node/serverless</strong> backends, and <strong>SQL databases</strong> — PostgreSQL with Row-Level Security on Supabase, SQLite in desktop apps and Cloudflare D1 at the edge.</p>
+          <p data-i18n="about_p2">I take projects from the first conversation with the client to requirements, data modelling, implementation, testing and deployment — then keep improving them after launch. My work runs shops, academies, agencies and schools: POS and ERP systems, exam platforms, CRMs and marketing websites.</p>
+
+          <div class="about-principles">
+            <div class="principle"><i class="fa-solid fa-diagram-project"></i><div><b data-i18n="pr1_t">Clean architecture</b><span data-i18n="pr1_d">Typed layers, clear data models, testable logic.</span></div></div>
+            <div class="principle"><i class="fa-solid fa-wifi"></i><div><b data-i18n="pr2_t">Offline-first</b><span data-i18n="pr2_d">Software that keeps working without the internet.</span></div></div>
+            <div class="principle"><i class="fa-solid fa-shield-halved"></i><div><b data-i18n="pr3_t">Secure by default</b><span data-i18n="pr3_d">RBAC, RLS policies and server-side rules.</span></div></div>
+            <div class="principle"><i class="fa-solid fa-language"></i><div><b data-i18n="pr4_t">Arabic & English</b><span data-i18n="pr4_d">Proper RTL / LTR, not an afterthought.</span></div></div>
+          </div>
         </div>
 
-        <div class="about-info-cards reveal">
-          <div class="info-card glass-card">
-            <div class="info-card-header">
-              <i class="fa-solid fa-graduation-cap"></i> <span data-i18n="about_card_edu_title">Education</span>
-            </div>
-            <h3 class="info-card-title" data-i18n="about_edu_name">Faculty of Industrial and Energy Technology</h3>
-            <div class="info-card-meta" data-i18n="about_edu_univ">New Assiut Technological University (NATU), IT Department</div>
-            <div class="info-card-body" data-i18n="about_edu_body">
-              Bachelor's Degree in Information Technology, Graduated 2026.
-              <br>Grade: <strong>Very Good</strong>.
+        <div class="about-info-cards">
+          <div class="info-card glass-card reveal" style="--d:.1s">
+            <div class="info-card-header"><i class="fa-solid fa-briefcase"></i> <span data-i18n="exp_title">Experience</span></div>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-date" data-i18n="exp1_date">Present</div>
+                <div class="tl-title" data-i18n="exp1_t">Freelance Software Engineer</div>
+                <div class="tl-desc" data-i18n="exp1_d">Building ERP/POS desktop apps, SaaS-style web platforms and websites for clients in Egypt and Saudi Arabia.</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-date">2026</div>
+                <div class="tl-title" data-i18n="exp2_t">B.Sc. in Information Technology</div>
+                <div class="tl-desc" data-i18n="exp2_d">New Assiut Technological University — Faculty of Industrial & Energy Technology. Grade: Very Good.</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-date" data-i18n="exp3_date">University</div>
+                <div class="tl-title" data-i18n="exp3_t">Academic engineering projects</div>
+                <div class="tl-desc" data-i18n="exp3_d">Applied ML and embedded/IoT projects (ESP32, Flutter + Firebase) as part of the degree.</div>
+              </div>
             </div>
           </div>
 
-          <div class="info-card glass-card">
-            <div class="info-card-header">
-              <i class="fa-solid fa-circle-nodes"></i> <span data-i18n="about_card_phil_title">Core Philosophy</span>
-            </div>
-            <div class="info-card-body" data-i18n="about_card_phil_body">
-              Connecting physical sensors and embedded IoT systems with responsive websites and desktop ERP dashboards. Committed to offline-first speed and pristine, user-centered interface designs.
-            </div>
+          <div class="info-card glass-card reveal" style="--d:.2s">
+            <div class="info-card-header"><i class="fa-solid fa-location-dot"></i> <span data-i18n="loc_title">Based in</span></div>
+            <div class="info-card-title" data-i18n="loc_name">Assiut, Egypt</div>
+            <div class="info-card-body" data-i18n="loc_body">Open to remote work, relocation and freelance contracts.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section" style="background-color: var(--bg-deep);">
+  <!-- Services -->
+  <section id="services" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <h2 class="section-title" data-i18n="skills_title">Skills & Technologies</h2>
-        <p class="section-subtitle" data-i18n="skills_subtitle">A collection of languages, libraries, and systems I actively use to develop software.</p>
+        <span class="eyebrow" data-i18n="svc_eyebrow">What I build</span>
+        <h2 class="section-title" data-i18n="svc_title">Software that solves <em>real operations</em></h2>
+        <p class="section-subtitle" data-i18n="svc_subtitle">Four kinds of products I design, build and deliver end-to-end.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card spotlight reveal">
+          <div class="service-icon"><i class="fa-solid fa-desktop"></i></div>
+          <h3 data-i18n="svc1_t">Desktop ERP & POS</h3>
+          <p data-i18n="svc1_d">Native, offline-first business systems: sales, inventory, installments, shifts, payroll and reports in one installer.</p>
+          <div class="mini-tags"><span>Tauri</span><span>Rust</span><span>SQLite</span><span>React</span></div>
+        </div>
+        <div class="service-card glass-card spotlight reveal" style="--d:.08s">
+          <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3 data-i18n="svc2_t">Full-Stack Web Platforms</h3>
+          <p data-i18n="svc2_d">Multi-role SaaS-style platforms with auth, permissions, dashboards, realtime updates and audit logs.</p>
+          <div class="mini-tags"><span>Supabase</span><span>Postgres</span><span>Workers</span><span>D1</span></div>
+        </div>
+        <div class="service-card glass-card spotlight reveal" style="--d:.16s">
+          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3 data-i18n="svc3_t">Interactive Websites</h3>
+          <p data-i18n="svc3_d">Fast, bilingual, SEO-ready websites with scroll storytelling, 3D scenes and conversion-focused UX.</p>
+          <div class="mini-tags"><span>GSAP</span><span>Three.js</span><span>SEO</span><span>RTL</span></div>
+        </div>
+        <div class="service-card glass-card spotlight reveal" style="--d:.24s">
+          <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+          <h3 data-i18n="svc4_t">Backend & Data</h3>
+          <p data-i18n="svc4_d">Data modelling, SQL schemas and migrations, REST APIs, server-side business rules and backups.</p>
+          <div class="mini-tags"><span>SQL</span><span>REST</span><span>RLS</span><span>Node</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow" data-i18n="skills_eyebrow">Toolbox</span>
+        <h2 class="section-title" data-i18n="skills_title">Skills & <em>technologies</em></h2>
+        <p class="section-subtitle" data-i18n="skills_subtitle">The languages, frameworks and tools I use to ship production software.</p>
       </div>
 
       <div class="skills-grid">
-        <!-- Category 1: Systems & Embedded / IoT -->
         <div class="skill-category glass-card reveal">
-          <h3 class="skill-category-title">
-            <i class="fa-solid fa-microchip"></i> <span data-i18n="skills_cat_embedded">Systems & Embedded / IoT</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-bolt"></i> ESP32</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-microchip"></i> Arduino & MCUs</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-code"></i> C / C++ (Embedded)</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-brain"></i> <span data-i18n="skill_embedded_ml">Embedded ML / TinyML</span></span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
-            </div>
+          <h3 class="skill-category-title"><i class="fa-solid fa-code"></i> <span data-i18n="sk_lang">Languages</span></h3>
+          <div class="chips">
+            <span class="chip core"><i class="fa-brands fa-js"></i> TypeScript / JavaScript</span>
+            <span class="chip core"><i class="fa-brands fa-rust"></i> Rust</span>
+            <span class="chip core"><i class="fa-solid fa-database"></i> SQL</span>
+            <span class="chip"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="chip"><i class="fa-solid fa-hashtag"></i> C#</span>
+            <span class="chip"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="chip"><i class="fa-solid fa-code"></i> Dart</span>
+            <span class="chip"><i class="fa-solid fa-c"></i> C / C++</span>
           </div>
         </div>
-
-        <!-- Category 2: Core Programming Languages -->
-        <div class="skill-category glass-card reveal">
-          <h3 class="skill-category-title">
-            <i class="fa-solid fa-code"></i> <span data-i18n="skills_cat_languages">Core Programming Languages</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-rust"></i> Rust</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-js"></i> TypeScript & JS (ES6+)</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-python"></i> Python</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-hashtag"></i> C# (.NET)</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-golang"></i> Go (Golang)</span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-java"></i> Java & Dart</span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
-            </div>
+        <div class="skill-category glass-card reveal" style="--d:.08s">
+          <h3 class="skill-category-title"><i class="fa-solid fa-palette"></i> <span data-i18n="sk_front">Frontend</span></h3>
+          <div class="chips">
+            <span class="chip core"><i class="fa-brands fa-react"></i> React 18 / 19</span>
+            <span class="chip core"><i class="fa-solid fa-bolt"></i> Vite</span>
+            <span class="chip core"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+            <span class="chip"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+            <span class="chip"><i class="fa-solid fa-wand-magic-sparkles"></i> GSAP</span>
+            <span class="chip"><i class="fa-solid fa-cube"></i> Three.js</span>
+            <span class="chip"><i class="fa-solid fa-chart-line"></i> Recharts / Chart.js</span>
+            <span class="chip"><i class="fa-solid fa-language"></i> i18n / RTL</span>
           </div>
         </div>
-
-        <!-- Category 3: Desktop & Offline ERPs -->
-        <div class="skill-category glass-card reveal">
-          <h3 class="skill-category-title">
-            <i class="fa-solid fa-desktop"></i> <span data-i18n="skills_cat_desktop">Desktop & Offline ERPs</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-shield-halved"></i> Tauri v2 & Rust IPC</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-database"></i> SQLite & Local D1</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-cash-register"></i> Offline-First POS & Ledgers</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-chart-pie"></i> Recharts & Analytics</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
-            </div>
+        <div class="skill-category glass-card reveal" style="--d:.16s">
+          <h3 class="skill-category-title"><i class="fa-solid fa-server"></i> <span data-i18n="sk_back">Backend & Cloud</span></h3>
+          <div class="chips">
+            <span class="chip core"><i class="fa-brands fa-cloudflare"></i> Cloudflare Workers / Pages</span>
+            <span class="chip core"><i class="fa-solid fa-bolt"></i> Supabase</span>
+            <span class="chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="chip"><i class="fa-solid fa-plug"></i> REST APIs</span>
+            <span class="chip"><i class="fa-solid fa-key"></i> Auth & RBAC</span>
+            <span class="chip"><i class="fa-brands fa-google"></i> Google Apps Script</span>
+            <span class="chip"><i class="fa-solid fa-fire"></i> Firebase</span>
           </div>
         </div>
-
-        <!-- Category 4: Web & Cloud Architecture -->
         <div class="skill-category glass-card reveal">
-          <h3 class="skill-category-title">
-            <i class="fa-solid fa-cloud"></i> <span data-i18n="skills_cat_web">Web & Cloud Architecture</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-react"></i> React 19 & Vite</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-cloudflare"></i> Cloudflare Workers & Pages</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-css3-alt"></i> Tailwind CSS v4</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-network-wired"></i> RESTful APIs & Serverless</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
-            </div>
+          <h3 class="skill-category-title"><i class="fa-solid fa-database"></i> <span data-i18n="sk_db">Databases</span></h3>
+          <div class="chips">
+            <span class="chip core"><i class="fa-solid fa-database"></i> PostgreSQL + RLS</span>
+            <span class="chip core"><i class="fa-solid fa-table"></i> SQLite</span>
+            <span class="chip"><i class="fa-brands fa-cloudflare"></i> Cloudflare D1</span>
+            <span class="chip"><i class="fa-solid fa-fire"></i> Firestore</span>
+            <span class="chip"><i class="fa-solid fa-diagram-project"></i> Data modelling</span>
+            <span class="chip"><i class="fa-solid fa-code-branch"></i> Migrations</span>
           </div>
         </div>
-
-        <!-- Category 5: AI & Machine Learning -->
-        <div class="skill-category glass-card reveal">
-          <h3 class="skill-category-title">
-            <i class="fa-solid fa-brain"></i> <span data-i18n="skills_cat_ai">AI & Machine Learning</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-robot"></i> <span data-i18n="skill_ai_fundamentals">AI Fundamentals</span></span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 86%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-network-wired"></i> <span data-i18n="skill_dl_basics">Deep Learning basics</span></span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-eye"></i> Computer Vision & Edge AI</span>
-                <span class="skill-level" data-i18n="skill_level_intermediate">Intermediate</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
-            </div>
+        <div class="skill-category glass-card reveal" style="--d:.08s">
+          <h3 class="skill-category-title"><i class="fa-solid fa-desktop"></i> <span data-i18n="sk_desk">Desktop & Mobile</span></h3>
+          <div class="chips">
+            <span class="chip core"><i class="fa-solid fa-feather"></i> Tauri v2</span>
+            <span class="chip core"><i class="fa-solid fa-right-left"></i> Rust IPC</span>
+            <span class="chip"><i class="fa-solid fa-box"></i> Windows installers</span>
+            <span class="chip"><i class="fa-solid fa-mobile-screen"></i> Flutter</span>
+            <span class="chip"><i class="fa-solid fa-mobile"></i> PWA</span>
           </div>
         </div>
-
-        <!-- Category 6: Mobile & DevOps Tools -->
-        <div class="skill-category glass-card reveal">
-          <h3 class="skill-category-title">
-            <i class="fa-solid fa-toolbox"></i> <span data-i18n="skills_cat_devops">Mobile & DevOps Tools</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-flutter"></i> Flutter Mobile</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-git-alt"></i> Git & GitHub Actions</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-brands fa-linux"></i> Linux & Bash Scripting</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 84%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name"><i class="fa-solid fa-file-pdf"></i> jsPDF & Invoicing Engines</span>
-                <span class="skill-level" data-i18n="skill_level_advanced">Advanced</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
-            </div>
+        <div class="skill-category glass-card reveal" style="--d:.16s">
+          <h3 class="skill-category-title"><i class="fa-solid fa-screwdriver-wrench"></i> <span data-i18n="sk_tools">Engineering practice</span></h3>
+          <div class="chips">
+            <span class="chip core"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+            <span class="chip"><i class="fa-solid fa-vial"></i> Testing</span>
+            <span class="chip"><i class="fa-solid fa-sitemap"></i> System design</span>
+            <span class="chip"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO</span>
+            <span class="chip"><i class="fa-solid fa-robot"></i> AI-assisted dev</span>
+            <span class="chip"><i class="fa-solid fa-microchip"></i> ML / IoT basics</span>
           </div>
         </div>
       </div>
+      <div class="skills-note reveal"><span class="skills-legend" data-i18n="skills_legend">Highlighted = used in production daily</span></div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-title" data-i18n="projects_title">Projects Showcase</h2>
-        <p class="section-subtitle" data-i18n="projects_subtitle">Explore actual screenshots of active ERPs, custom accounting apps, and websites built on my workstation.</p>
-      </div>
-
-      <div class="projects-filter-bar reveal">
-        <button class="filter-btn active" data-filter="all"><i class="fa-solid fa-layer-group"></i> <span data-i18n="filter_all">All Projects (12)</span></button>
-        <button class="filter-btn" data-filter="desktop"><i class="fa-solid fa-desktop"></i> <span data-i18n="filter_desktop">Desktop & ERPs (7)</span></button>
-        <button class="filter-btn" data-filter="web"><i class="fa-solid fa-globe"></i> <span data-i18n="filter_web">Web & Cloud Platforms (5)</span></button>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1: Mastoor Home Textiles ERP (Desktop) -->
-        <div class="project-card glass-card reveal" data-category="desktop">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
-            <img src="assets/images/project/Screenshot (244).png" alt="Mastoor Home Textiles ERP Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=mastoor" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">React 19</span>
-              <span class="project-tag">Tauri v2</span>
-              <span class="project-tag">Rust</span>
-              <span class="project-tag">SQLite</span>
-              <span class="project-tag">Tailwind</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_mastoor_title">Mastoor Home Textiles ERP & Installments</h3>
-            <p class="project-description" data-i18n="project_mastoor_desc">
-              Offline-first desktop ERP and POS for home textiles and fabrics retail. Features fast POS checkout, credit & installment ledger with guarantor records, multi-channel cash liquidity (Cash, Vodafone Cash, InstaPay), and fabric yardage tracking.
-            </p>
-          </div>
+      <div class="projects-head">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="projects_eyebrow">Selected work</span>
+          <h2 class="section-title" data-i18n="projects_title">Projects I've <em>shipped</em></h2>
+          <p class="section-subtitle" data-i18n="projects_subtitle">Real systems built for real clients. Open any project for screenshots, the problem, technical decisions and results.</p>
         </div>
-
-        <!-- Project 2: Gebaby EdTech & Exam Platform (Web) -->
-        <div class="project-card glass-card reveal" data-category="web">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 14</div>
-            <img src="assets/images/project1/Screenshot (227).png" alt="Gebaby EdTech & Exam Management Platform Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=gebaby-platform" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Cloudflare Workers</span>
-              <span class="project-tag">D1 (SQLite)</span>
-              <span class="project-tag">TypeScript</span>
-              <span class="project-tag">Chart.js</span>
-              <span class="project-tag">REST API</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_gebaby_title">Gebaby EdTech & Exam Management Platform</h3>
-            <p class="project-description" data-i18n="project_gebaby_desc">
-              A centralized cloud learning and examination management platform deployed on Cloudflare Pages. Unifies teacher group management, a question bank, timed auto-graded exams, digital study libraries (PDF/video), and a gamified merit leaderboard.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 3: Oxygen Website -->
-        <div class="project-card glass-card reveal" data-category="web">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 4</div>
-            <img src="assets/images/oxygen_preview.png" alt="Oxygen Website Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=oxygen" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">HTML5/CSS3</span>
-              <span class="project-tag">Bootstrap</span>
-              <span class="project-tag">JS</span>
-              <span class="project-tag">Web Design</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_oxygen_title">Oxygen Business Portal</h3>
-            <p class="project-description" data-i18n="project_oxygen_desc">
-              A responsive, modern marketing website built for strategic business presentation. Showcases consultation services, client grids, and team details with micro-interactions.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 4: GBB Accounting ERP -->
-        <div class="project-card glass-card reveal" data-category="desktop">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
-            <img src="assets/images/gbb_accounting_preview.png" alt="GBB Accounting ERP Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=gbb" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Tauri</span>
-              <span class="project-tag">Vite</span>
-              <span class="project-tag">LocalStorage</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_gbb_title">GBB Route Accounting</h3>
-            <p class="project-description" data-i18n="project_gbb_desc">
-              Desktop ERP app managing transportation schedules, route logs, driver-vehicle pairings, passenger tickets, and financial logs syncing to local state.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 5: Jacket Maqtoo3 (Suit Rental ERP) -->
-        <div class="project-card glass-card reveal" data-category="desktop">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 9</div>
-            <img src="assets/images/jacket_maqtoo3_preview.png" alt="Jacket Maqtoo3 Suit Rental ERP Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=jacket" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Tauri</span>
-              <span class="project-tag">React</span>
-              <span class="project-tag">SQLite</span>
-              <span class="project-tag">Tailwind</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_jacket_title">Jacket Maqtoo3 ERP</h3>
-            <p class="project-description" data-i18n="project_jacket_desc">
-              Desktop suite rental ERP featuring active booking calendars, order processing, inventory control, and customer physical measurements registers with saved profiles.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 6: Jacket Maqtoo3 v1 -->
-        <div class="project-card glass-card reveal" data-category="desktop">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 8</div>
-            <img src="assets/images/jacket_maqtoo3_v1_preview.png" alt="Jacket Maqtoo3 v1 ERP Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=jacket-v1" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Tauri</span>
-              <span class="project-tag">SQLite</span>
-              <span class="project-tag">Vite</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_jacket_v1_title">Jacket Maqtoo3 v1</h3>
-            <p class="project-description" data-i18n="project_jacket_v1_desc">
-              Initial release build of the suit rental app management software. Houses catalog searching, customer order history tables, and sales log tracking.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 7: Printing Accounting ERP -->
-        <div class="project-card glass-card reveal" data-category="desktop">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 9</div>
-            <img src="assets/images/printing_accounting_preview.png" alt="Printing Accounting ERP Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=printing" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Tauri v2</span>
-              <span class="project-tag">Tailwind v4</span>
-              <span class="project-tag">Recharts</span>
-              <span class="project-tag">jsPDF</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_printing_title">Print-Job Billing System</h3>
-            <p class="project-description" data-i18n="project_printing_desc">
-              Financial and order administration desktop app for copy centers. Generates financial charts for sales metrics, invoices print orders, and exports logs as PDFs.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 8: Vodafone Cash ERP -->
-        <div class="project-card glass-card reveal" data-category="desktop">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
-            <img src="assets/images/vodafone_cash_preview.png" alt="Vodafone Cash ERP Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=vodafone" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Tauri v2</span>
-              <span class="project-tag">React</span>
-              <span class="project-tag">TypeScript</span>
-              <span class="project-tag">Lucide Icons</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_vodafone_title">Vodafone Cash ERP</h3>
-            <p class="project-description" data-i18n="project_vodafone_desc">
-              Agent manager desktop application tracking multiple wallets, cash-in/out registers, automatic commission calculations, and cheapest wallet transfer paths.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 9: Al-Fares Al-Moaser Exam Platform -->
-        <div class="project-card glass-card reveal" data-category="web">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 3</div>
-            <img src="assets/images/exam_platform_preview.svg" alt="Al-Fares Al-Moaser Exam Platform Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=exam-platform" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">Google Apps Script</span>
-              <span class="project-tag">Google Sheets</span>
-              <span class="project-tag">Cloudflare Pages</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_exam_title">Al-Fares Al-Moaser Exam Platform</h3>
-            <p class="project-description" data-i18n="project_exam_desc">
-              A free, fully custom online exam platform for a secondary-school teacher, serving Grade 1 & 2 students. Serverless Google Apps Script backend with Google Sheets as the database, featuring auto-grading, anti-cheat detection, and scheduled exam windows.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 10: Aura Academy Management System -->
-        <div class="project-card glass-card reveal" data-category="desktop">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-desktop" data-i18n="category_badge_desktop">Desktop & ERP</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 17</div>
-            <img src="assets/images/aura academy 0.png" alt="Aura Academy Management System Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=aura-academy" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">React 19</span>
-              <span class="project-tag">Tauri v2</span>
-              <span class="project-tag">Rust</span>
-              <span class="project-tag">SQLite</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_aura_title">Aura Academy Management System</h3>
-            <p class="project-description" data-i18n="project_aura_desc">
-              Offline-first desktop ERP for a private educational academy, unifying student & course management, attendance, a café POS, inventory, cash-shift reconciliation, payroll, and full financial reporting in one native app.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 11: Osama Group Agency ERP & CRM -->
-        <div class="project-card glass-card reveal" data-category="web">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 10</div>
-            <img src="assets/images/agency-ERP 0.jpeg" alt="Osama Group Agency ERP Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=agency-erp" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Cloudflare Workers</span>
-              <span class="project-tag">D1 (SQLite)</span>
-              <span class="project-tag">TypeScript</span>
-              <span class="project-tag">Backblaze B2</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_agency_title">Osama Group Agency ERP & CRM</h3>
-            <p class="project-description" data-i18n="project_agency_desc">
-              Full-stack ERP/CRM for a digital marketing agency running entirely on Cloudflare Workers and D1. Manages employees, clients, financial dues, a 7-stage project workflow, attendance, WhatsApp templates, complaints, and dynamic role-based permissions.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 12: Novera Clean Website -->
-        <div class="project-card glass-card reveal" data-category="web">
-          <div class="project-img-wrapper">
-            <span class="project-category-badge badge-web" data-i18n="category_badge_web">Cloud & Web</span>
-            <div class="media-badge"><i class="fa-solid fa-images"></i> 5</div>
-            <img src="assets/images/novera/novera-ar-home.png" alt="Novera Clean Website Preview" class="project-img" loading="lazy">
-            <div class="project-overlay">
-              <div class="project-meta-links">
-                <a href="project.html?id=novera-clean" class="btn btn-primary" style="width: 100%; font-size: 0.8rem; padding: 0.5rem 0.75rem;" data-i18n="project_btn_details">
-                  <i class="fa-solid fa-circle-info"></i> View Details
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">HTML5</span>
-              <span class="project-tag">CSS3</span>
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">RTL / SEO</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="project_novera_title">Novera Clean - Cleaning & Pest Control Website</h3>
-            <p class="project-description" data-i18n="project_novera_desc">
-              Bilingual (Arabic RTL / English) marketing website for a cleaning and pest control company in Dammam. Dedicated service pages, FAQ, dark mode, and one-tap call and WhatsApp booking.
-            </p>
-          </div>
+        <div class="filter-bar reveal" role="tablist">
+          <span class="filter-indicator" aria-hidden="true"></span>
+          <button class="filter-btn active" data-filter="all" role="tab"><span data-i18n="filter_all">All</span><span class="count" data-count-for="all"></span></button>
+          <button class="filter-btn" data-filter="web" role="tab"><span data-i18n="filter_web">Web & Cloud</span><span class="count" data-count-for="web"></span></button>
+          <button class="filter-btn" data-filter="desktop" role="tab"><span data-i18n="filter_desktop">Desktop</span><span class="count" data-count-for="desktop"></span></button>
         </div>
       </div>
+
+      <div class="projects-grid" id="projects-grid"></div>
     </div>
   </section>
 
-  <!-- Dedicated Video Showcase Section -->
-  <section id="video-demo" class="section video-showcase-section" style="background: var(--bg-deep);">
+  <!-- Video -->
+  <section id="video-demo" class="section section-alt">
     <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-title" data-i18n="video_title">Live Portfolio & Systems Showcase</h2>
-        <p class="section-subtitle" data-i18n="video_subtitle">Watch a video preview of custom ERP solutions, accounting software, and desktop applications developed for business clients.</p>
+      <div class="section-header center reveal">
+        <span class="eyebrow" data-i18n="video_eyebrow">Demo reel</span>
+        <h2 class="section-title" data-i18n="video_title">See the systems <em>in action</em></h2>
+        <p class="section-subtitle" data-i18n="video_subtitle">A short walkthrough of desktop ERP and accounting software built for business clients.</p>
       </div>
-
-      <div class="video-showcase-card glass-card reveal" style="max-width: 900px; margin: 0 auto; padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
-        <div class="video-player-wrapper" style="aspect-ratio: 16/9; background: #000; border-radius: 10px; overflow: hidden; margin-bottom: 1.25rem;">
-          <video controls poster="assets/images/vodafone_cash_preview.png" preload="metadata" playsinline style="width: 100%; height: 100%; object-fit: contain;">
+      <div class="video-showcase-card glass-card reveal">
+        <div class="video-player-wrapper">
+          <video controls poster="assets/images/vodafone_cash_preview.png" preload="metadata" playsinline>
             <source src="assets/video/202607251047 (1).mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
           </video>
         </div>
         <div class="video-card-footer">
-          <div class="video-card-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">
-            <i class="fa-solid fa-circle-play"></i> <span data-i18n="video_badge">Ibrahem Osama Hassan - Systems & ERP Demo Reel</span>
+          <i class="fa-solid fa-circle-play"></i>
+          <div>
+            <strong data-i18n="video_badge">Systems & ERP demo reel</strong>
+            <p data-i18n="video_info_text">Desktop ERP applications, real-time data management and financial ledgers.</p>
           </div>
-          <p class="video-card-desc" data-i18n="video_info_text" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-            A compilation preview demonstrating custom desktop ERP applications, real-time data management, financial ledgers, and high-performance software architecture.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section" style="background-color: var(--bg-deep);">
-    <div class="container contact-wrapper">
-      <div class="section-header reveal">
-        <h2 class="section-title" data-i18n="contact_title">Get in Touch</h2>
-        <p class="section-subtitle" data-i18n="contact_subtitle">Have a project, job offer, or technical query? Let's connect and build together.</p>
-      </div>
-
-      <div class="contact-card glass-card reveal">
-        <div class="contact-icon">
-          <i class="fa-solid fa-comments"></i>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-panel glass-card reveal">
+        <div>
+          <span class="eyebrow" data-i18n="contact_eyebrow">Contact</span>
+          <h2 class="contact-heading" data-i18n="contact_title">Have a role or a project? <em>Let's talk.</em></h2>
+          <p class="contact-text" data-i18n="contact_text">I'm open to Software Engineer positions (remote or on-site) and freelance projects. I usually reply within a day.</p>
+          <div class="hero-actions">
+            <a href="mailto:ibrahem.gebaby@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> <span data-i18n="contact_btn">Send an email</span></a>
+            <a href="assets/cv/Ibrahem_Osama_Hassan_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="hero_btn_cv">Resume / CV</span></a>
+          </div>
         </div>
-        <h3 class="contact-heading" data-i18n="contact_card_heading">Let's collaborate!</h3>
-        <p class="contact-text" data-i18n="contact_card_text">
-          Click below to copy my email address or connect with me via professional social networks. I am always open to discussing new opportunities.
-        </p>
-
         <div class="contact-details">
-          <div class="contact-method email" style="cursor: pointer;" title="Click to copy email">
-            <div class="contact-method-icon">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="contact-method-info">
-              <div class="contact-label" data-i18n="contact_lbl_email">Email Address (Click to copy)</div>
-              <div class="contact-value">ibrahem.gebaby@gmail.com</div>
-            </div>
+          <div class="contact-method email" role="button" tabindex="0">
+            <div class="contact-method-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><div class="contact-label" data-i18n="contact_lbl_email">Email (click to copy)</div><div class="contact-value">ibrahem.gebaby@gmail.com</div></div>
+            <i class="fa-regular fa-copy go"></i>
           </div>
-
-          <a href="https://wa.me/201035748525" target="_blank" class="contact-method">
-            <div class="contact-method-icon" style="color: #25D366;">
-              <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <div class="contact-method-info">
-              <div class="contact-label" data-i18n="contact_lbl_whatsapp">WhatsApp</div>
-              <div class="contact-value">01035748525</div>
-            </div>
+          <a href="https://wa.me/201035748525" target="_blank" rel="noopener" class="contact-method">
+            <div class="contact-method-icon" style="color:#25D366"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><div class="contact-label" data-i18n="contact_lbl_whatsapp">WhatsApp</div><div class="contact-value">+20 103 574 8525</div></div>
+            <i class="fa-solid fa-arrow-up-right-from-square go"></i>
           </a>
-
-          <a href="https://github.com/gebaby-rgb" target="_blank" class="contact-method">
-            <div class="contact-method-icon">
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <div class="contact-method-info">
-              <div class="contact-label" data-i18n="contact_lbl_github">GitHub Account</div>
-              <div class="contact-value">github.com/gebaby-rgb</div>
-            </div>
+          <a href="https://github.com/gebaby-rgb" target="_blank" rel="noopener" class="contact-method">
+            <div class="contact-method-icon"><i class="fa-brands fa-github"></i></div>
+            <div><div class="contact-label" data-i18n="contact_lbl_github">GitHub</div><div class="contact-value">github.com/gebaby-rgb</div></div>
+            <i class="fa-solid fa-arrow-up-right-from-square go"></i>
           </a>
         </div>
       </div>
     </div>
   </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
+      <p class="footer-copy">&copy; 2026 <span data-i18n="footer_name">Ibrahem Osama Hassan</span> · <span data-i18n="footer_copy">Software Engineer. Designed & built by me.</span></p>
       <div class="footer-socials">
-        <a href="https://github.com/gebaby-rgb" target="_blank" class="social-link" title="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://wa.me/201035748525" target="_blank" class="social-link" title="WhatsApp" style="color: #25D366;">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="mailto:ibrahem.gebaby@gmail.com" class="social-link" title="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
+        <a href="https://github.com/gebaby-rgb" target="_blank" rel="noopener" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://wa.me/201035748525" target="_blank" rel="noopener" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:ibrahem.gebaby@gmail.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
-      <p class="footer-copy">
-        &copy; 2026 <span data-i18n="hero_title_name">Ibrahem Osama</span>. <span data-i18n="footer_copy">All Rights Reserved. Built on local workspaces.</span>
-      </p>
     </div>
   </footer>
 
-  <!-- Main JavaScript File -->
+  <div class="toast" role="status" aria-live="polite"></div>
+
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -356,7 +356,7 @@
         </a>
       </div>
       <p class="footer-copy">
-        &copy; 2026 Ibrahem Osama Hassan. <span data-i18n="footer_copy">All Rights Reserved. Built on local workspaces.</span>
+        &copy; 2026 Ibrahem Osama Hassan. <span data-i18n="footer_copy">Software Engineer. All rights reserved.</span>
       </p>
     </div>
   </footer>
@@ -968,6 +968,206 @@
           "assets/images/project1/Screenshot (239).png",
           "assets/images/project1/Screenshot (240).png"
         ]
+      },
+      "elhamd-store": {
+        en: {
+          title: "El Hamd Store — Mobile Shop ERP & POS (Desktop)",
+          description: "A fully offline desktop ERP and point-of-sale system for a mobile-phone, accessories and repair shop. Built with Tauri v2 and a Rust backend over an embedded SQLite engine, it ships as a single self-contained installer with no server, no Docker and no internet dependency. It covers POS checkout, serialized device inventory (IMEI tracking), a repair-center pipeline, cash shifts and treasury, installments and financing dues, suppliers and purchase invoices, QR-coded invoices and an executive profit dashboard.",
+          client: "El Hamd Store — Mobiles, Accessories & Repair Center, Egypt",
+          purpose: "Replace paper notebooks and spreadsheets with one reliable desktop system that runs the whole shop: selling, stock, repairs, cash and installments.",
+          problem: "The shop tracked devices, IMEIs, repairs, used-device purchases and customer installments manually, which caused stock mismatches, lost repair tickets and no clear daily profit picture.",
+          challenges: "Designing a Rust + rusqlite backend compiled into the EXE so the app works 100% offline; a typed IPC layer between React and Rust; serialized inventory with dual-IMEI devices; landed-cost allocation of shipping on purchase invoices; PIN-based multi-user login with roles and security-question recovery; and a browser-mode mock layer so the UI can be developed and demoed without the native shell.",
+          results: "A production desktop installer (WebView2 bundled offline) with 13 integrated modules, an Arabic RTL interface, printable QR invoices with WhatsApp sharing, and hot backups from the settings screen.",
+          features: [
+            "Fast POS with barcode/IMEI search, cart, discounts and printable QR invoices (WhatsApp share)",
+            "Serialized device inventory with dual IMEI, low-stock alerts and used-device intake",
+            "Repair-center Kanban pipeline: received, diagnosing, awaiting approval, ready, delivered",
+            "Cash shifts, expenses, treasury accounts and an archive of every invoice",
+            "Installment engine and financing-company dues with monthly schedules",
+            "Customer & supplier ledgers, purchase invoices with landed-cost allocation",
+            "Executive profit dashboard: revenue, COGS, net profit, category breakdown and top products",
+            "PIN login with roles, first-run setup wizard, security-question recovery and backup/restore"
+          ],
+          status: "Completed — Delivered as Desktop Installer"
+        },
+        ar: {
+          title: "محل الحمد — نظام ERP ونقطة بيع لمحلات الموبايلات (سطح المكتب)",
+          description: "نظام إدارة ونقطة بيع مكتبي يعمل بدون إنترنت بالكامل لمحل موبايلات وإكسسوارات ومركز صيانة. مبني بـ Tauri v2 مع Backend بلغة Rust وقاعدة SQLite مدمجة داخل ملف التثبيت، بدون سيرفر أو Docker. يغطي نقطة البيع، والمخزون المسلسل بأرقام IMEI، ومركز الصيانة، والورديات والخزينة، والأقساط واستحقاقات التمويل، والموردين وفواتير التوريد، والفواتير بكود QR، ولوحة أرباح تنفيذية.",
+          client: "محل الحمد — موبايلات وإكسسوارات ومركز صيانة، مصر",
+          purpose: "استبدال الدفاتر والجداول بنظام مكتبي واحد موثوق يدير المحل بالكامل: البيع والمخزون والصيانة والخزينة والأقساط.",
+          problem: "كان المحل يتابع الأجهزة وأرقام IMEI والصيانة وشراء المستعمل والأقساط يدوياً، مما سبب فروقات في المخزون وضياع تذاكر الصيانة وغياب صورة واضحة للربح اليومي.",
+          challenges: "بناء Backend بلغة Rust مع rusqlite مدمج داخل ملف EXE ليعمل النظام بدون إنترنت 100%، وطبقة IPC بين React وRust، ومخزون مسلسل لأجهزة بشريحتين، وتوزيع تكلفة الشحن على أصناف فاتورة التوريد، وتسجيل دخول بالـ PIN مع صلاحيات واسترجاع بأسئلة الأمان، وطبقة محاكاة لتشغيل الواجهة في المتصفح.",
+          results: "ملف تثبيت مكتبي جاهز للإنتاج (مع WebView2 مدمج) يضم 13 وحدة متكاملة بواجهة عربية، وفواتير QR قابلة للطباعة والمشاركة عبر واتساب، ونسخ احتياطي فوري من الإعدادات.",
+          features: [
+            "نقطة بيع سريعة بالبحث بالباركود/IMEI وفواتير QR قابلة للطباعة والمشاركة عبر واتساب",
+            "مخزون أجهزة مسلسل بـ IMEI مزدوج وتنبيهات النواقص واستلام الأجهزة المستعملة",
+            "مركز صيانة بنظام Kanban: استلام، فحص، انتظار موافقة، جاهز، تسليم",
+            "ورديات نقدية ومصروفات وحسابات خزينة وأرشيف لكل الفواتير",
+            "محرك أقساط واستحقاقات شركات التمويل بجداول شهرية",
+            "حسابات العملاء والموردين وفواتير توريد مع توزيع التكلفة",
+            "لوحة أرباح تنفيذية: الإيرادات وتكلفة البضاعة وصافي الربح وأفضل الأصناف",
+            "دخول بالـ PIN مع صلاحيات ومعالج إعداد أولي ونسخ احتياطي واسترجاع"
+          ],
+          status: "مكتمل — تم التسليم كملف تثبيت"
+        },
+        tech: ["Tauri v2", "Rust", "SQLite (rusqlite)", "React 18", "TypeScript", "Tailwind CSS", "Vite"],
+        images: [
+          "assets/images/elhamd/5.jpg",
+          "assets/images/elhamd/1.jpg",
+          "assets/images/elhamd/2.jpg",
+          "assets/images/elhamd/3.jpg",
+          "assets/images/elhamd/4.jpg",
+          "assets/images/elhamd/0.jpg",
+          "assets/images/elhamd/6.jpg",
+          "assets/images/elhamd/7.jpg"
+        ]
+      },
+      "gebaby-v2": {
+        en: {
+          title: "Gebaby v2 — Teachers & Students Platform (React + Supabase)",
+          description: "A full rebuild of the Gebaby education platform on React, Vite and Supabase (Postgres, Auth, Storage, Realtime). It offers separate portals for super admins, teachers and students: groups and enrollments, an exam editor with a one-attempt exam engine, results and leaderboards, a study library, attendance, parent reports, Q&A, announcements with realtime notifications, certificates and complaints.",
+          client: "Gebaby — Teachers & Students Learning Platform",
+          purpose: "Give teachers one place to run their groups, exams and material, and give students a secure, motivating space to study and take exams.",
+          problem: "Exams and materials were scattered across messaging groups, grading was manual, and there was no trustworthy way to stop repeat attempts or follow student progress.",
+          challenges: "Moving the business rules into Postgres: Row-Level Security policies per role and server-side RPCs (start_attempt, save_answer, submit_attempt, close_exam, get_attempt_review) so a student can attempt an exam only once and cannot read answers early; realtime notifications; math rendering with KaTeX; Excel import/export; and a PWA with a service worker for installable, fast loading.",
+          results: "A production-ready platform with 6 database migrations, role-based portals (admin / teacher / student), a top-10 leaderboard, badges and certificates, deployable for free on static hosting.",
+          features: [
+            "Role-based portals: super admin, teacher and student, secured by Postgres RLS",
+            "Exam editor and one-attempt exam engine with automatic grading and attempt review",
+            "Groups, enrollments, attendance and printable parent reports",
+            "Study library (notes, PDFs, videos) and Q&A between students and teachers",
+            "Realtime announcements and notifications via Supabase Realtime",
+            "Top-10 leaderboard, badges and certificate exams",
+            "Admin audit log, user and teacher management, complaints and settings",
+            "Installable PWA with KaTeX math rendering and Excel import/export"
+          ],
+          status: "Completed — Production Ready"
+        },
+        ar: {
+          title: "جيبابي v2 — منصة المعلمين والطلاب (React + Supabase)",
+          description: "إعادة بناء كاملة لمنصة جيبابي التعليمية باستخدام React وVite وSupabase (Postgres وAuth وStorage وRealtime). تضم بوابات منفصلة للمدير والمعلم والطالب: المجموعات والاشتراكات، ومحرر امتحانات بمحرك محاولة واحدة، والنتائج ولوحة الترتيب، والمكتبة، والحضور، وتقارير ولي الأمر، والأسئلة والأجوبة، والإعلانات مع إشعارات لحظية، والشهادات والشكاوى.",
+          client: "جيبابي — منصة تعليمية للمعلمين والطلاب",
+          purpose: "منح المعلم مكاناً واحداً لإدارة مجموعاته وامتحاناته ومذكراته، ومنح الطالب بيئة آمنة ومحفزة للمذاكرة والامتحان.",
+          problem: "كانت الامتحانات والمذكرات مبعثرة في جروبات التواصل، والتصحيح يدوي، ولا توجد طريقة موثوقة لمنع تكرار المحاولة أو متابعة تقدم الطالب.",
+          challenges: "نقل قواعد العمل إلى قاعدة Postgres: سياسات Row-Level Security لكل دور ودوال RPC على السيرفر (start_attempt وsave_answer وsubmit_attempt وclose_exam) لضمان محاولة واحدة فقط، وإشعارات لحظية، وعرض المعادلات بـ KaTeX، واستيراد وتصدير Excel، وتطبيق PWA قابل للتثبيت.",
+          results: "منصة جاهزة للإنتاج بـ 6 ملفات Migration وبوابات حسب الدور ولوحة أفضل 10 طلاب وأوسمة وشهادات، وقابلة للنشر مجاناً على استضافة ثابتة.",
+          features: [
+            "بوابات حسب الدور: مدير ومعلم وطالب مع حماية RLS",
+            "محرر امتحانات ومحرك محاولة واحدة مع تصحيح تلقائي ومراجعة المحاولة",
+            "المجموعات والاشتراكات والحضور وتقارير ولي الأمر",
+            "مكتبة مذكرات وفيديوهات وأسئلة وأجوبة بين الطالب والمعلم",
+            "إعلانات وإشعارات لحظية عبر Supabase Realtime",
+            "لوحة أفضل 10 طلاب وأوسمة وامتحانات شهادات",
+            "سجل تدقيق للمدير وإدارة المستخدمين والمعلمين والشكاوى",
+            "تطبيق PWA قابل للتثبيت مع KaTeX واستيراد/تصدير Excel"
+          ],
+          status: "مكتمل — جاهز للإنتاج"
+        },
+        tech: ["React", "TypeScript", "Vite", "Supabase", "PostgreSQL + RLS", "Realtime", "PWA", "KaTeX"],
+        images: [
+          "assets/images/gebaby-v2/0.jpg",
+          "assets/images/gebaby-v2/1.jpg"
+        ]
+      },
+      "osama-group-site": {
+        en: {
+          title: "Osama Group — Scrollytelling Agency Website",
+          description: "The official website of Osama Group, an advertising and digital-marketing agency. The home page tells a story as you scroll: a quiet shop with no customers gets a new brand identity, its sign lights up and crowds walk in — then the page flows into services, packages and prices taken from the agency's real quotations. It is a multi-page static site with services, packages, results, company profile, a digital contract page and a 30+ article SEO blog.",
+          client: "Osama Group for Advertising & Marketing — Manfalut, Assiut, Egypt",
+          purpose: "Show business owners, visually and in seconds, what branding and marketing do for a shop, and turn that into enquiries and package requests.",
+          problem: "The agency's offer lived in PDFs and quotations that prospects rarely read; it needed a memorable site that explains its value and ranks locally in Arabic search.",
+          challenges: "Building a GSAP ScrollTrigger scene with illustrated characters, lighting changes and floating coins that stays smooth on mid-range phones; extracting real packages and prices from the company PDFs; writing a local-SEO article cluster with sitemap, robots and structured data; and adding PWA support with a service worker.",
+          results: "A live multi-page website on munfalut.com with an interactive story home page, full service and pricing pages, a downloadable company profile and 32 SEO articles.",
+          features: [
+            "Scroll-driven story: struggling shop, rebrand, then a crowd of customers and revenue",
+            "Services, packages and pricing pages built from the agency's real quotations",
+            "Company profile page and downloadable PDF profile",
+            "Digital contract page and results section",
+            "32-article Arabic SEO blog targeting local search (Manfalut, Assiut)",
+            "Sitemap, robots.txt, PWA manifest and service worker",
+            "Floating WhatsApp contact and fully responsive RTL layout"
+          ],
+          status: "Completed & Live"
+        },
+        ar: {
+          title: "أسامة جروب — موقع وكالة دعاية بأسلوب Scrollytelling",
+          description: "الموقع الرسمي لشركة أسامة جروب للدعاية والتسويق الرقمي. الصفحة الرئيسية تحكي قصة أثناء التمرير: محل هادئ بلا زبائن يحصل على هوية جديدة، تضيء لافتته ويتوافد العملاء، ثم تنتقل الصفحة إلى الخدمات والباقات والأسعار المأخوذة من عروض أسعار الشركة الحقيقية. موقع متعدد الصفحات يضم الخدمات والباقات والنتائج والبروفايل وصفحة العقد ومدونة بأكثر من 30 مقالاً.",
+          client: "شركة أسامة جروب للدعاية والإعلان — منفلوط، أسيوط",
+          purpose: "أن يرى صاحب النشاط في ثوانٍ وبصرياً ما تفعله الهوية والتسويق لمحله، وتحويل ذلك إلى استفسارات وطلبات باقات.",
+          problem: "كان عرض الشركة موجوداً في ملفات PDF وعروض أسعار نادراً ما تُقرأ، واحتاجت موقعاً لا يُنسى يشرح قيمتها ويظهر في البحث المحلي بالعربية.",
+          challenges: "بناء مشهد GSAP ScrollTrigger بشخصيات مرسومة وتغير إضاءة وعملات متطايرة يبقى سلساً على الهواتف المتوسطة، واستخراج الباقات والأسعار من ملفات الشركة، وكتابة مجموعة مقالات SEO محلية مع Sitemap وبيانات منظمة، ودعم PWA.",
+          results: "موقع حي متعدد الصفحات على munfalut.com بصفحة رئيسية تفاعلية وصفحات خدمات وأسعار كاملة وبروفايل قابل للتحميل و32 مقالاً.",
+          features: [
+            "قصة بالتمرير: محل متعثر، ثم هوية جديدة، ثم زبائن وأرباح",
+            "صفحات خدمات وباقات وأسعار من عروض الأسعار الحقيقية",
+            "صفحة بروفايل الشركة وملف PDF للتحميل",
+            "صفحة عقد رقمي وقسم النتائج",
+            "مدونة عربية بـ 32 مقالاً تستهدف البحث المحلي",
+            "Sitemap وrobots.txt وملف PWA وService Worker",
+            "زر واتساب عائم وتصميم RTL متجاوب بالكامل"
+          ],
+          status: "مكتمل ومنشور"
+        },
+        liveUrl: "https://munfalut.com/",
+        tech: ["HTML5", "CSS3", "JavaScript", "GSAP ScrollTrigger", "SEO", "PWA"],
+        images: [
+          "assets/images/osama-site/0.jpg",
+          "assets/images/osama-site/1.jpg",
+          "assets/images/osama-site/2.jpg",
+          "assets/images/osama-site/3.jpg",
+          "assets/images/osama-site/4.jpg",
+          "assets/images/osama-site/5.jpg",
+          "assets/images/osama-site/6.jpg",
+          "assets/images/osama-site/7.jpg"
+        ]
+      },
+      "aa-vision": {
+        en: {
+          title: "A_A Vision — Interior Finishing Website (React + Three.js)",
+          description: "A bilingual (Arabic / English) website for A_A Vision, an interior design and finishing company. It combines a cinematic hero slider, a scroll-driven 3D story built with Three.js that goes from bare red brick to a finished, furnished room, and interactive tools: a finishing-cost estimator, a style quiz, a project wizard and a booking flow with WhatsApp handoff.",
+          client: "A_A Vision — Interior Design & Finishing, Egypt",
+          purpose: "Help apartment owners understand the finishing journey, estimate a budget and book a consultation with confidence.",
+          problem: "Finishing companies usually show a gallery and a phone number; clients still don't know the stages, the cost range or which style fits them, so leads arrive cold.",
+          challenges: "A Three.js scene synced to scroll with GSAP and Lenis smooth scrolling; spring-based micro-interactions with Motion; full Arabic/English i18n for the story and tools; respecting prefers-reduced-motion; and keeping the bundle fast on mobile.",
+          results: "A production-grade React 19 site with a 3D build story, cost estimator, style quiz, booking wizard and floating WhatsApp contact.",
+          features: [
+            "Cinematic hero slider with Arabic-first copy and an English toggle",
+            "Scroll-driven Three.js story: red brick, plumbing & electrics, gypsum board, finished room",
+            "Finishing-cost estimator and style quiz",
+            "Step-by-step project wizard and booking form with WhatsApp handoff",
+            "Work/portfolio, about and extras sections",
+            "Smooth scrolling (Lenis), GSAP and Motion spring animations",
+            "Reduced-motion support and mobile-first responsive layout"
+          ],
+          status: "Completed"
+        },
+        ar: {
+          title: "A_A Vision — موقع شركة تشطيبات وديكور (React + Three.js)",
+          description: "موقع ثنائي اللغة لشركة A_A Vision للتصميم الداخلي والتشطيبات. يجمع بين سلايدر رئيسي سينمائي، وقصة ثلاثية الأبعاد بالتمرير مبنية بـ Three.js تنتقل من الطوب الأحمر إلى غرفة مشطبة ومفروشة، وأدوات تفاعلية: حاسبة تكلفة التشطيب واختبار الستايل ومعالج المشروع ونموذج حجز يحول إلى واتساب.",
+          client: "A_A Vision — تصميم داخلي وتشطيبات، مصر",
+          purpose: "مساعدة أصحاب الشقق على فهم مراحل التشطيب وتقدير الميزانية وحجز استشارة بثقة.",
+          problem: "معظم شركات التشطيب تعرض صوراً ورقم هاتف فقط، ويظل العميل لا يعرف المراحل أو التكلفة أو الستايل المناسب.",
+          challenges: "مشهد Three.js متزامن مع التمرير باستخدام GSAP وLenis، وحركات Spring بمكتبة Motion، وترجمة كاملة للقصة والأدوات، واحترام prefers-reduced-motion، والحفاظ على سرعة الموقع على الموبايل.",
+          results: "موقع React 19 احترافي بقصة بناء ثلاثية الأبعاد وحاسبة تكلفة واختبار ستايل ومعالج حجز وزر واتساب عائم.",
+          features: [
+            "سلايدر رئيسي سينمائي بالعربية مع زر الإنجليزية",
+            "قصة Three.js بالتمرير: طوب أحمر، سباكة وكهرباء، جبس بورد، غرفة مشطبة",
+            "حاسبة تكلفة التشطيب واختبار الستايل",
+            "معالج مشروع خطوة بخطوة ونموذج حجز يحول إلى واتساب",
+            "قسم الأعمال ومن نحن والإضافات",
+            "تمرير ناعم (Lenis) وحركات GSAP وMotion",
+            "دعم تقليل الحركة وتصميم متجاوب يبدأ من الموبايل"
+          ],
+          status: "مكتمل"
+        },
+        tech: ["React 19", "TypeScript", "Three.js", "GSAP", "Lenis", "Motion", "Vite"],
+        images: [
+          "assets/images/aavision/0.jpg",
+          "assets/images/aavision/1.jpg",
+          "assets/images/aavision/2.jpg",
+          "assets/images/aavision/3.jpg",
+          "assets/images/aavision/4.jpg"
+        ]
       }
     };
 
@@ -986,7 +1186,7 @@
         label_problem: "The Problem Solved",
         label_challenges: "Key Technical Decisions",
         label_results: "Measurable Result",
-        footer_copy: "All Rights Reserved. Built on local workspaces."
+        footer_copy: "Software Engineer. All rights reserved."
       },
       ar: {
         page_title: "تفاصيل المشروع | إبراهيم أسامة حسن",
