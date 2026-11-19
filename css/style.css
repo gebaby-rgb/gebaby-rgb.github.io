@@ -499,6 +499,8 @@ header.scrolled {
 }
 .badge-desktop i { color: var(--accent-secondary); }
 .badge-web i { color: var(--accent); }
+.badge-mobile i { color: #86EFAC; }
+.grad-badge { background: linear-gradient(135deg, #F2B84B, #4FD1C5); }
 .new-badge { background: var(--accent-secondary); color: #1A1204; border-color: transparent; }
 
 .project-body { padding: 1.4rem 1.4rem 1.5rem; display: flex; flex-direction: column; flex: 1; }

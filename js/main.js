@@ -9,10 +9,10 @@ const translations = {
     hero_status: "Available for full-time roles & freelance projects",
     hero_hi: "Hi, I'm", hero_name: "Ibrahem Osama",
     hero_role_prefix: "Software Engineer building",
-    hero_desc: "I design and ship <strong>production software end-to-end</strong> — full-stack web platforms, cloud backends and offline-first desktop systems — with TypeScript, React, Rust, SQL and serverless infrastructure. 16 projects delivered for real businesses, schools and agencies.",
+    hero_desc: "I design and ship <strong>production software end-to-end</strong> — full-stack web platforms, cloud backends and offline-first desktop systems — with TypeScript, React, Rust, SQL and serverless infrastructure. 17 projects delivered, including my graduation project.",
     hero_btn_projects: "View Projects", hero_btn_cv: "Resume / CV", hero_cv_download: "Download CV (PDF)",
     hero_find: "Find me on", hero_badge_t: "B.Sc. IT · 2026", hero_badge_s: "Very Good grade",
-    stat_projects: "Projects shipped to real clients", stat_desktop: "Desktop ERP & POS systems", stat_web: "Web & cloud platforms", stat_langs: "Languages in every product (AR / EN)",
+    stat_projects: "Projects designed & shipped", stat_desktop: "Desktop ERP & POS systems", stat_web: "Web & cloud platforms", stat_langs: "Languages in every product (AR / EN)",
     about_eyebrow: "About me",
     about_title: "An engineer who owns the <em>whole product</em>",
     about_lead: "I'm a Software Engineer from Egypt who turns messy, real-world business operations into fast, reliable software that people actually use every day.",
@@ -25,7 +25,7 @@ const translations = {
     exp_title: "Experience",
     exp1_date: "Present", exp1_t: "Freelance Software Engineer", exp1_d: "Building ERP/POS desktop apps, SaaS-style web platforms and websites for clients in Egypt and Saudi Arabia.",
     exp2_t: "B.Sc. in Information Technology", exp2_d: "New Assiut Technological University — Faculty of Industrial & Energy Technology, Software Engineering Department. Grade: Very Good.",
-    exp3_date: "University", exp3_t: "Academic engineering projects", exp3_d: "Applied ML and embedded/IoT projects (ESP32, Flutter + Firebase) as part of the degree.",
+    exp3_date: "2026", exp3_t: "Graduation project — Smart Farming & Irrigation", exp3_d: "IoT smart-irrigation system: field sensors → Firebase → bilingual Flutter app with live dashboard, history, weather and alerts.",
     loc_title: "Based in", loc_name: "Assiut, Egypt", loc_body: "Open to remote work, relocation and freelance contracts.",
     svc_eyebrow: "What I build", svc_title: "Software that solves <em>real operations</em>", svc_subtitle: "Four kinds of products I design, build and deliver end-to-end.",
     svc1_t: "Desktop ERP & POS", svc1_d: "Native, offline-first business systems: sales, inventory, installments, shifts, payroll and reports in one installer.",
@@ -38,7 +38,7 @@ const translations = {
     projects_eyebrow: "Selected work", projects_title: "Projects I've <em>shipped</em>",
     projects_subtitle: "Real systems built for real clients. Open any project for screenshots, the problem, technical decisions and results.",
     filter_all: "All", filter_web: "Web & Cloud", filter_desktop: "Desktop",
-    badge_web: "Web & Cloud", badge_desktop: "Desktop", badge_new: "New", case_study: "View case study",
+    badge_web: "Web & Cloud", badge_desktop: "Desktop", badge_new: "New", badge_mobile: "Mobile & IoT", badge_grad: "Graduation Project", filter_mobile: "Mobile & IoT", case_study: "View case study",
     video_eyebrow: "Demo reel", video_title: "See the systems <em>in action</em>",
     video_subtitle: "A short walkthrough of desktop ERP and accounting software built for business clients.",
     video_badge: "Systems & ERP demo reel", video_info_text: "Desktop ERP applications, real-time data management and financial ledgers.",
@@ -54,10 +54,10 @@ const translations = {
     hero_status: "متاح لوظائف بدوام كامل ومشاريع حرة",
     hero_hi: "مرحباً، أنا", hero_name: "إبراهيم أسامة",
     hero_role_prefix: "مهندس برمجيات أبني",
-    hero_desc: "أصمم وأطلق <strong>برمجيات إنتاجية من البداية للنهاية</strong> — منصات ويب متكاملة، وأنظمة سحابية، وتطبيقات سطح مكتب تعمل بدون إنترنت — باستخدام TypeScript و React و Rust و SQL والبنية السحابية. سلّمت 16 مشروعاً لشركات ومدارس ووكالات حقيقية.",
+    hero_desc: "أصمم وأطلق <strong>برمجيات إنتاجية من البداية للنهاية</strong> — منصات ويب متكاملة، وأنظمة سحابية، وتطبيقات سطح مكتب تعمل بدون إنترنت — باستخدام TypeScript و React و Rust و SQL والبنية السحابية. سلّمت 17 مشروعاً منها مشروع التخرج.",
     hero_btn_projects: "شاهد المشاريع", hero_btn_cv: "السيرة الذاتية", hero_cv_download: "تحميل السيرة الذاتية (PDF)",
     hero_find: "تابعني على", hero_badge_t: "بكالوريوس IT · 2026", hero_badge_s: "بتقدير جيد جداً",
-    stat_projects: "مشروعاً تم تسليمها لعملاء حقيقيين", stat_desktop: "أنظمة ERP ونقاط بيع مكتبية", stat_web: "منصات ويب وسحابية", stat_langs: "لغتان في كل منتج (عربي / إنجليزي)",
+    stat_projects: "مشروعاً تم تصميمها وتسليمها", stat_desktop: "أنظمة ERP ونقاط بيع مكتبية", stat_web: "منصات ويب وسحابية", stat_langs: "لغتان في كل منتج (عربي / إنجليزي)",
     about_eyebrow: "نبذة عني",
     about_title: "مهندس يتحمل مسؤولية <em>المنتج بالكامل</em>",
     about_lead: "أنا مهندس برمجيات من مصر، أحوّل عمليات الأعمال الحقيقية المعقدة إلى برمجيات سريعة وموثوقة يستخدمها الناس يومياً.",
@@ -70,7 +70,7 @@ const translations = {
     exp_title: "الخبرة",
     exp1_date: "حالياً", exp1_t: "مهندس برمجيات مستقل", exp1_d: "بناء أنظمة ERP ونقاط بيع مكتبية ومنصات ويب ومواقع لعملاء في مصر والسعودية.",
     exp2_t: "بكالوريوس تكنولوجيا المعلومات", exp2_d: "جامعة أسيوط الجديدة التكنولوجية — كلية تكنولوجيا الصناعة والطاقة، قسم Software Engineering. التقدير: جيد جداً.",
-    exp3_date: "الجامعة", exp3_t: "مشاريع هندسية أكاديمية", exp3_d: "مشاريع تعلم آلي وأنظمة مدمجة/IoT (ESP32 و Flutter مع Firebase) ضمن الدراسة.",
+    exp3_date: "2026", exp3_t: "مشروع التخرج — نظام الزراعة والري الذكي", exp3_d: "نظام ري ذكي بإنترنت الأشياء: حساسات الحقل ← Firebase ← تطبيق Flutter ثنائي اللغة بلوحة لحظية وسجل وطقس وتنبيهات.",
     loc_title: "المقر", loc_name: "أسيوط، مصر", loc_body: "متاح للعمل عن بُعد أو الانتقال أو العقود الحرة.",
     svc_eyebrow: "ماذا أبني", svc_title: "برمجيات تحل <em>مشاكل حقيقية</em>", svc_subtitle: "أربعة أنواع من المنتجات أصممها وأبنيها وأسلمها كاملة.",
     svc1_t: "أنظمة ERP ونقاط بيع مكتبية", svc1_d: "أنظمة أعمال أصلية تعمل بدون إنترنت: مبيعات ومخزون وأقساط وورديات ورواتب وتقارير في ملف تثبيت واحد.",
@@ -83,7 +83,7 @@ const translations = {
     projects_eyebrow: "أعمال مختارة", projects_title: "مشاريع <em>تم تسليمها</em>",
     projects_subtitle: "أنظمة حقيقية لعملاء حقيقيين. افتح أي مشروع لترى الصور والمشكلة والقرارات التقنية والنتائج.",
     filter_all: "الكل", filter_web: "ويب وسحابة", filter_desktop: "سطح المكتب",
-    badge_web: "ويب وسحابة", badge_desktop: "سطح المكتب", badge_new: "جديد", case_study: "عرض تفاصيل المشروع",
+    badge_web: "ويب وسحابة", badge_desktop: "سطح المكتب", badge_new: "جديد", badge_mobile: "موبايل و IoT", badge_grad: "مشروع التخرج", filter_mobile: "موبايل و IoT", case_study: "عرض تفاصيل المشروع",
     video_eyebrow: "فيديو العرض", video_title: "شاهد الأنظمة <em>أثناء العمل</em>",
     video_subtitle: "جولة قصيرة في أنظمة ERP والبرامج المحاسبية المكتبية المطورة لعملاء.",
     video_badge: "عرض أنظمة ERP", video_info_text: "تطبيقات ERP مكتبية وإدارة بيانات لحظية ودفاتر مالية.",
@@ -98,6 +98,10 @@ const translations = {
 
 /* ---------- Projects (order = display order) ---------- */
 const projects = [
+  { id: "smart-irrigation", cat: "mobile", featured: true, grad: true, img: "assets/images/smart-irrigation/0.jpg", media: 8,
+    tags: ["Flutter", "Dart", "Firebase", "IoT", "MVVM"],
+    en: ["Graduation Project — Smart Farming & Irrigation System", "IoT smart-farming system: field sensors stream soil moisture, humidity, temperature, pH and light to Firebase, and a bilingual Flutter app shows a live dashboard, history charts, a 7-day weather forecast, alerts and pump status."],
+    ar: ["مشروع التخرج — نظام الزراعة والري الذكي", "نظام زراعة ذكية بإنترنت الأشياء: حساسات الحقل ترسل رطوبة التربة والحرارة والـ pH والإضاءة إلى Firebase، وتطبيق Flutter ثنائي اللغة يعرض لوحة لحظية ورسوم السجل وتوقعات الطقس لسبعة أيام والتنبيهات وحالة المضخة."] },
   { id: "elhamd-store", cat: "desktop", featured: true, isNew: true, img: "assets/images/elhamd/5.jpg", media: 8,
     tags: ["Tauri v2", "Rust", "SQLite", "React", "TypeScript"],
     en: ["El Hamd Store — Mobile Shop ERP & POS", "Fully offline desktop ERP for a mobile-phone and repair shop: POS with QR invoices, IMEI-serialized inventory, repair Kanban, shifts & treasury, installments, suppliers and a profit dashboard — Rust + embedded SQLite in one installer."],
@@ -118,14 +122,14 @@ const projects = [
     tags: ["React 19", "Tauri v2", "Rust", "SQLite"],
     en: ["Mastoor Home Textiles ERP & Installments", "Offline-first desktop ERP and POS for textiles retail: fast checkout, installment ledger with guarantors, multi-channel cash (Cash, Vodafone Cash, InstaPay) and fabric yardage tracking."],
     ar: ["نظام مستور لإدارة الأقمشة والمفروشات والتقسيط", "نظام مكتبي يعمل بدون إنترنت لمتاجر الأقمشة: نقطة بيع سريعة، وعقود تقسيط مع الضامنين، وإدارة السيولة (نقدية، فودافون كاش، إنستاباي)، وتتبع أمتار الأقمشة."] },
-  { id: "agency-erp", cat: "web", featured: true, img: "assets/images/agency-ERP 0.jpeg", media: 10,
-    tags: ["Cloudflare Workers", "D1", "TypeScript", "Backblaze B2"],
-    en: ["Osama Group Agency ERP & CRM", "Full-stack ERP/CRM for a multi-branch marketing agency on Cloudflare Workers and D1: 11-role dynamic permissions, a 7-stage project workflow, financial dues, attendance, WhatsApp templates and a 396-case regression suite."],
-    ar: ["نظام Osama Group لإدارة الوكالات (ERP/CRM)", "نظام ERP/CRM متكامل لوكالة تسويق متعددة الفروع على Cloudflare Workers وD1: صلاحيات ديناميكية لـ 11 دوراً، ومسار مشاريع بسبع مراحل، ومستحقات مالية وحضور وقوالب واتساب و396 حالة اختبار."] },
   { id: "aura-academy", cat: "desktop", img: "assets/images/aura academy 0.png", media: 17,
     tags: ["React 19", "Tauri v2", "Rust", "SQLite"],
     en: ["Aura Academy Management System", "Offline-first desktop ERP for an academy: students & courses, attendance, café POS, inventory, cash-shift reconciliation, payroll and financial reporting in one native app."],
     ar: ["نظام إدارة أكاديمية أورا", "نظام ERP مكتبي يعمل بدون إنترنت لأكاديمية: الطلاب والكورسات، والحضور، ونقطة بيع الكافيه، والمخزون، وتسوية الورديات، والرواتب، والتقارير المالية."] },
+  { id: "agency-erp", cat: "web", featured: true, img: "assets/images/agency-ERP 0.jpeg", media: 10,
+    tags: ["Cloudflare Workers", "D1", "TypeScript", "Backblaze B2"],
+    en: ["Osama Group Agency ERP & CRM", "Full-stack ERP/CRM for a multi-branch marketing agency on Cloudflare Workers and D1: 11-role dynamic permissions, a 7-stage project workflow, financial dues, attendance, WhatsApp templates and a 396-case regression suite."],
+    ar: ["نظام Osama Group لإدارة الوكالات (ERP/CRM)", "نظام ERP/CRM متكامل لوكالة تسويق متعددة الفروع على Cloudflare Workers وD1: صلاحيات ديناميكية لـ 11 دوراً، ومسار مشاريع بسبع مراحل، ومستحقات مالية وحضور وقوالب واتساب و396 حالة اختبار."] },
   { id: "gebaby-platform", cat: "web", img: "assets/images/project1/Screenshot (227).png", media: 14,
     tags: ["Cloudflare Workers", "D1", "TypeScript", "Chart.js"],
     en: ["Gebaby EdTech & Exam Platform (v1)", "Cloud learning platform on Cloudflare Pages + D1: teacher groups, question bank, timed auto-graded exams, digital library, audit logs and a gamified leaderboard."],
@@ -172,7 +176,7 @@ function renderProjects(lang) {
   const t = translations[lang];
   grid.innerHTML = projects.map((p, i) => {
     const [title, desc] = p[lang];
-    const icon = p.cat === "desktop" ? "fa-desktop" : "fa-cloud";
+    const icon = { desktop: "fa-desktop", web: "fa-cloud", mobile: "fa-mobile-screen" }[p.cat];
     return `
       <article class="project-card glass-card spotlight reveal${p.featured ? " featured" : ""}" data-category="${p.cat}" style="--d:${(i % 3) * 0.07}s">
         <a class="project-card-link" href="project.html?id=${p.id}" aria-label="${esc(title)}"></a>
@@ -180,6 +184,7 @@ function renderProjects(lang) {
           <div class="project-badges">
             <span class="project-category-badge badge-${p.cat}"><i class="fa-solid ${icon}"></i> ${t["badge_" + p.cat]}</span>
             <span style="display:flex;gap:.4rem">
+              ${p.grad ? `<span class="new-badge grad-badge"><i class="fa-solid fa-graduation-cap"></i> ${t.badge_grad}</span>` : ""}
               ${p.isNew ? `<span class="new-badge">${t.badge_new}</span>` : ""}
               <span class="media-badge"><i class="fa-solid fa-images"></i> ${p.media}</span>
             </span>
@@ -195,7 +200,7 @@ function renderProjects(lang) {
       </article>`;
   }).join("");
 
-  ["all", "web", "desktop"].forEach((f) => {
+  ["all", "web", "desktop", "mobile"].forEach((f) => {
     const el = document.querySelector(`[data-count-for="${f}"]`);
     if (el) el.textContent = f === "all" ? projects.length : projects.filter((p) => p.cat === f).length;
   });

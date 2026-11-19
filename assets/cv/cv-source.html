@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Ibrahem Osama Hassan — Software Engineer CV</title>
+<!-- Source for Ibrahem_Osama_Hassan_CV.pdf. Re-render with a browser "Print to PDF" (A4, background graphics on). -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@page { size: A4; margin: 13mm 15mm; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Inter', Arial, sans-serif; color:#1b2230; font-size:9.5pt; line-height:1.42; }
+a { color:inherit; text-decoration:none; }
+h1 { font-size:22pt; letter-spacing:-0.02em; color:#0b1220; }
+.role { font-size:11.5pt; font-weight:600; color:#0f8f86; margin-top:2px; }
+.contact { margin-top:6px; color:#4a5568; font-size:8.8pt; }
+.contact a { margin-right:11px; border-bottom:1px solid #cfe3e0; }
+h2 { font-size:9.8pt; text-transform:uppercase; letter-spacing:0.12em; color:#0f8f86; border-bottom:1.2px solid #d6e4e2; padding-bottom:3px; margin:12px 0 6px; }
+p { margin-bottom:4px; }
+ul { padding-left:14px; } li { margin-bottom:2px; }
+.proj { margin-bottom:6px; page-break-inside: avoid; }
+.ph { display:flex; justify-content:space-between; gap:10px; align-items:baseline; }
+.ph b { font-size:9.9pt; color:#0b1220; }
+.ph b a { border-bottom:1px solid #cfe3e0; }
+.stack { color:#0f8f86; font-size:8.3pt; font-weight:500; text-align:right; white-space:nowrap; }
+.skills { display:grid; grid-template-columns: 140px 1fr; row-gap:3px; }
+.skills b { color:#0b1220; }
+.muted { color:#5b6577; }
+.tag { display:inline-block; font-size:7.6pt; font-weight:600; color:#8a5a00; background:#fdf1d8; border-radius:4px; padding:0 5px; margin-left:6px; vertical-align:1px; }
+</style></head><body>
+<h1>IBRAHEM OSAMA HASSAN</h1>
+<div class="role">Software Engineer — Full-Stack Web, Cloud, Desktop & Mobile</div>
+<div class="contact">
+  <a href="mailto:ibrahem.gebaby@gmail.com">ibrahem.gebaby@gmail.com</a>
+  <a href="https://wa.me/201035748525">+20 103 574 8525</a>
+  <a href="https://github.com/gebaby-rgb">github.com/gebaby-rgb</a>
+  <a href="https://gebaby-rgb.github.io">gebaby-rgb.github.io</a>
+</div>
+
+<h2>Summary</h2>
+<p>Software Engineer (B.Sc., Software Engineering Department, 2026 — Very Good) who designs, builds and ships production software end-to-end. Delivered 17 projects — offline-first desktop ERP/POS systems, multi-role web platforms, bilingual websites and a Flutter + Firebase IoT graduation project — using TypeScript, React, Rust, Dart, SQL and serverless cloud (Supabase, Cloudflare Workers/D1, Firebase). Owns the full lifecycle: client requirements, data modelling, implementation, testing, deployment and support.</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+<b>Languages</b><span>TypeScript / JavaScript, Rust, SQL, Dart, Python, C#, Java, C/C++</span>
+<b>Frontend</b><span>React 18/19, Vite, Tailwind CSS, HTML5/CSS3, GSAP, Three.js, Recharts / Chart.js, i18n & RTL</span>
+<b>Backend & Cloud</b><span>Supabase (Auth, Storage, Realtime, RPC), Cloudflare Workers / Pages, Firebase (Auth, Realtime DB, Firestore), Node.js, REST APIs, RBAC</span>
+<b>Databases</b><span>PostgreSQL + Row-Level Security, SQLite (rusqlite), Cloudflare D1, Firestore — schema design & migrations</span>
+<b>Desktop & Mobile</b><span>Tauri v2 + Rust IPC, Windows installers (offline WebView2), Flutter (Provider / MVVM, go_router), PWA</span>
+<b>Practices</b><span>Git / GitHub, clean architecture (MVVM, repositories), testing & regression suites, system design, SEO, performance</span>
+</div>
+
+<h2>Experience</h2>
+<div class="ph"><b>Freelance Software Engineer</b><span class="muted">Present</span></div>
+<ul>
+<li>Design and deliver custom software for businesses in Egypt and Saudi Arabia — retail ERP/POS, academy and agency management, exam platforms and marketing websites (16 client projects).</li>
+<li>Own each engagement end-to-end: requirements with the client, data modelling, implementation, testing, deployment and post-launch support.</li>
+<li>Ship bilingual (Arabic RTL / English) products used daily by shop staff, teachers, students and agency teams; 3 websites live in production.</li>
+</ul>
+
+<h2>Selected Projects</h2>
+<div class="proj"><div class="ph"><b>Smart Farming & Irrigation System<span class="tag">GRADUATION PROJECT</span></b><span class="stack">Flutter · Dart · Firebase · IoT</span></div>
+<ul><li>IoT system: field sensors (soil moisture, humidity, temperature, pH, light) stream to Firebase Realtime DB / Firestore; bilingual Flutter app with live dashboard, history charts (min/max/avg), 7-day weather (Open-Meteo + geolocation), alerts and pump status.</li>
+<li>MVVM architecture with Provider view-models and repositories, go_router navigation, Firebase Auth, connectivity monitoring with cached last-known readings.</li></ul></div>
+
+<div class="proj"><div class="ph"><b>El Hamd Store — Mobile Shop ERP & POS</b><span class="stack">Tauri v2 · Rust · SQLite · React · TypeScript</span></div>
+<ul><li>100% offline desktop system shipped as one installer: POS with QR invoices, IMEI-serialized inventory, repair Kanban, cash shifts, installments, suppliers and a profit dashboard (13 modules).</li>
+<li>Rust + embedded SQLite backend with typed IPC, landed-cost allocation, PIN login with roles and a browser mock layer for UI development.</li></ul></div>
+
+<div class="proj"><div class="ph"><b>Gebaby v2 — Teachers & Students Platform</b><span class="stack">React · Supabase · PostgreSQL · RLS · PWA</span></div>
+<ul><li>Admin / teacher / student portals; one-attempt exam engine enforced in Postgres via RPCs and Row-Level Security; realtime notifications, library, attendance, parent reports, leaderboard and certificates.</li></ul></div>
+
+<div class="proj"><div class="ph"><b>Osama Group — Agency ERP & CRM</b><span class="stack">Cloudflare Workers · D1 · TypeScript · Backblaze B2</span></div>
+<ul><li>ERP/CRM for a multi-branch marketing agency: 11-role dynamic permissions, 7-stage project workflow, financial dues, attendance, WhatsApp templates; covered by a 396-case regression suite.</li></ul></div>
+
+<div class="proj"><div class="ph"><b><a href="https://munfalut.com/">Osama Group — Scrollytelling Website ↗</a></b><span class="stack">JavaScript · GSAP · SEO · PWA</span></div>
+<ul><li>Live multi-page agency site with a scroll-driven story home page, real pricing packages, PWA support and a 32-article local-SEO blog.</li></ul></div>
+
+<div class="proj"><div class="ph"><b><a href="https://gebaby-rgb.github.io/aa-vision/">A_A Vision — Interior Finishing Website ↗</a></b><span class="stack">React 19 · Three.js · GSAP · Lenis</span></div>
+<ul><li>Bilingual site with a scroll-synced Three.js build story, finishing-cost estimator, style quiz and booking wizard with WhatsApp handoff.</li></ul></div>
+
+<div class="proj"><div class="ph"><b>Aura Academy & Mastoor Textiles — Desktop ERPs</b><span class="stack">Tauri v2 · React 19 · Rust · SQLite</span></div>
+<ul><li>Offline-first ERPs: student wallets, attendance, café POS, payroll, cash-shift reconciliation; installment contracts with guarantors and multi-channel cash (Cash, Vodafone Cash, InstaPay).</li></ul></div>
+
+<p class="muted">Also: <a href="https://noveraclean.com/">Novera Clean website (live, KSA)</a>, Al-Fares online exam platform, Vodafone Cash agent ERP, print-shop billing, suit-rental ERP, transport accounting. Case studies & screenshots: <a href="https://gebaby-rgb.github.io/#projects">gebaby-rgb.github.io</a></p>
+
+<h2>Education</h2>
+<div class="ph"><b>B.Sc. — New Assiut Technological University</b><span class="muted">2026</span></div>
+<p class="muted">Faculty of Industrial and Energy Technology · Software Engineering Department · Grade: Very Good · Graduation project: Smart Farming & Irrigation System (above).</p>
+</body></html>

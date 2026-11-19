@@ -1169,6 +1169,59 @@
           "assets/images/aavision/3.jpg",
           "assets/images/aavision/4.jpg"
         ]
+      },
+      "smart-irrigation": {
+        en: {
+          title: "Graduation Project — Smart Farming & Irrigation System (Flutter + Firebase)",
+          description: "My B.Sc. graduation project: an IoT smart-farming system in which field sensors (soil moisture, soil humidity, temperature, pH and light) stream readings to Firebase, and a cross-platform Flutter app lets the farmer monitor the field live, review history and weather, receive alerts and see the irrigation pump status. The app is bilingual (Arabic / English) with light and dark themes and runs on Android, iOS and the web.",
+          client: "Graduation Project — B.Sc., New Assiut Technological University (Software Engineering Department), 2026",
+          purpose: "Help farmers save water and protect crops by watering based on real soil data instead of fixed schedules, and by giving them the field's status on their phone at any time.",
+          problem: "Traditional irrigation runs on a fixed timetable, which wastes water and either over- or under-waters crops; farmers have no live view of soil conditions, so problems like dry soil or overheating are discovered too late.",
+          challenges: "Designing a clean MVVM-style architecture (Provider view-models, repositories and services) on top of two Firebase stores: Realtime Database for live sensor streams and pump state, Firestore for structured device and reading history. Handling missing or late sensor data and connectivity loss gracefully (connectivity monitoring and a cached last-known state), integrating a 7-day weather forecast from the Open-Meteo API with device geolocation, declarative navigation with go_router, and full Arabic RTL / English localization.",
+          results: "A working end-to-end system — sensors to cloud to mobile app — with a live dashboard of 6 field metrics, historical charts with min / max / average, weather forecast, categorized alerts, authentication and settings, delivered and presented as the graduation project.",
+          features: [
+            "Live dashboard: temperature, soil humidity, soil moisture, soil pH, light intensity and pump status",
+            "Realtime sensor stream from Firebase Realtime Database; device and reading history in Cloud Firestore",
+            "Sensor history charts (fl_chart) per metric with today / yesterday / last-week ranges and min / max / average",
+            "7-day weather forecast from the Open-Meteo API using the device location (geolocator)",
+            "Alerts center: high temperature, low soil moisture, pump maintenance and system status",
+            "Firebase Authentication (sign-up / login) with onboarding and splash screens",
+            "Connectivity monitoring with cached last-known readings when offline",
+            "Arabic / English localization, light / dark theme, go_router navigation and an MVVM + repository architecture"
+          ],
+          status: "Completed — Graduation Project 2026"
+        },
+        ar: {
+          title: "مشروع التخرج — نظام الزراعة والري الذكي (Flutter + Firebase)",
+          description: "مشروع تخرجي في البكالوريوس: نظام زراعة ذكية بإنترنت الأشياء، حيث ترسل حساسات الحقل (رطوبة التربة ودرجة الحرارة والـ pH وشدة الإضاءة) قراءاتها إلى Firebase، ويتيح تطبيق Flutter متعدد المنصات للمزارع متابعة الحقل لحظياً ومراجعة السجل والطقس واستقبال التنبيهات ومعرفة حالة مضخة الري. التطبيق ثنائي اللغة بوضع فاتح وداكن ويعمل على Android و iOS والويب.",
+          client: "مشروع التخرج — بكالوريوس، جامعة أسيوط الجديدة التكنولوجية (قسم Software Engineering)، 2026",
+          purpose: "مساعدة المزارع على توفير المياه وحماية المحصول بالري حسب بيانات التربة الفعلية بدلاً من مواعيد ثابتة، ومعرفة حالة الحقل من الموبايل في أي وقت.",
+          problem: "الري التقليدي يعتمد على جدول ثابت، فيهدر المياه ويروي المحصول أكثر أو أقل من حاجته، ولا يملك المزارع رؤية لحظية لحالة التربة فتُكتشف مشاكل الجفاف أو ارتفاع الحرارة متأخراً.",
+          challenges: "تصميم معمارية MVVM نظيفة (View-Models بـ Provider ومستودعات وخدمات) فوق مصدرين من Firebase: Realtime Database للقراءات اللحظية وحالة المضخة، و Firestore لسجل الأجهزة والقراءات. التعامل مع البيانات الناقصة أو المتأخرة وانقطاع الاتصال (مراقبة الاتصال وحفظ آخر حالة)، ودمج توقعات الطقس لسبعة أيام من Open-Meteo مع موقع الجهاز، والتنقل بـ go_router، وترجمة كاملة عربي RTL / إنجليزي.",
+          results: "نظام متكامل يعمل من الحساس إلى السحابة إلى الموبايل، بلوحة لحظية لستة مؤشرات للحقل ورسوم بيانية تاريخية بأعلى وأقل ومتوسط قيمة وتوقعات الطقس وتنبيهات مصنفة وتسجيل دخول وإعدادات، وتم تسليمه وعرضه كمشروع تخرج.",
+          features: [
+            "لوحة لحظية: الحرارة ورطوبة التربة ونسبة الرطوبة والـ pH وشدة الإضاءة وحالة المضخة",
+            "قراءات لحظية من Firebase Realtime Database وسجل الأجهزة والقراءات في Cloud Firestore",
+            "رسوم بيانية لسجل كل حساس (اليوم / أمس / آخر أسبوع) مع أعلى وأقل ومتوسط قيمة",
+            "توقعات الطقس لسبعة أيام من Open-Meteo حسب موقع الجهاز",
+            "مركز تنبيهات: ارتفاع الحرارة وانخفاض رطوبة التربة وصيانة المضخة وحالة النظام",
+            "تسجيل دخول وإنشاء حساب بـ Firebase Authentication مع شاشات تعريفية",
+            "مراقبة الاتصال وعرض آخر قراءات محفوظة عند انقطاع الإنترنت",
+            "عربي / إنجليزي ووضع فاتح / داكن وتنقل بـ go_router ومعمارية MVVM + Repository"
+          ],
+          status: "مكتمل — مشروع التخرج 2026"
+        },
+        tech: ["Flutter", "Dart", "Firebase Realtime DB", "Cloud Firestore", "Firebase Auth", "Provider (MVVM)", "go_router", "fl_chart", "Open-Meteo API", "IoT sensors"],
+        images: [
+          "assets/images/smart-irrigation/0.jpg",
+          "assets/images/smart-irrigation/1.jpg",
+          "assets/images/smart-irrigation/2.jpg",
+          "assets/images/smart-irrigation/3.jpg",
+          "assets/images/smart-irrigation/4.jpg",
+          "assets/images/smart-irrigation/5.jpg",
+          "assets/images/smart-irrigation/6.jpg",
+          "assets/images/smart-irrigation/7.jpg"
+        ]
       }
     };
 
